@@ -2,9 +2,11 @@
 	export default {
 		onLaunch: function() {
 			console.log('App Launch')
+      uni.hideTabBar()
 		},
 		onShow: function() {
 			console.log('App Show')
+      uni.hideTabBar()
 		},
 		onHide: function() {
 			console.log('App Hide')
