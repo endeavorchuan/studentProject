@@ -8,16 +8,28 @@
 
 <template>
   <view class="home-item">
-    实训室
+    <view class="item-main">
+      <view class="item-content">
+        <image class="image left-arrow" src="../../../static/imgs/right-arrow.png"></image>
+        <view class="item-text">{{ item.className }}</view>
+        <image class="image" src="../../../static/imgs/right-arrow.png"></image>
+      </view>
+    </view>
   </view>
 </template>
 
 <script>
 export default {
-  name: "HomeItem"
+  name: "HomeItem",
+  props: {
+    item: {
+      type: Object,
+      default: {}
+    }
+  }
 }
 </script>
 
 <style scoped>
-
+@import "./css/HomeItem.css";
 </style>

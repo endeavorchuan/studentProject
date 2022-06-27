@@ -184,7 +184,6 @@ __webpack_require__.r(__webpack_exports__);
         info.boundingClientRect(function (data) {
           // data包含元素的高度信息
           // data.height 是头部的高度，68是tabbar的高度
-          console.log(data);
           _this.clientHeight = res.windowHeight - data.height - 68;
         }).exec(function (res) {
           // 这个方法必须执行，即使什么也不做，否则不会获取到信息
