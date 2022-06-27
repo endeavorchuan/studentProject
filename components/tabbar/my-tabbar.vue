@@ -12,9 +12,9 @@
       <view class="tabbar-list-ul">
         <view class="tabbar-list-li" v-for="(item, index) in tabBar.list" :key="index">
           <view class="tabbar-list-li-icon">
-            <image class="tabbar-list-li-icon-image" :src="item.iconPath"></image>
+            <image class="tabbar-list-li-icon-image" :src="selected === index ? item.selectedIconPath : item.iconPath"></image>
           </view>
-          <view class="tabbar-list-li-name">{{ item.text }}</view>
+          <view :class="selected === index ? 'tabbar-list-li-name active' : 'tabbar-list-li-name'">{{ item.text }}</view>
         </view>
       </view>
     </view>
@@ -23,6 +23,7 @@
 
 <script>
 export default {
+  props: ['selected'],
   data() {
     return {
       tabBar: {

@@ -139,6 +139,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 var _default =
 {
+  props: ['selected'],
   data: function data() {
     return {
       tabBar: {

@@ -4,7 +4,7 @@
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view>
-    <MyTabbar></MyTabbar>
+    <MyTabbar :selected="selected"></MyTabbar>
 	</view>
 </template>
 
@@ -16,7 +16,8 @@
     },
 		data() {
 			return {
-				title: 'Hello, World'
+				title: 'Hello, World',
+        selected: 0
 			}
 		},
 		onLoad() {

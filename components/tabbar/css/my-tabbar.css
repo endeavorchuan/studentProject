@@ -46,3 +46,7 @@
   font-size: 28rpx;
   font-family: Microsoft YaHei;
 }
+
+.active {
+  color: #5468ff;
+}

@@ -154,7 +154,8 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
   data: function data() {
     return {
-      title: 'Hello, World' };
+      title: 'Hello, World',
+      selected: 0 };
 
   },
   onLoad: function onLoad() {
