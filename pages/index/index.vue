@@ -13,7 +13,7 @@
       </view>
       <scroll-view scroll-y="true">
         <view class="home-content">
-          <text>班级组件</text>
+          <HomeCommodity></HomeCommodity>
         </view>
       </scroll-view>
     </view>
@@ -23,9 +23,11 @@
 
 <script>
   import MyTabbar from '@/components/tabbar/my-tabbar.vue'
+  import HomeCommodity from '@/components/index/HomeCommodity/HomeCommodity.vue'
 	export default {
     components: {
-      MyTabbar
+      MyTabbar,
+      HomeCommodity
     },
 		data() {
 			return {
