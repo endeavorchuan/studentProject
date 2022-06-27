@@ -1,4 +1,4 @@
-.scroll-view.data-v-3f947c0c ::-webkit-scrollbar {
+.scroll-view ::-webkit-scrollbar {
   display: none;
   width: 0 !important;
   height: 0 !important;
@@ -6,81 +6,91 @@
   background: transparent;
   color: transparent;
 }
-.show-contract.data-v-3f947c0c {
+
+.show-contract {
   width: 750rpx;
   height: 100vh;
   padding-bottom: 200rpx;
   box-sizing: border-box;
   background: url("https://fawn.xuexiluxian.cn/api/profile/wechat/bgimg/sign-bg.png") no-repeat;
 }
-.contract-header.data-v-3f947c0c {
+
+.contract-header {
   width: 100vw;
   height: 300rpx;
   position: relative;
 }
-.contract-header .image.data-v-3f947c0c {
+
+.contract-header .image {
   width: 622rpx;
   height: 93rpx;
   position: absolute;
   left: 50%;
   top: 150rpx;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
-.contract.data-v-3f947c0c {
+
+.contract {
   width: 702rpx;
   padding: 0 24rpx;
   padding-bottom: 60rpx;
 }
-.sign-item.data-v-3f947c0c {
+
+.sign-item {
   width: 702rpx;
   margin-bottom: 60rpx;
 }
-.sign-bg-title.data-v-3f947c0c {
+
+.sign-bg-title {
   width: 702rpx;
   height: 100rpx;
   background: url("https://fawn.xuexiluxian.cn/api/profile/wechat/bgimg/sign-bg-title.png") no-repeat;
   background-size: 100% 100%;
   position: relative;
 }
-.item-title.data-v-3f947c0c {
+
+.item-title {
   position: absolute;
   left: 50%;
   top: 10rpx;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   font-size: 48rpx;
   font-weight: normal;
   color: #5d6fe5;
   line-height: 60rpx;
 }
-.item-content.data-v-3f947c0c {
+
+.item-content {
   width: 702rpx;
   height: 100%;
   background: url("https://fawn.xuexiluxian.cn/api/profile/wechat/bgimg/item-bg.png") no-repeat;
   background-size: 100% 100%;
   position: relative;
 }
-.sign-bg-footer.data-v-3f947c0c {
+
+.sign-bg-footer {
   width: 702rpx;
   height: 100%;
   background: url("https://fawn.xuexiluxian.cn/api/profile/wechat/bgimg/sign-bg-footer.png") no-repeat;
   background-size: 100% 100%;
   position: relative;
 }
-.item-text.data-v-3f947c0c {
+
+.item-text {
   padding-bottom: 20rpx 40rpx;
   font-size: 30rpx;
   font-family: Microsoft YaHei;
   font-weight: 400;
   color: #7a8bff;
 }
-.know.data-v-3f947c0c {
+
+.know {
   width: 100vw;
   height: 200rpx;
   position: relative;
 }
-.contract-know.data-v-3f947c0c {
+
+.contract-know {
   width: 520rpx;
   height: 80rpx;
   font-size: 30rpx;
@@ -93,8 +103,6 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   border-radius: 20rpx;
 }
-
