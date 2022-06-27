@@ -114,7 +114,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -144,22 +144,27 @@ var _default =
     return {
       tabBar: {
         list: [{
+          pagePath: '/pages/index/index',
           iconPath: '/static/tabbar/home.png',
           selectedIconPath: '/static/tabbar/home-selected.png',
           text: '首页' },
         {
+          pagePath: '/pages/interview-question/interview-question',
           iconPath: '/static/tabbar/question.png',
           selectedIconPath: '/static/tabbar/question-selected.png',
           text: '刷面试题' },
         {
+          pagePath: '/pages/interview-process/interview-process',
           iconPath: '/static/tabbar/process.png',
           selectedIconPath: '/static/tabbar/process-selected.png',
           text: '面试流程' },
         {
+          pagePath: '/pages/my-contract/my-contract',
           iconPath: '/static/tabbar/contract.png',
           selectedIconPath: '/static/tabbar/contract-selected.png',
           text: '我的协议' },
         {
+          pagePath: '/pages/my-card/my-card',
           iconPath: '/static/tabbar/card.png',
           selectedIconPath: '/static/tabbar/my-selected.png',
           text: '我的名片' }] } };
@@ -167,7 +172,15 @@ var _default =
 
 
   },
+  methods: {
+    setSelected: function setSelected(index) {
+      uni.switchTab({
+        url: this.tabBar.list[index].pagePath });
+
+    } },
+
   name: "my-tabbar" };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 
