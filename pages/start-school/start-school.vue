@@ -8,13 +8,17 @@
 
 <template>
   <view class="start-school">
-    班级详情页
+    <MyHeader></MyHeader>
   </view>
 </template>
 
 <script>
+import MyHeader from '@/components/start-school/my-header/my-header.vue'
 export default {
-  name: "start-school"
+  name: "start-school",
+  components: {
+    MyHeader
+  }
 }
 </script>
 
