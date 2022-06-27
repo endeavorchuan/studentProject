@@ -1,9 +1,22 @@
 <template>
 	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
-		</view>
+    <view class="home-container">
+      <view class="home-header">
+        <view class="home-title">前端学院</view>
+        <view class="home-school">入学信息入口</view>
+        <view class="home-show">
+          <view class="home-class">
+            <text class="show-text">查看班级权益</text>
+            <image class="home-img" src="../../static/imgs/shape.png"></image>
+          </view>
+        </view>
+      </view>
+      <scroll-view scroll-y="true">
+        <view class="home-content">
+          <text>班级组件</text>
+        </view>
+      </scroll-view>
+    </view>
     <MyTabbar :selected="selected"></MyTabbar>
 	</view>
 </template>
@@ -16,7 +29,6 @@
     },
 		data() {
 			return {
-				title: 'Hello, World',
         selected: 0
 			}
 		},

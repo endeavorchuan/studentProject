@@ -148,13 +148,25 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   components: {
     MyTabbar: MyTabbar },
 
   data: function data() {
     return {
-      title: 'Hello, World',
       selected: 0 };
 
   },
