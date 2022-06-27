@@ -8,7 +8,7 @@
 
 <template>
   <view class="home-item">
-    <view class="item-main">
+    <view class="item-main" @tap="goStart">
       <view class="item-content">
         <image class="image left-arrow" src="../../../static/imgs/right-arrow.png"></image>
         <view class="item-text">{{ item.className }}</view>
@@ -25,6 +25,13 @@ export default {
     item: {
       type: Object,
       default: {}
+    }
+  },
+  methods: {
+    goStart () {
+      uni.navigateTo({
+        url: '/pages/start-school/start-school'
+      })
     }
   }
 }

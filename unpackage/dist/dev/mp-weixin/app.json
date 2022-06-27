@@ -5,7 +5,8 @@
     "pages/interview-process/interview-process",
     "pages/my-contract/my-contract",
     "pages/my-card/my-card",
-    "pages/show-contract/show-contract"
+    "pages/show-contract/show-contract",
+    "pages/start-school/start-school"
   ],
   "subPackages": [],
   "window": {
