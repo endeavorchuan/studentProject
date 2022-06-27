@@ -12,7 +12,7 @@
         </view>
       </view>
       <scroll-view scroll-y="true" :style="'height: '+clientHeight+'px;'">
-        <view class="home-content">
+        <view class="home-content" :style="'height: '+clientHeight+'px;'">
           <HomeCommodity></HomeCommodity>
         </view>
       </scroll-view>
@@ -46,7 +46,6 @@
           info.boundingClientRect((data) => {
             // data包含元素的高度信息
             // data.height 是头部的高度，68是tabbar的高度
-            console.log(data)
             this.clientHeight = res.windowHeight - data.height - 68
           }).exec(function (res){
             // 这个方法必须执行，即使什么也不做，否则不会获取到信息
