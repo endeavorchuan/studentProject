@@ -1,1 +1,1 @@
-<view class="my-card data-v-76160fac"><text class="data-v-76160fac">我的名片</text></view>
+<view class="my-card data-v-76160fac"><text class="data-v-76160fac">我的名片</text><my-tabbar vue-id="4caae3c8-1" selected="{{selected}}" class="data-v-76160fac" bind:__l="__l"></my-tabbar></view>

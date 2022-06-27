@@ -1,1 +1,1 @@
-<view class="my-contract data-v-3bdbfe2e"><text class="data-v-3bdbfe2e">我的协议</text></view>
+<view class="my-contract data-v-3bdbfe2e"><text class="data-v-3bdbfe2e">我的协议</text><my-tabbar vue-id="3fa44898-1" selected="{{selected}}" class="data-v-3bdbfe2e" bind:__l="__l"></my-tabbar></view>

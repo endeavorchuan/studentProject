@@ -128,23 +128,32 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var MyTabbar = function MyTabbar() {__webpack_require__.e(/*! require.ensure | components/tabbar/my-tabbar */ "components/tabbar/my-tabbar").then((function () {return resolve(__webpack_require__(/*! @/components/tabbar/my-tabbar.vue */ 44));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
-  name: "my-card" };exports.default = _default;
+  name: "my-card",
+  data: function data() {
+    return {
+      selected: 4 };
+
+  },
+  components: {
+    MyTabbar: MyTabbar } };exports.default = _default;
 
 /***/ })
 

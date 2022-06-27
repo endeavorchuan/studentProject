@@ -9,12 +9,22 @@
 <template>
   <view class="my-contract">
     <text>我的协议</text>
+    <MyTabbar :selected="selected"></MyTabbar>
   </view>
 </template>
 
 <script>
+import MyTabbar from '@/components/tabbar/my-tabbar.vue'
 export default {
-  name: "my-contract"
+  name: "my-contract",
+  data() {
+    return {
+      selected: 3
+    }
+  },
+  components: {
+    MyTabbar
+  }
 }
 </script>
 

@@ -1,1 +1,1 @@
-<view class="interview-question data-v-6ccd2106"><text class="data-v-6ccd2106">刷面试题</text></view>
+<view class="interview-question data-v-6ccd2106"><text class="data-v-6ccd2106">刷面试题</text><my-tabbar vue-id="2cd780c0-1" selected="{{selected}}" class="data-v-6ccd2106" bind:__l="__l"></my-tabbar></view>

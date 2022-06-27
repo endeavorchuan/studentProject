@@ -3,5 +3,7 @@
   "navigationStyle": "custom",
   "backgroundColor": "#f0f3f7",
   "enablePullDownRefresh": false,
-  "usingComponents": {}
+  "usingComponents": {
+    "my-tabbar": "/components/tabbar/my-tabbar"
+  }
 }

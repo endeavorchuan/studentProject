@@ -9,12 +9,22 @@
 <template>
   <view class="my-card">
     <text>我的名片</text>
+    <MyTabbar :selected="selected"></MyTabbar>
   </view>
 </template>
 
 <script>
+import MyTabbar from '@/components/tabbar/my-tabbar.vue'
 export default {
-  name: "my-card"
+  name: "my-card",
+  data() {
+    return {
+      selected: 4
+    }
+  },
+  components: {
+    MyTabbar
+  }
 }
 </script>
 
