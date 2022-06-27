@@ -137,32 +137,35 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 var _default =
 {
+  data: function data() {
+    return {
+      tabBar: {
+        list: [{
+          iconPath: '/static/tabbar/home.png',
+          selectedIconPath: '/static/tabbar/home-selected.png',
+          text: '首页' },
+        {
+          iconPath: '/static/tabbar/question.png',
+          selectedIconPath: '/static/tabbar/question-selected.png',
+          text: '刷面试题' },
+        {
+          iconPath: '/static/tabbar/process.png',
+          selectedIconPath: '/static/tabbar/process-selected.png',
+          text: '面试流程' },
+        {
+          iconPath: '/static/tabbar/contract.png',
+          selectedIconPath: '/static/tabbar/contract-selected.png',
+          text: '我的协议' },
+        {
+          iconPath: '/static/tabbar/card.png',
+          selectedIconPath: '/static/tabbar/my-selected.png',
+          text: '我的名片' }] } };
+
+
+
+  },
   name: "my-tabbar" };exports.default = _default;
 
 /***/ }),
