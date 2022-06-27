@@ -7,9 +7,11 @@
   margin-bottom: 120rpx;
   box-sizing: border-box;
 }
+
 .home-header {
   padding: 131rpx 37rpx 0 37rpx;
 }
+
 .home-title {
   width: 420rpx;
   height: 59rpx;
@@ -19,6 +21,7 @@
   color: #000cff;
   line-height: 80rpx;
 }
+
 .home-school {
   width: 236rpx;
   height: 40rpx;
@@ -30,6 +33,7 @@
   opacity: .8;
   padding: 30rpx 0;
 }
+
 .home-show {
   width: 290rpx;
   height: 59rpx;
@@ -40,6 +44,7 @@
   padding: 0 20rpx;
   box-sizing: border-box;
 }
+
 .home-class {
   height: 27rpx;
   line-height: 27rpx;
@@ -47,6 +52,7 @@
   font-weight: 400;
   color: #fff;
 }
+
 .home-class:after {
   content: '';
   width: 1rpx;
@@ -54,8 +60,8 @@
   margin: 0 20rpx;
   border-left: 4rpx solid #fff;
 }
+
 .home-img {
   width: 28rpx;
   height: 28rpx;
 }
-
