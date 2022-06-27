@@ -11,7 +11,7 @@
           <image class="home-img" src="../../static/imgs/shape.png"></image>
         </view>
       </view>
-      <scroll-view scroll-y="true" :style="'height: '+clientHeight+'px;'">
+      <scroll-view class="scroll-view" scroll-y="true" :style="'height: '+clientHeight+'px;'">
         <view class="home-content" :style="'height: '+clientHeight+'px;'">
           <HomeCommodity></HomeCommodity>
         </view>
