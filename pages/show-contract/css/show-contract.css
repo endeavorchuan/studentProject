@@ -77,7 +77,7 @@
 }
 
 .item-text {
-  padding-bottom: 20rpx 40rpx;
+  padding: 20rpx 40rpx;
   font-size: 30rpx;
   font-family: Microsoft YaHei;
   font-weight: 400;

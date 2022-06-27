@@ -130,7 +130,23 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -187,7 +203,37 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 var _default =
 {
-  name: "show-contract" };exports.default = _default;
+  name: "show-contract",
+  data: function data() {
+    return {
+      clientHeight: null };
+
+  },
+  onReady: function onReady() {var _this = this;
+    uni.getSystemInfo({
+      success: function success(res) {
+        // 获取头部的高度，select里面的参数如css选择器一样选择元素
+        var info = uni.createSelectorQuery().in(_this).select(".contract-header");
+        info.boundingClientRect(function (data) {
+          // data包含元素的高度信息
+          // data.height 是头部的高度
+          _this.clientHeight = res.windowHeight - data.height;
+        }).exec(function (res) {
+          // 这个方法必须执行，即使什么也不做，否则不会获取到信息
+        });
+        // 获取"我知道了"的高度
+        var know = uni.createSelectorQuery().in(_this).select(".know");
+        know.boundingClientRect(function (data) {
+          // data包含元素的高度信息
+          // data.height 是头部的高度，68是tabbar的高度
+          _this.clientHeight = _this.clientHeight - data.height;
+        }).exec(function (res) {
+          // 这个方法必须执行，即使什么也不做，否则不会获取到信息
+        });
+      } });
+
+  } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 

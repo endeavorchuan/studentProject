@@ -69,7 +69,7 @@
   position: relative;
 }
 .item-text.data-v-3f947c0c {
-  padding-bottom: 20rpx 40rpx;
+  padding: 20rpx 40rpx;
   font-size: 30rpx;
   font-family: Microsoft YaHei;
   font-weight: 400;
