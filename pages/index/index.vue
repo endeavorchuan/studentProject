@@ -11,7 +11,7 @@
           <image class="home-img" src="../../static/imgs/shape.png"></image>
         </view>
       </view>
-      <scroll-view scroll-y="true">
+      <scroll-view scroll-y="true" :style="'height: '+clientHeight+'px;'">
         <view class="home-content">
           <HomeCommodity></HomeCommodity>
         </view>
@@ -31,12 +31,29 @@
     },
 		data() {
 			return {
-        selected: 0
+        selected: 0,
+        clientHeight: null
 			}
 		},
 		onLoad() {
 
 		},
+    onReady() {
+      uni.getSystemInfo({
+        success: (res) => {
+          // 获取头部的高度，select里面的参数如css选择器一样选择元素
+          let info = uni.createSelectorQuery().in(this).select(".home-header")
+          info.boundingClientRect((data) => {
+            // data包含元素的高度信息
+            // data.height 是头部的高度，68是tabbar的高度
+            console.log(data)
+            this.clientHeight = res.windowHeight - data.height - 68
+          }).exec(function (res){
+            // 这个方法必须执行，即使什么也不做，否则不会获取到信息
+          })
+        }
+      })
+    },
 		methods: {
 
 		}

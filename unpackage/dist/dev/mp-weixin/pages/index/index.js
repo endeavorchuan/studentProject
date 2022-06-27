@@ -136,7 +136,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var MyTabbar = function MyTabbar() {__webpack_require__.e(/*! require.ensure | components/tabbar/my-tabbar */ "components/tabbar/my-tabbar").then((function () {return resolve(__webpack_require__(/*! @/components/tabbar/my-tabbar.vue */ 44));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var HomeCommodity = function HomeCommodity() {__webpack_require__.e(/*! require.ensure | components/index/HomeCommodity/HomeCommodity */ "components/index/HomeCommodity/HomeCommodity").then((function () {return resolve(__webpack_require__(/*! @/components/index/HomeCommodity/HomeCommodity.vue */ 54));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var MyTabbar = function MyTabbar() {__webpack_require__.e(/*! require.ensure | components/tabbar/my-tabbar */ "components/tabbar/my-tabbar").then((function () {return resolve(__webpack_require__(/*! @/components/tabbar/my-tabbar.vue */ 44));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var HomeCommodity = function HomeCommodity() {__webpack_require__.e(/*! require.ensure | components/index/HomeCommodity/HomeCommodity */ "components/index/HomeCommodity/HomeCommodity").then((function () {return resolve(__webpack_require__(/*! @/components/index/HomeCommodity/HomeCommodity.vue */ 54));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -169,13 +169,31 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
   data: function data() {
     return {
-      selected: 0 };
+      selected: 0,
+      clientHeight: null };
 
   },
   onLoad: function onLoad() {
 
   },
+  onReady: function onReady() {var _this = this;
+    uni.getSystemInfo({
+      success: function success(res) {
+        // 获取头部的高度，select里面的参数如css选择器一样选择元素
+        var info = uni.createSelectorQuery().in(_this).select(".home-header");
+        info.boundingClientRect(function (data) {
+          // data包含元素的高度信息
+          // data.height 是头部的高度，68是tabbar的高度
+          console.log(data);
+          _this.clientHeight = res.windowHeight - data.height - 68;
+        }).exec(function (res) {
+          // 这个方法必须执行，即使什么也不做，否则不会获取到信息
+        });
+      } });
+
+  },
   methods: {} };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 /* 18 */
