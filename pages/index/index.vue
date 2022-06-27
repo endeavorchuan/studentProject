@@ -4,7 +4,7 @@
       <view class="home-header">
         <view class="home-title">前端学院</view>
         <view class="home-school">入学信息入口</view>
-        <view class="home-show">
+        <view class="home-show" @tap="goShowContract">
           <view class="home-class">
             <text class="show-text">查看班级权益</text>
           </view>
@@ -54,7 +54,11 @@
       })
     },
 		methods: {
-
+      goShowContract() {
+        uni.navigateTo({
+          url: '../show-contract/show-contract'
+        })
+      }
 		}
 	}
 </script>

@@ -191,7 +191,12 @@ __webpack_require__.r(__webpack_exports__);
       } });
 
   },
-  methods: {} };exports.default = _default;
+  methods: {
+    goShowContract: function goShowContract() {
+      uni.navigateTo({
+        url: '../show-contract/show-contract' });
+
+    } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),

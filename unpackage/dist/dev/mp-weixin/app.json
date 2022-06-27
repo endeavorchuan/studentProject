@@ -4,7 +4,8 @@
     "pages/interview-question/interview-question",
     "pages/interview-process/interview-process",
     "pages/my-contract/my-contract",
-    "pages/my-card/my-card"
+    "pages/my-card/my-card",
+    "pages/show-contract/show-contract"
   ],
   "subPackages": [],
   "window": {

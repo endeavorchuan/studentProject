@@ -43,6 +43,14 @@
 				"navigationStyle": "custom",
 				"enablePullDownRefresh": false
 			}
+		},
+		{
+			"path": "pages/show-contract/show-contract",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
 		}
 	],
 	"globalStyle": {
