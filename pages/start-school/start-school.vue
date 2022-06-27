@@ -9,6 +9,13 @@
 <template>
   <view class="start-school">
     <MyHeader :title="title"></MyHeader>
+    <scroll-view class="scroll-view" scroll-y="true">
+      <view>
+        <view class="banner-bg">
+          <view class="sign-btn">立即填写 > </view>
+        </view>
+      </view>
+    </scroll-view>
   </view>
 </template>
 
@@ -32,5 +39,5 @@ export default {
 </script>
 
 <style scoped>
-
+@import "./css/start-school.css";
 </style>
