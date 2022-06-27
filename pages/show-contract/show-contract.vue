@@ -64,7 +64,7 @@
       </view>
     </scroll-view>
     <view class="know">
-      <view class="contract-know">我知道了</view>
+      <view class="contract-know" @tap="goBack">我知道了</view>
     </view>
   </view>
 </template>
@@ -101,6 +101,13 @@ export default {
       }
     })
   },
+  methods: {
+    goBack () {
+      uni.navigateBack({
+        delta: 1
+      })
+    }
+  }
 }
 </script>
 
