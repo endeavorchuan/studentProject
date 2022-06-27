@@ -11,14 +11,14 @@
     <view class="nav_top">
       <view class="status-bar"></view>
       <view class="topContent">
-        <view class="goBack">
+        <view class="goBack" @click="goTo">
           <slot name="left">
             <image class="image" src="../../../static/imgs/arrow.png"></image>
           </slot>
         </view>
         <view class="title">
           <slot name="center">
-            <view>实训室</view>
+            <view>{{ title }}</view>
           </slot>
         </view>
       </view>
@@ -31,7 +31,20 @@
 
 <script>
 export default {
-  name: "my-header"
+  name: "my-header",
+  props: {
+    title: {
+      type: String,
+      default: ''
+    }
+  },
+  methods: {
+    goTo () {
+      uni.navigateBack({
+        delta: 1
+      })
+    }
+  }
 }
 </script>
 

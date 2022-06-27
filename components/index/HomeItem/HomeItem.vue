@@ -8,7 +8,7 @@
 
 <template>
   <view class="home-item">
-    <view class="item-main" @tap="goStart">
+    <view class="item-main" @tap="goStart(item)">
       <view class="item-content">
         <image class="image left-arrow" src="../../../static/imgs/right-arrow.png"></image>
         <view class="item-text">{{ item.className }}</view>
@@ -28,9 +28,9 @@ export default {
     }
   },
   methods: {
-    goStart () {
+    goStart (item) {
       uni.navigateTo({
-        url: '/pages/start-school/start-school'
+        url: '/pages/start-school/start-school?item=' + JSON.stringify(item)
       })
     }
   }

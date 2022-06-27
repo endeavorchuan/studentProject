@@ -8,7 +8,7 @@
 
 <template>
   <view class="start-school">
-    <MyHeader></MyHeader>
+    <MyHeader :title="title"></MyHeader>
   </view>
 </template>
 
@@ -16,6 +16,15 @@
 import MyHeader from '@/components/start-school/my-header/my-header.vue'
 export default {
   name: "start-school",
+  data () {
+    return {
+      title: ''
+    }
+  },
+  onLoad(options) {
+    const item = JSON.parse(options.item)
+    this.title = item.className
+  },
   components: {
     MyHeader
   }
