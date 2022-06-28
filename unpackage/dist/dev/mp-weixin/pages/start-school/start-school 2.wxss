@@ -1,0 +1,39 @@
+.scroll-view.data-v-8d50f334 ::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
+  height: 0 !important;
+  -webkit-appearance: none;
+  background: transparent;
+  color: transparent;
+}
+.scroll-view.data-v-8d50f334 {
+  background-color: #f3f4f6;
+}
+.start-school.data-v-8d50f334 {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: #f3f4f6;
+}
+.banner-bg.data-v-8d50f334 {
+  position: relative;
+  width: 750rpx;
+  height: 295rpx;
+  background: url('https://fawn.xuexiluxian.cn/api/profile/wechat/bgimg/banner.png') no-repeat;
+  background-size: contain;
+}
+.sign-btn.data-v-8d50f334 {
+  position: absolute;
+  top: 195rpx;
+  left: 60rpx;
+  width: 173rpx;
+  height: 44rpx;
+  font-size: 28rpx;
+  color: #fff;
+  padding: 5rpx 10rpx;
+  text-align: center;
+  line-height: 44rpx;
+  border: 1rpx solid #fff;
+  border-radius: 40rpx;
+}
+

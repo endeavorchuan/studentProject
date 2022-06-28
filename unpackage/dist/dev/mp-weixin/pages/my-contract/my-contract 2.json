@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "我的协议",
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "my-tabbar": "/components/tabbar/my-tabbar"
+  }
+}

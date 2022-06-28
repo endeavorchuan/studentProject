@@ -14,6 +14,9 @@
         <view class="banner-bg">
           <view class="sign-btn">立即填写 > </view>
         </view>
+        <view class="school-content">
+          <MangaList></MangaList>
+        </view>
       </view>
     </scroll-view>
   </view>
@@ -21,8 +24,9 @@
 
 <script>
 import MyHeader from '@/components/start-school/my-header/my-header.vue'
+import MangaList from '@/components/start-school/manga-list/manga-list.vue'
 export default {
-  name: "start-school"
+  name: "start-school",
   data () {
     return {
       title: ''
@@ -33,7 +37,8 @@ export default {
     this.title = item.className
   },
   components: {
-    MyHeader
+    MyHeader,
+    MangaList
   }
 }
 </script>

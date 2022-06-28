@@ -105,11 +105,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"components/index/HomeCommodity/HomeCommodity":1,"components/tabbar/my-tabbar":1,"components/index/HomeItem/HomeItem":1};
+/******/ 		var cssChunks = {"components/index/HomeCommodity/HomeCommodity":1,"components/tabbar/my-tabbar":1,"components/start-school/manga-list/manga-list":1,"components/start-school/my-header/my-header":1,"components/index/HomeItem/HomeItem":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"components/index/HomeCommodity/HomeCommodity":"components/index/HomeCommodity/HomeCommodity","components/tabbar/my-tabbar":"components/tabbar/my-tabbar","components/index/HomeItem/HomeItem":"components/index/HomeItem/HomeItem"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"components/index/HomeCommodity/HomeCommodity":"components/index/HomeCommodity/HomeCommodity","components/tabbar/my-tabbar":"components/tabbar/my-tabbar","components/start-school/manga-list/manga-list":"components/start-school/manga-list/manga-list","components/start-school/my-header/my-header":"components/start-school/my-header/my-header","components/index/HomeItem/HomeItem":"components/index/HomeItem/HomeItem"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
