@@ -22,6 +22,8 @@
               <CelebrityList></CelebrityList>
             </view>
           </scroll-view>
+          <view class="main-title">公告</view>
+          <Notice></Notice>
         </view>
       </view>
     </scroll-view>
@@ -32,6 +34,7 @@
 import MyHeader from '@/components/start-school/my-header/my-header.vue'
 import MangaList from '@/components/start-school/manga-list/manga-list.vue'
 import CelebrityList from '@/components/start-school/celebrity-list/celebrity-list.vue'
+import Notice from '@/components/start-school/notice/notice.vue'
 export default {
   name: "start-school",
   data () {
@@ -46,7 +49,8 @@ export default {
   components: {
     MyHeader,
     MangaList,
-    CelebrityList
+    CelebrityList,
+    Notice
   }
 }
 </script>
