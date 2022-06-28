@@ -39,7 +39,19 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 var _default =
 {
-  name: "manga-list" };exports.default = _default;
+  name: "manga-list",
+  data: function data() {
+    return {
+      mangaList: {
+        imgUrl: '/static/imgs/sign-out.png',
+        name: '签署协议' },
+
+      signList: {
+        imgUrl: '/static/imgs/sign-in.png',
+        name: '我的协议' } };
+
+
+  } };exports.default = _default;
 
 /***/ }),
 
