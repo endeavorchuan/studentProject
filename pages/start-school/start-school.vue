@@ -16,6 +16,12 @@
         </view>
         <view class="school-content">
           <MangaList></MangaList>
+          <view class="main-title">名人堂</view>
+          <scroll-view class="scroll-content" scroll-x="true">
+            <view class="scroll-item">
+              <CelebrityList></CelebrityList>
+            </view>
+          </scroll-view>
         </view>
       </view>
     </scroll-view>
@@ -25,6 +31,7 @@
 <script>
 import MyHeader from '@/components/start-school/my-header/my-header.vue'
 import MangaList from '@/components/start-school/manga-list/manga-list.vue'
+import CelebrityList from '@/components/start-school/celebrity-list/celebrity-list.vue'
 export default {
   name: "start-school",
   data () {
@@ -38,7 +45,8 @@ export default {
   },
   components: {
     MyHeader,
-    MangaList
+    MangaList,
+    CelebrityList
   }
 }
 </script>

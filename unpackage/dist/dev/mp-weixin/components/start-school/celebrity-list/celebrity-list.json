@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "celebrity": "/components/start-school/celebrity-list/celebrity/celebrity"
+  },
+  "component": true
+}
