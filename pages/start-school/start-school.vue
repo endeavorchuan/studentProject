@@ -22,7 +22,7 @@
 <script>
 import MyHeader from '@/components/start-school/my-header/my-header.vue'
 export default {
-  name: "start-school",
+  name: "start-school"
   data () {
     return {
       title: ''
