@@ -12,7 +12,7 @@
     <scroll-view class="scroll-view" scroll-y="true">
       <view>
         <view class="banner-bg">
-          <view class="sign-btn">立即填写 > </view>
+          <view class="sign-btn" @tap="goEnterSchool">立即填写 > </view>
         </view>
         <view class="school-content">
           <MangaList></MangaList>
@@ -33,7 +33,7 @@
         <view class="pop-content">
           <image class="close" @tap="closePop" src="../../static/imgs/close.png"></image>
           <image class="pop-btn" src="../../static/imgs/pop-btn.png"></image>
-          <view class="btn-text">快速入学</view>
+          <view class="btn-text" @tap="goEnterSchool">快速入学</view>
         </view>
       </view>
     </view>
@@ -66,6 +66,11 @@ export default {
   methods: {
     closePop () {
       this.showPop = false
+    },
+    goEnterSchool () {
+      uni.navigateTo({
+        url: '../enter-school/enter-school'
+      })
     }
   }
 }
