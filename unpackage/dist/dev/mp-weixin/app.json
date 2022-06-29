@@ -6,7 +6,8 @@
     "pages/my-contract/my-contract",
     "pages/my-card/my-card",
     "pages/show-contract/show-contract",
-    "pages/start-school/start-school"
+    "pages/start-school/start-school",
+    "pages/enter-school/enter-school"
   ],
   "subPackages": [],
   "window": {
