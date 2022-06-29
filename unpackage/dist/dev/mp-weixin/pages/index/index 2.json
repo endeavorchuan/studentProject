@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "首页",
-  "navigationStyle": "custom",
-  "usingComponents": {
-    "my-tabbar": "/components/tabbar/my-tabbar",
-    "home-commodity": "/components/index/HomeCommodity/HomeCommodity"
-  }
-}

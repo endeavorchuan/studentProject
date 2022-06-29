@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "home-item": "/components/index/HomeItem/HomeItem"
-  },
-  "component": true
-}

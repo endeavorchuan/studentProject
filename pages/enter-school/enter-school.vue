@@ -143,5 +143,5 @@ export default {
 </script>
 
 <style scoped>
-
+@import "./css/enter-school.css";
 </style>

@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "刷面试题",
-  "navigationStyle": "custom",
-  "backgroundColor": "#f0f3f7",
-  "enablePullDownRefresh": false,
-  "usingComponents": {
-    "my-tabbar": "/components/tabbar/my-tabbar"
-  }
-}
