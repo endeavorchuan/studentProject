@@ -27,6 +27,16 @@
         </view>
       </view>
     </scroll-view>
+    <view class="pop" v-if="showPop">
+      <view class="pop-mask"></view>
+      <view class="pop-box">
+        <view class="pop-content">
+          <image class="close" @tap="closePop" src="../../static/imgs/close.png"></image>
+          <image class="pop-btn" src="../../static/imgs/pop-btn.png"></image>
+          <view class="btn-text">快速入学</view>
+        </view>
+      </view>
+    </view>
   </view>
 </template>
 
@@ -39,7 +49,8 @@ export default {
   name: "start-school",
   data () {
     return {
-      title: ''
+      title: '',
+      showPop: true
     }
   },
   onLoad(options) {
@@ -51,6 +62,11 @@ export default {
     MangaList,
     CelebrityList,
     Notice
+  },
+  methods: {
+    closePop () {
+      this.showPop = false
+    }
   }
 }
 </script>

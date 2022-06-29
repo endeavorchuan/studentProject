@@ -40,8 +40,11 @@
 .item-text {
   margin: 0 20rpx;
   font-size: 36rpx;
-  font-family: Microsoft YaHei;
   font-weight: 400;
   color: #fff;
   padding-top: 0 20rpx;
+}
+
+.item-text {
+  font-family: Microsoft YaHei;
 }
