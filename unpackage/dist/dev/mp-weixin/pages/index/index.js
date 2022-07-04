@@ -136,7 +136,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var MyTabbar = function MyTabbar() {__webpack_require__.e(/*! require.ensure | components/tabbar/my-tabbar */ "components/tabbar/my-tabbar").then((function () {return resolve(__webpack_require__(/*! @/components/tabbar/my-tabbar.vue */ 66));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var HomeCommodity = function HomeCommodity() {__webpack_require__.e(/*! require.ensure | components/index/HomeCommodity/HomeCommodity */ "components/index/HomeCommodity/HomeCommodity").then((function () {return resolve(__webpack_require__(/*! @/components/index/HomeCommodity/HomeCommodity.vue */ 73));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var MyTabbar = function MyTabbar() {__webpack_require__.e(/*! require.ensure | components/tabbar/my-tabbar */ "components/tabbar/my-tabbar").then((function () {return resolve(__webpack_require__(/*! @/components/tabbar/my-tabbar.vue */ 68));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var HomeCommodity = function HomeCommodity() {__webpack_require__.e(/*! require.ensure | components/index/HomeCommodity/HomeCommodity */ "components/index/HomeCommodity/HomeCommodity").then((function () {return resolve(__webpack_require__(/*! @/components/index/HomeCommodity/HomeCommodity.vue */ 75));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
