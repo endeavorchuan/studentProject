@@ -14,49 +14,17 @@
     <scroll-view class="scroll-view" scroll-y="true" :style="'height: '+clientHeight+'px;'">
       <view class="contract" :style="'height: '+clientHeight+'px;'">
         <view class="show-contract-content">
-          <view class="sign-item">
+
+          <view class="sign-item" v-for="item in classInfo" :key="item.id">
             <view class="sign-bg-title">
-              <view class="item-title">实训室</view>
+              <view class="item-title">{{ item.className }}</view>
             </view>
             <view class="item-content">
               <view class="item-text">
-                <rich-text>学习周期1个月</rich-text>
-                <rich-text>学习周期1个月</rich-text>
-                <rich-text>学习周期1个月</rich-text>
+                <rich-text :nodes="item.classDesc"></rich-text>
               </view>
             </view>
             <view class="sign-bg-footer">
-              <rich-text>1234455</rich-text>
-            </view>
-          </view>
-          <view class="sign-item">
-            <view class="sign-bg-title">
-              <view class="item-title">实训室</view>
-            </view>
-            <view class="item-content">
-              <view class="item-text">
-                <rich-text>学习周期1个月</rich-text>
-                <rich-text>学习周期1个月</rich-text>
-                <rich-text>学习周期1个月</rich-text>
-              </view>
-            </view>
-            <view class="sign-bg-footer">
-              <rich-text>1234455</rich-text>
-            </view>
-          </view>
-          <view class="sign-item">
-            <view class="sign-bg-title">
-              <view class="item-title">实训室</view>
-            </view>
-            <view class="item-content">
-              <view class="item-text">
-                <rich-text>学习周期1个月</rich-text>
-                <rich-text>学习周期1个月</rich-text>
-                <rich-text>学习周期1个月</rich-text>
-              </view>
-            </view>
-            <view class="sign-bg-footer">
-              <rich-text>1234455</rich-text>
             </view>
           </view>
 
@@ -70,11 +38,14 @@
 </template>
 
 <script>
+import {getClassList} from "../../service/class.js";
+
 export default {
   name: "show-contract",
   data() {
     return {
-      clientHeight: null
+      clientHeight: null,
+      classInfo: null
     }
   },
   onReady() {
@@ -101,7 +72,20 @@ export default {
       }
     })
   },
+  onLoad() {
+    this.__init()
+  },
   methods: {
+    // 请求数据
+    async __init() {
+      const data = {
+        pageNum: this.pageNum,
+        pageSize: this.pageSize
+      }
+      const res = await getClassList(data)
+      console.log(res)
+      this.classInfo = res
+    },
     goBack () {
       uni.navigateBack({
         delta: 1

@@ -2,13 +2,13 @@
  * @name: request
  * @author: chuanchuan
  * @date: 2022-07-04 11:51
- * @description：request
+ * @description：请求文件封装
  * @update: 2022-07-04 11:51
  */
 
 export default {
   common: {   // 默认参数
-    baseUrl: 'http://fawnuat.xuexiluxian.cn/',
+    baseUrl: 'https://fawnuat.xuexiluxian.cn',
     data: {},
     header: {
       "Content-Type": "application/json",
@@ -30,11 +30,11 @@ export default {
         ...options,
         success: (result) => {
           if (result.data.resultCode !== 200) {
-            setTimeout(() => {
+            setTimeout(function () {
               uni.hideLoading()
             }, 300)
           }
-          setTimeout(() => {
+          setTimeout(function () {
             uni.hideLoading()
           }, 300)
           let data = result.data.data
