@@ -9673,7 +9673,7 @@ function resolveLocaleChain(locale) {
 
 /***/ }),
 
-/***/ 63:
+/***/ 65:
 /*!************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/service/start-school.js ***!
   \************************************************************************************************/
@@ -9723,7 +9723,7 @@ exports.getExcellentList = getExcellentList;var getNoticeList = function getNoti
 
 /***/ }),
 
-/***/ 80:
+/***/ 82:
 /*!****************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/service/help.js ***!
   \****************************************************************************************/

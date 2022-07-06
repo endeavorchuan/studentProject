@@ -37,7 +37,6 @@
   height: 42rpx;
 }
 .title.data-v-68e890b8 {
-  line-height: 115rpx;
   font-size: 32rpx;
   text-align: center;
   color: #344356;
