@@ -83,7 +83,6 @@ export default {
         pageSize: this.pageSize
       }
       const res = await getClassList(data)
-      console.log(res)
       this.classInfo = res
     },
     goBack () {
