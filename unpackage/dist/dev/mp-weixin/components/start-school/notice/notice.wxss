@@ -5,7 +5,7 @@
   background: rgba(248, 140, 53, .12);
   color: #f88c35;
   border-radius: 10rpx;
-  /*padding-bottom: 20rpx;*/
+  margin-bottom: 20rpx;
 }
 .notice-main.data-v-1efce11a {
   width: 674rpx;

@@ -139,7 +139,11 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 var _default =
 {
-  name: "notice" };exports.default = _default;
+  name: "notice",
+  props: {
+    noticeList: {
+      type: Array,
+      default: [] } } };exports.default = _default;
 
 /***/ }),
 

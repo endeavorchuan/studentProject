@@ -22,3 +22,18 @@ export const getExcellentList = ({pageSize, pageNum}) => {
     }
   })
 }
+
+// 获取公告数据  /wechat/notice/list
+export const getNoticeList = ({pageSize, pageNum}) => {
+  return $http.request({
+    url: '/wechat/notice/list',
+    method: 'POST',
+    header: {
+      "Content-Type": "application/json"
+    },
+    data: {
+      pageNum,
+      pageSize
+    }
+  })
+}

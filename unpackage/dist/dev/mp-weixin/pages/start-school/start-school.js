@@ -186,7 +186,8 @@ var _startSchool = __webpack_require__(/*! @/service/start-school.js */ 63);func
       showPop: true,
       pageNum: 1,
       pageSize: 10,
-      excellentList: [] };
+      excellentList: [],
+      noticeList: [] };
 
   },
   onLoad: function onLoad(options) {
@@ -216,7 +217,8 @@ var _startSchool = __webpack_require__(/*! @/service/start-school.js */ 63);func
                   pageSize: _this.pageSize };_context.next = 3;return (
 
                   (0, _startSchool.getExcellentList)(data));case 3:res = _context.sent;
-                _this.excellentList = res.slice(0, 4);case 5:case "end":return _context.stop();}}}, _callee);}))();
+                _this.excellentList = res.slice(0, 3);_context.next = 7;return (
+                  (0, _startSchool.getNoticeList)(data));case 7:_this.noticeList = _context.sent;case 8:case "end":return _context.stop();}}}, _callee);}))();
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

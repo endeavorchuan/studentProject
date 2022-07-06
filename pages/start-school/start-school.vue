@@ -23,7 +23,7 @@
             </view>
           </scroll-view>
           <view class="main-title">公告</view>
-          <Notice></Notice>
+          <Notice :noticeList="noticeList"></Notice>
         </view>
       </view>
     </scroll-view>
@@ -45,7 +45,7 @@ import MyHeader from '@/components/start-school/my-header/my-header.vue'
 import MangaList from '@/components/start-school/manga-list/manga-list.vue'
 import CelebrityList from '@/components/start-school/celebrity-list/celebrity-list.vue'
 import Notice from '@/components/start-school/notice/notice.vue'
-import {getExcellentList} from '@/service/start-school.js'
+import {getExcellentList, getNoticeList} from '@/service/start-school.js'
 export default {
   name: "start-school",
   data () {
@@ -54,7 +54,8 @@ export default {
       showPop: true,
       pageNum: 1,
       pageSize: 10,
-      excellentList: []
+      excellentList: [],
+      noticeList: []
     }
   },
   onLoad(options) {
@@ -84,7 +85,8 @@ export default {
         pageSize: this.pageSize
       }
       const res = await getExcellentList(data)
-      this.excellentList = res.slice(0, 4)
+      this.excellentList = res.slice(0, 3)
+      this.noticeList = await getNoticeList(data)
     }
   }
 }

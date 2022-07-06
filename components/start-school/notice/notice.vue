@@ -8,13 +8,13 @@
 
 <template>
   <view class="notice">
-    <view class="notice-item">
+    <view class="notice-item" v-for="(item, index) in noticeList" :key="item.noticeId">
       <view class="notice-main">
         <block>
           <image class="notice-img" src="../../../static/imgs/upgrade.png"></image>
         </block>
         <view class="notice-warning">
-          <text>我是第一条公告内容！</text>
+          <text>{{ item.noticeTitle }}</text>
         </view>
       </view>
     </view>
@@ -23,7 +23,13 @@
 
 <script>
 export default {
-  name: "notice"
+  name: "notice",
+  props: {
+    noticeList: {
+      type: Array,
+      default: []
+    }
+  }
 }
 </script>
 

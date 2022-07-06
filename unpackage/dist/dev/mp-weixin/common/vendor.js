@@ -9681,7 +9681,7 @@ function resolveLocaleChain(locale) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.getExcellentList = void 0;
+Object.defineProperty(exports, "__esModule", { value: true });exports.getNoticeList = exports.getExcellentList = void 0;
 
 
 
@@ -9704,7 +9704,22 @@ var getExcellentList = function getExcellentList(_ref) {var pageSize = _ref.page
       pageSize: pageSize } });
 
 
-};exports.getExcellentList = getExcellentList;
+};
+
+// 获取公告数据  /wechat/notice/list
+exports.getExcellentList = getExcellentList;var getNoticeList = function getNoticeList(_ref2) {var pageSize = _ref2.pageSize,pageNum = _ref2.pageNum;
+  return _request.default.request({
+    url: '/wechat/notice/list',
+    method: 'POST',
+    header: {
+      "Content-Type": "application/json" },
+
+    data: {
+      pageNum: pageNum,
+      pageSize: pageSize } });
+
+
+};exports.getNoticeList = getNoticeList;
 
 /***/ })
 
