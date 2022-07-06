@@ -18,24 +18,15 @@
 import HomeItem from '@/components/index/HomeItem/HomeItem.vue'
 export default {
   name: "HomeCommodity",
+  props: {
+    homeData: {
+      type: Array,
+      default: []
+    }
+  },
   data() {
     return {
-      homeData: [{
-        classImgLink: 'https://test.cloudapprod.com/api/profile/wechat/bgimg/p4.png',
-        className: '实训室'
-      }, {
-        classImgLink: 'https://test.cloudapprod.com/api/profile/wechat/bgimg/p4.png',
-        className: 'P4'
-      }, {
-        classImgLink: 'https://test.cloudapprod.com/api/profile/wechat/bgimg/p4.png',
-        className: 'P5'
-      }, {
-        classImgLink: 'https://test.cloudapprod.com/api/profile/wechat/bgimg/p4.png',
-        className: '全日班'
-      }, {
-        classImgLink: 'https://test.cloudapprod.com/api/profile/wechat/bgimg/p4.png',
-        className: '线下班'
-      }]
+
     }
   },
   components: {

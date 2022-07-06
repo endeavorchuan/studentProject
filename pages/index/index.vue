@@ -13,7 +13,7 @@
       </view>
       <scroll-view class="scroll-view" scroll-y="true" :style="'height: '+clientHeight+'px;'">
         <view class="home-content" :style="'height: '+clientHeight+'px;'">
-          <HomeCommodity></HomeCommodity>
+          <HomeCommodity :homeData="homeData"></HomeCommodity>
         </view>
       </scroll-view>
     </view>
@@ -24,7 +24,9 @@
 <script>
   import MyTabbar from '@/components/tabbar/my-tabbar.vue'
   import HomeCommodity from '@/components/index/HomeCommodity/HomeCommodity.vue'
-	export default {
+  import {getClassList} from "../../service/class";
+
+  export default {
     components: {
       MyTabbar,
       HomeCommodity
@@ -32,11 +34,13 @@
 		data() {
 			return {
         selected: 0,
-        clientHeight: null
+        clientHeight: null,
+        homeData: []
 			}
 		},
 		onLoad() {
-
+      // 获取班级信息列表
+      this.__init()
 		},
     onReady() {
       uni.getSystemInfo({
@@ -58,6 +62,14 @@
         uni.navigateTo({
           url: '../show-contract/show-contract'
         })
+      },
+      async __init () {
+        const data = {
+          pageNum: 1,
+          pageSize: 10
+        }
+        const res = await getClassList(data)
+        this.homeData = res.slice(0, 5)
       }
 		}
 	}

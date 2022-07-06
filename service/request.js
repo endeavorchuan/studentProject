@@ -21,6 +21,7 @@ export default {
     options.url = this.common.baseUrl + options.url
     options.data = options.data || this.common.data
     options.header = options.header || this.common.header
+    options.method = options.method || this.common.method
     options.dataType = options.dataType || this.common.dataType
     return new Promise((res, rej) => {    // 正式发送请求
       uni.showLoading({

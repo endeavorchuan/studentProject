@@ -83,7 +83,7 @@ export default {
         pageSize: this.pageSize
       }
       const res = await getClassList(data)
-      this.classInfo = res
+      this.classInfo = res.slice(0, 5)
     },
     goBack () {
       uni.navigateBack({

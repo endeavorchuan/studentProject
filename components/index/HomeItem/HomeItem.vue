@@ -8,7 +8,7 @@
 
 <template>
   <view class="home-item">
-    <view class="item-main" @tap="goStart(item)">
+    <view class="item-main" @tap="goStart(item)" :style="{backgroundImage:'url('+classImgLink+')'}">
       <view class="item-content">
         <image class="image left-arrow" src="../../../static/imgs/right-arrow.png"></image>
         <view class="item-text">{{ item.className }}</view>
@@ -25,6 +25,16 @@ export default {
     item: {
       type: Object,
       default: {}
+    }
+  },
+  data() {
+    return {
+      classImgLink: ''
+    }
+  },
+  computed: {
+    changeImg () {
+      return this.classImgLink = this.item.classImgLink
     }
   },
   methods: {
