@@ -12,7 +12,7 @@ export default {
     data: {},
     header: {
       "Content-Type": "application/json",
-      "Content-Type": "application/x-www-form-urlencoded"
+      // "Content-Type": "application/x-www-form-urlencoded"
     },
     method: 'GET',
     dataType: 'json',
