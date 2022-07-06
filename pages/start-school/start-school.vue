@@ -19,7 +19,7 @@
           <view class="main-title">名人堂</view>
           <scroll-view class="scroll-content" scroll-x="true">
             <view class="scroll-item">
-              <CelebrityList></CelebrityList>
+              <CelebrityList :excellentList="excellentList"></CelebrityList>
             </view>
           </scroll-view>
           <view class="main-title">公告</view>
@@ -45,17 +45,22 @@ import MyHeader from '@/components/start-school/my-header/my-header.vue'
 import MangaList from '@/components/start-school/manga-list/manga-list.vue'
 import CelebrityList from '@/components/start-school/celebrity-list/celebrity-list.vue'
 import Notice from '@/components/start-school/notice/notice.vue'
+import {getExcellentList} from '@/service/start-school.js'
 export default {
   name: "start-school",
   data () {
     return {
       title: '',
-      showPop: true
+      showPop: true,
+      pageNum: 1,
+      pageSize: 10,
+      excellentList: []
     }
   },
   onLoad(options) {
     const item = JSON.parse(options.item)
     this.title = item.className
+    this.__init()
   },
   components: {
     MyHeader,
@@ -71,6 +76,15 @@ export default {
       uni.navigateTo({
         url: '../enter-school/enter-school'
       })
+    },
+    // 获取名人堂信息
+    async __init () {
+      const data = {
+        pageNum: this.pageNum,
+        pageSize: this.pageSize
+      }
+      const res = await getExcellentList(data)
+      this.excellentList = res.slice(0, 4)
     }
   }
 }

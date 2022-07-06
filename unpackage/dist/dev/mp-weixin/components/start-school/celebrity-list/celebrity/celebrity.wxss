@@ -1,0 +1,73 @@
+.celebrity.data-v-34e4ea56 {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 36rpx;
+}
+.celebrity-item.data-v-34e4ea56 {
+  width: 289rpx;
+  height: 319rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  margin-right: 40rpx;
+  background: url("https://fawn.xuexiluxian.cn/api/profile/wechat/bgimg/fame-bg.png") np-repeat;
+  background-size: cover;
+  padding: 24rpx;
+}
+.item-header.data-v-34e4ea56 {
+  padding-top: 10rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.student-stars .image.data-v-34e4ea56 {
+  width: 19rpx;
+  height: 19rpx;
+}
+.trophy.data-v-34e4ea56 {
+  width: 97rpx;
+  height: 91rpx;
+}
+.item-content.data-v-34e4ea56 {
+  padding-top: 20rpx;
+  padding-left: 20rpx;
+}
+.item-list.data-v-34e4ea56 {
+  height: 25rpx;
+  font-size: 25rpx;
+  font-weight: 400;
+  color: #333;
+  line-height: 27rpx;
+  padding-bottom: 20rpx;
+}
+.item-text.data-v-34e4ea56 {
+  padding-left: 10rpx;
+}
+.item-active-text.data-v-34e4ea56 {
+  color: #f00;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.item-foot.data-v-34e4ea56 {
+  width: 100%;
+  height: 50rpx;
+  background: #006cff;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 0 0 20rpx 20rpx;
+}
+.foot-item.data-v-34e4ea56 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.foot-bg.data-v-34e4ea56 {
+  width: 22rpx;
+  height: 20rpx;
+}
+.foot-text.data-v-34e4ea56 {
+  font-size: 24rpx;
+  font-weight: normal;
+  color: #fff;
+  line-height: 27rpx;
+}
+

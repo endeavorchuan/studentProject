@@ -8,7 +8,7 @@
 
 <template>
   <view class="celebrity-list">
-    <Celebrity></Celebrity>
+    <Celebrity :dataList="excellentList"></Celebrity>
   </view>
 </template>
 
@@ -16,6 +16,12 @@
 import Celebrity from '@/components/start-school/celebrity-list/celebrity/celebrity.vue'
 export default {
   name: "celebrity-list",
+  props: {
+    excellentList: {
+      type: Array,
+      default: {}
+    }
+  },
   components: {
     Celebrity
   }
