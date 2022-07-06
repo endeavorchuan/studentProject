@@ -9721,6 +9721,42 @@ exports.getExcellentList = getExcellentList;var getNoticeList = function getNoti
 
 };exports.getNoticeList = getNoticeList;
 
+/***/ }),
+
+/***/ 80:
+/*!****************************************************************************************!*\
+  !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/service/help.js ***!
+  \****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.getHelpList = void 0;
+
+
+
+
+
+
+
+var _request = _interopRequireDefault(__webpack_require__(/*! ./request.js */ 22));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} /**
+                                                                                                                                                              * @name: start-school
+                                                                                                                                                              * @author: chuanchuan
+                                                                                                                                                              * @date: 2022-07-06 16:58
+                                                                                                                                                              * @description：请求咨询帮助页数据
+                                                                                                                                                              * @update: 2022-07-06 16:58
+                                                                                                                                                              */ // 查询咨询帮助页  /wechat/help/list
+var getHelpList = function getHelpList(_ref) {var pageSize = _ref.pageSize,pageNum = _ref.pageNum;return _request.default.request({ url: '/wechat/help/list', method: 'POST',
+    header: {
+      "Content-Type": "application/json" },
+
+    data: {
+      pageNum: pageNum,
+      pageSize: pageSize } });
+
+
+};exports.getHelpList = getHelpList;
+
 /***/ })
 
 }]);
