@@ -67,6 +67,14 @@
 				"navigationStyle": "custom",
 				"enablePullDownRefresh": false
 			}
+		},
+		{
+			"path": "pages/cnosulting-help/consulting-help",
+			"style": {
+				"navigationBarTitleText": "cnosulting-help",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
 		}
 	],
 	"globalStyle": {
@@ -77,21 +85,27 @@
 	},
 	"tabBar": {
 		"custom": true,
-		"list": [{
-			"pagePath": "pages/index/index",
-			"text": "首页"
-		}, {
-			"pagePath": "pages/interview-question/interview-question",
-			"text": "刷面试题"
-		}, {
-			"pagePath": "pages/interview-process/interview-process",
-			"text": "面试流程"
-		}, {
-			"pagePath": "pages/my-contract/my-contract",
-			"text": "我的协议"
-		}, {
-			"pagePath": "pages/my-card/my-card",
-			"text": "我的名片"
-		}]
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/interview-question/interview-question",
+				"text": "刷面试题"
+			},
+			{
+				"pagePath": "pages/interview-process/interview-process",
+				"text": "面试流程"
+			},
+			{
+				"pagePath": "pages/my-contract/my-contract",
+				"text": "我的协议"
+			},
+			{
+				"pagePath": "pages/my-card/my-card",
+				"text": "我的名片"
+			}
+		]
 	}
 }

@@ -8,7 +8,7 @@
 
 <template>
   <view class="notice">
-    <view class="notice-item" v-for="(item, index) in noticeList" :key="item.noticeId">
+    <view class="notice-item" v-for="(item) in noticeList" :key="item.noticeId">
       <view class="notice-main">
         <block>
           <image class="notice-img" src="../../../static/imgs/upgrade.png"></image>

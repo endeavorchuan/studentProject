@@ -20,7 +20,7 @@
       <image class="item-bg" :src="mangaList.imgUrl"></image>
       <view class="item-text">{{ mangaList.name }}</view>
     </view>
-    <view class="list-item">
+    <view class="list-item" @tap="goHelp">
       <image class="item-bg" src="../../../static/imgs/service.png"></image>
       <view class="item-text">咨询帮助</view>
     </view>
@@ -40,6 +40,14 @@ export default {
         imgUrl: '/static/imgs/sign-in.png',
         name: '我的协议'
       }
+    }
+  },
+  methods: {
+    goHelp () {
+      console.log('1')
+      uni.navigateTo({
+        url: '/pages/cnosulting-help/consulting-help'
+      })
     }
   }
 }
