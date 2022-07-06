@@ -1,36 +1,53 @@
 <template>
   <view class="cosulting-help">
-    咨询帮助
+    <MyHeader title="咨询帮助"></MyHeader>
+    <view class="help-content">
+      <view class="help-item">
+        <image class="image-address" src="../../static/imgs/address.png"></image>
+        <view class="item-main">
+          <view class="main-title">赵老师</view>
+          <view class="main-phone">18922298278</view>
+        </view>
+        <image class="image-phone" src="../../static/imgs/phone.png"></image>
+      </view>
+    </view>
+
+     <view class="help-content">
+      <view class="help-item">
+        <image class="image-address" src="../../static/imgs/address.png"></image>
+        <view class="item-main">
+          <view class="main-title">赵老师</view>
+          <view class="main-phone">18922298278</view>
+        </view>
+        <image class="image-phone" src="../../static/imgs/phone.png"></image>
+      </view>
+    </view>
+     <view class="help-content">
+      <view class="help-item">
+        <image class="image-address" src="../../static/imgs/address.png"></image>
+        <view class="item-main">
+          <view class="main-title">赵老师</view>
+          <view class="main-phone">18922298278</view>
+        </view>
+        <image class="image-phone" src="../../static/imgs/phone.png"></image>
+      </view>
+    </view>
+
+    <view class="help-content">暂无数据...</view>
+    <view class="help-sure">确认</view>
   </view>
 </template>
 
 <script>
-export default {
-  components: {},
-  data: () => ({}),
-  computed: {},
-  methods: {},
-  watch: {},
+import MyHeader from '@/components/start-school/my-header/my-header.vue'
 
-  // 页面周期函数--监听页面加载
-  onLoad() {},
-  // 页面周期函数--监听页面初次渲染完成
-  onReady() {},
-  // 页面周期函数--监听页面显示(not-nvue)
-  onShow() {},
-  // 页面周期函数--监听页面隐藏
-  onHide() {},
-  // 页面周期函数--监听页面卸载
-  onUnload() {},
-  // 页面处理函数--监听用户下拉动作
-  // onPullDownRefresh() { uni.stopPullDownRefresh(); },
-  // 页面处理函数--监听用户上拉触底
-  // onReachBottom() {},
-  // 页面处理函数--监听页面滚动(not-nvue)
-  // onPageScroll(event) {},
-  // 页面处理函数--用户点击右上角分享
-  // onShareAppMessage(options) {},
+export default {
+  components: {
+    MyHeader
+  }
 } 
 </script>
 
-<style scoped></style>
+<style scoped>
+@import './css/consulting.css'
+</style>

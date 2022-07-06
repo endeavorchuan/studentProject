@@ -1,0 +1,62 @@
+.cosulting-help {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f3f4f6;
+}
+
+.help-content {
+    background-color: #fff;
+}
+
+.help-item {
+    display: flex;
+    align-items: center;
+    padding: 40rpx;
+    border-bottom: 2rpx solid #f3f4f6;
+    box-sizing: border-box;
+}
+
+.image-address,
+.image-phone {
+    width: 33rpx;
+    height: 36rpx;
+}
+
+.item-phone {
+    padding: 20rpx;
+}
+
+.item-main {
+    flex: 1;
+    padding: 0 20rpx;
+}
+
+.main-title {
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #333;
+    padding-bottom: 20rpx;
+}
+
+.main-phone {
+    font-size: 24rpx;
+    font-weight: 400;
+    color: #999;
+    padding-bottom: 20rpx;
+    opacity: 0.8;
+}
+
+.help-sure {
+    width: 420rpx;
+    height: 80rpx;
+    background: #0066ff;
+    text-align: center;
+    line-height: 80rpx;
+    border-radius: 40rpx;
+    font-size: 30rpx;
+    font-weight: 400;
+    position: absolute;
+    left: 50%;
+    bottom: 100rpx;
+    transform: translateX(-50%);
+}
