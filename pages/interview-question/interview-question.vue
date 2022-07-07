@@ -32,14 +32,20 @@
 import MyHeader from '@/components/start-school/my-header/my-header'
 import MyTabbar from '@/components/tabbar/my-tabbar.vue'
 import QuestionCommidtyVue from '@/components/interview-question/question-commidty/question-commidty.vue'
+import {getQuestionTypeList} from '@/service/question.js'
 
 export default {
   name: "interview-question",
   data() {
     return {
       selected: 1,
-      clientHeight: null
+      clientHeight: null,
+      pageNum: 1,
+      pageSize: 10
     }
+  },
+  onLoad() {
+    this.__init()
   },
   onReady() {
     uni.getSystemInfo({
@@ -55,6 +61,16 @@ export default {
           })
         }
       })
+  },
+  methods: {
+    async __init () {
+      const data = {
+        pageNum: this.pageNum,
+        pageSize: this.pageSize 
+      }
+      const res = await getQuestionTypeList(data)
+      console.log(res)
+    }
   },
   components: {
     MyHeader,

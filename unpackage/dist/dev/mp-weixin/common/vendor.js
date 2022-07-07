@@ -9198,6 +9198,41 @@ internalMixin(Vue);
 
 /***/ }),
 
+/***/ 31:
+/*!********************************************************************************************!*\
+  !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/service/question.js ***!
+  \********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.getQuestionTypeList = void 0;
+
+
+
+
+
+
+
+var _request = _interopRequireDefault(__webpack_require__(/*! ./request.js */ 22));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} /**
+                                                                                                                                                              * @name: question
+                                                                                                                                                              * @author: chuanchuan
+                                                                                                                                                              * @date: 2022-07-07 11:58
+                                                                                                                                                              * @description：请求面试题的信息
+                                                                                                                                                              * @update: 2022-07-07 11:58
+                                                                                                                                                              */ // 查询面试题 /wechat/questions/typeList
+var getQuestionTypeList = function getQuestionTypeList(_ref) {var pageNum = _ref.pageNum,pageSize = _ref.pageSize;return _request.default.request({ url: '/wechat/questions/typeList', method: 'POST', header: {
+      "Content-Type": "application/json" },
+
+    data: {
+      pageNum: pageNum,
+      pageSize: pageSize } });
+
+
+};exports.getQuestionTypeList = getQuestionTypeList;
+
+/***/ }),
+
 /***/ 4:
 /*!*************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-i18n/dist/uni-i18n.es.js ***!
@@ -9673,7 +9708,7 @@ function resolveLocaleChain(locale) {
 
 /***/ }),
 
-/***/ 65:
+/***/ 66:
 /*!************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/service/start-school.js ***!
   \************************************************************************************************/
@@ -9723,7 +9758,7 @@ exports.getExcellentList = getExcellentList;var getNoticeList = function getNoti
 
 /***/ }),
 
-/***/ 82:
+/***/ 83:
 /*!****************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/service/help.js ***!
   \****************************************************************************************/
