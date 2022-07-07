@@ -75,6 +75,16 @@
 				"navigationStyle": "custom",
 				"enablePullDownRefresh": false
 			}
+		},
+		{
+			"path": "pages/subject/subject",
+			"style": {
+				"navigationBarTitleText": "subject",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false,
+				"backgroundColor": "#f0f3f7",
+				"scrollIndicator": "none"
+			}
 		}
 	],
 	"globalStyle": {

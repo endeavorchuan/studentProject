@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "subject",
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": false,
+  "backgroundColor": "#f0f3f7",
+  "scrollIndicator": "none",
+  "usingComponents": {
+    "my-header": "/components/start-school/my-header/my-header"
+  }
+}
