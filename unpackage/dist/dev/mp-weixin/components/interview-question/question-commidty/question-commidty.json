@@ -1,6 +1,6 @@
 {
+  "component": true,
   "usingComponents": {
     "question-item": "/components/interview-question/question-item/question-item"
-  },
-  "component": true
+  }
 }

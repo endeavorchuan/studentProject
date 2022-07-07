@@ -17,8 +17,8 @@
         <image class="question-search" src="../../static/imgs/search.png"></image>
       </view>
       <!-- 主区域 -->
-      <scroll-view scroll-y="true">
-        <view class="commidty">
+      <scroll-view class="scroll-view" scroll-y="true" :style="'height:'+clientHeight+'px;'">
+        <view class="commidty" :style="'height:'+clientHeight+'px;'">
           <QuestionCommidtyVue></QuestionCommidtyVue>
         </view>
       </scroll-view>
@@ -37,8 +37,24 @@ export default {
   name: "interview-question",
   data() {
     return {
-      selected: 1
+      selected: 1,
+      clientHeight: null
     }
+  },
+  onReady() {
+    uni.getSystemInfo({
+        success: (res) => {
+          // 获取头部的高度，select里面的参数如css选择器一样选择元素
+          let info = uni.createSelectorQuery().in(this).select(".question-header")
+          info.boundingClientRect((data) => {
+            // data包含元素的高度信息
+            // data.height 是头部的高度，68是tabbar的高度
+            this.clientHeight = res.windowHeight - data.height - 68 - 80
+          }).exec(function (res){
+            // 这个方法必须执行，即使什么也不做，否则不会获取到信息
+          })
+        }
+      })
   },
   components: {
     MyHeader,
