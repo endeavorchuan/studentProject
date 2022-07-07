@@ -11,7 +11,7 @@
     <view class="nav_top">
       <view class="status-bar"></view>
       <view class="topContent">
-        <view class="goBack" @click="goTo">
+        <view class="goBack" @click="goTo" v-if="backShow">
           <slot name="left">
             <image class="image" src="../../../static/imgs/arrow.png"></image>
           </slot>
@@ -36,6 +36,10 @@ export default {
     title: {
       type: String,
       default: ''
+    },
+    backShow: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {

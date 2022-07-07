@@ -8,7 +8,7 @@
 
 <template>
   <view class="interview-question">
-    <MyHeader title="面试题"></MyHeader>
+    <MyHeader title="面试题" :backShow="false"></MyHeader>
 
     <view class="question-content">
       <!-- 搜索区域 -->
