@@ -1,7 +1,7 @@
 <!--
  * @Author: 初浩诚
  * @Date: 2022-07-07 11:12:03
- * @LastEditTime: 2022-07-07 11:21:15
+ * @LastEditTime: 2022-07-07 15:24:17
  * @LastEditors: 初浩诚
  * @Description: 
  * @FilePath: /studentProject/components/interview-question/question-item/question-item.vue
@@ -10,10 +10,10 @@
 
 <template>
   <view class="question-item">
-    <image class="item-img" src="../../../static/imgs/trophy.png"></image>
+    <image class="item-img" :src="item.imgUrl"></image>
     <view class="item-text">
-      <view class="item-title">HTML</view>
-      <view class="item-tips">HTML高频面试题</view>
+      <view class="item-title">{{ item.title }}</view>
+      <view class="item-tips">{{ item.source }}</view>
     </view>
     <view class="item-start">开始刷题</view>
   </view>
@@ -21,7 +21,12 @@
 
 <script>
 export default {
-
+  props: {
+    item: {
+      type: Object,
+      default: []
+    }
+  }
 }
 </script>
 

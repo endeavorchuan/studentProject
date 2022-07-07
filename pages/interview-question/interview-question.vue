@@ -19,7 +19,7 @@
       <!-- 主区域 -->
       <scroll-view class="scroll-view" scroll-y="true" :style="'height:'+clientHeight+'px;'">
         <view class="commidty" :style="'height:'+clientHeight+'px;'">
-          <QuestionCommidtyVue></QuestionCommidtyVue>
+          <QuestionCommidty :dataList="dataList"></QuestionCommidty>
         </view>
       </scroll-view>
     </view>
@@ -31,7 +31,7 @@
 <script>
 import MyHeader from '@/components/start-school/my-header/my-header'
 import MyTabbar from '@/components/tabbar/my-tabbar.vue'
-import QuestionCommidtyVue from '@/components/interview-question/question-commidty/question-commidty.vue'
+import QuestionCommidty from '@/components/interview-question/question-commidty/question-commidty.vue'
 import {getQuestionTypeList} from '@/service/question.js'
 
 export default {
@@ -41,7 +41,8 @@ export default {
       selected: 1,
       clientHeight: null,
       pageNum: 1,
-      pageSize: 10
+      pageSize: 10,
+      dataList: []
     }
   },
   onLoad() {
@@ -69,13 +70,13 @@ export default {
         pageSize: this.pageSize 
       }
       const res = await getQuestionTypeList(data)
-      console.log(res)
+      this.dataList = res.slice(0, 9)
     }
   },
   components: {
     MyHeader,
     MyTabbar,
-    QuestionCommidtyVue
+    QuestionCommidty
   }
 }
 </script>

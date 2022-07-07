@@ -134,6 +134,12 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 {
+  props: {
+    dataList: {
+      type: Array,
+      default: [] } },
+
+
   components: {
     QuestionItem: QuestionItem } };exports.default = _default;
 
