@@ -130,7 +130,8 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var MyHeader = function MyHeader() {__webpack_require__.e(/*! require.ensure | components/start-school/my-header/my-header */ "components/start-school/my-header/my-header").then((function () {return resolve(__webpack_require__(/*! @/components/start-school/my-header/my-header */ 99));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var MyTabbar = function MyTabbar() {__webpack_require__.e(/*! require.ensure | components/tabbar/my-tabbar */ "components/tabbar/my-tabbar").then((function () {return resolve(__webpack_require__(/*! @/components/tabbar/my-tabbar.vue */ 85));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var MyHeader = function MyHeader() {__webpack_require__.e(/*! require.ensure | components/start-school/my-header/my-header */ "components/start-school/my-header/my-header").then((function () {return resolve(__webpack_require__(/*! @/components/start-school/my-header/my-header */ 99));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var MyTabbar = function MyTabbar() {__webpack_require__.e(/*! require.ensure | components/tabbar/my-tabbar */ "components/tabbar/my-tabbar").then((function () {return resolve(__webpack_require__(/*! @/components/tabbar/my-tabbar.vue */ 85));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var QuestionCommidtyVue = function QuestionCommidtyVue() {__webpack_require__.e(/*! require.ensure | components/interview-question/question-commidty/question-commidty */ "components/interview-question/question-commidty/question-commidty").then((function () {return resolve(__webpack_require__(/*! @/components/interview-question/question-commidty/question-commidty.vue */ 106));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
 
 
 
@@ -173,7 +174,8 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   },
   components: {
     MyHeader: MyHeader,
-    MyTabbar: MyTabbar } };exports.default = _default;
+    MyTabbar: MyTabbar,
+    QuestionCommidtyVue: QuestionCommidtyVue } };exports.default = _default;
 
 /***/ }),
 

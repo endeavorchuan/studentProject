@@ -5,6 +5,7 @@
   "enablePullDownRefresh": false,
   "usingComponents": {
     "my-header": "/components/start-school/my-header/my-header",
-    "my-tabbar": "/components/tabbar/my-tabbar"
+    "my-tabbar": "/components/tabbar/my-tabbar",
+    "question-commidty-vue": "/components/interview-question/question-commidty/question-commidty"
   }
 }

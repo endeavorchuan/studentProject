@@ -19,7 +19,7 @@
       <!-- 主区域 -->
       <scroll-view scroll-y="true">
         <view class="commidty">
-          板块组件
+          <QuestionCommidtyVue></QuestionCommidtyVue>
         </view>
       </scroll-view>
     </view>
@@ -31,6 +31,7 @@
 <script>
 import MyHeader from '@/components/start-school/my-header/my-header'
 import MyTabbar from '@/components/tabbar/my-tabbar.vue'
+import QuestionCommidtyVue from '@/components/interview-question/question-commidty/question-commidty.vue'
 
 export default {
   name: "interview-question",
@@ -41,7 +42,8 @@ export default {
   },
   components: {
     MyHeader,
-    MyTabbar
+    MyTabbar,
+    QuestionCommidtyVue
   }
 }
 </script>
