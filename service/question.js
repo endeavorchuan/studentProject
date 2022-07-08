@@ -38,3 +38,11 @@ export const getQuestionList = ({pageNum, pageSize, typeId}) => {
         }
     })
 }
+
+// 获取面试题总条数  /wechat/questions/selQuestionNum/{typeId}
+export const getQuestionNum = ({typeId}) => {
+    return $http.request({
+        url: '/wechat/questions/selQuestionNum/' + typeId,
+        method: 'GET'
+    })
+}

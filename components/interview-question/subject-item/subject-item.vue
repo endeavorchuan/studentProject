@@ -1,7 +1,7 @@
 <!--
  * @Author: 初浩诚
  * @Date: 2022-07-07 16:26:45
- * @LastEditTime: 2022-07-08 14:51:39
+ * @LastEditTime: 2022-07-08 17:45:45
  * @LastEditors: 初浩诚
  * @Description: 
  * @FilePath: /studentProject/components/interview-question/subject-item/subject-item.vue
@@ -11,7 +11,7 @@
 <template>
   <view class="swiper-item">
     <view class="item-title">
-      <text>1. {{ item.title }}</text>
+      <text>{{ index+1 }}. {{ item.title }}</text>
       <view v-if="item.content">
         <MDParserHighlight class="answer" :resource="item.content"></MDParserHighlight>
       </view>
@@ -42,6 +42,10 @@ export default {
     item: {
       type: Object,
       default: {}
+    },
+    index: {
+      type: Number,
+      default: 0
     }
   },
   components: {

@@ -157,7 +157,11 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   props: {
     item: {
       type: Object,
-      default: {} } },
+      default: {} },
+
+    index: {
+      type: Number,
+      default: 0 } },
 
 
   components: {

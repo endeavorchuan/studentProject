@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import MyHeader from '@/components/start-school/my-header/my-header'
+import MyHeader from '@/components/start-school/my-header/my-header.vue'
 import MyTabbar from '@/components/tabbar/my-tabbar.vue'
 import QuestionCommidty from '@/components/interview-question/question-commidty/question-commidty.vue'
 import {getQuestionTypeList} from '@/service/question.js'

@@ -1,7 +1,7 @@
 <!--
  * @Author: 初浩诚
  * @Date: 2022-07-07 15:27:51
- * @LastEditTime: 2022-07-08 15:05:01
+ * @LastEditTime: 2022-07-08 18:04:12
  * @LastEditors: 初浩诚
  * @Description: 
  * @FilePath: /studentProject/pages/subject/subject.vue
@@ -13,20 +13,20 @@
     <view class="subject-content">
       <view class="subject-common">
         <view class="dots">
-          <text>1/20</text>
+          <text>{{ topSwiperIndex+1 }}/{{ totalNum }}</text>
         </view>
-        <swiper class="swiper" :style="'height:'+clientHeight+'px;'">
+        <swiper :current="topSwiperIndex" @change="toSwiperTab" class="swiper" :style="'height:'+clientHeight+'px;'">
           <swiper-item v-for="(item, index) in toSwiper" :key="index">
             <scroll-view class="scroll-view" scroll-y="true" :style="'height:'+clientHeight+'px;'">
-              <SubjectItem :item="item"></SubjectItem>
+              <SubjectItem :item="item" :index="topSwiperIndex"></SubjectItem>
             </scroll-view>
           </swiper-item>
         </swiper>
       </view>
     </view>
     <view class="subject-check">
-      <view class="last">上一题</view>
-      <view class="next">下一题</view>
+      <view @tap="goBefore" class="last">上一题</view>
+      <view @tap="goNext" class="next">下一题</view>
     </view>
   </view>
 </template>
@@ -34,7 +34,7 @@
 <script>
 import MyHeader from '@/components/start-school/my-header/my-header.vue'
 import SubjectItem from '@/components/interview-question/subject-item/subject-item.vue'
-import { getQuestionList } from '@/service/question'
+import { getQuestionList, getQuestionNum } from '@/service/question.js'
 
 export default {
   components: {
@@ -45,7 +45,12 @@ export default {
     return {
       clientHeight: 0,
       typeId: 0,
-      toSwiper: []
+      toSwiper: [],
+      totalNum: 0,
+      topSwiperIndex: 0,
+      currentNum: 0,
+      pageSize: 10,
+      pageNum: 1
     }
   },
   onReady() {
@@ -77,6 +82,7 @@ export default {
     // 获取类型id
     this.typeId = options.typeId
     this.__init()
+    this.getTotal()
   },
   methods: {
     // 获取可视区域的高度
@@ -92,8 +98,65 @@ export default {
         typeId: this.typeId
       }
       const res = await getQuestionList(data)
+      this.currentNum += res.length
       this.toSwiper.push(...res)
-      console.log(this.toSwiper)
+      console.log(res)
+    },
+    // 获取面试题总条数
+    async getTotal () {
+      const data = {
+        typeId: this.typeId
+      }
+      const res = await getQuestionNum(data)
+      this.totalNum = res.questionNum
+    },
+    // 滑动轮播触发改变
+    toSwiperTab (e) {
+      this.topSwiperIndex = Number(e.target.current)
+      const current = this.topSwiperIndex + 1
+      if (current === this.currentNum - 1) {
+        // 继续请求
+        this.continueReq()
+      } else if (current === this.totalNum) {
+        uni.showToast({
+          title: '等待更新',
+          icon: 'none'
+        })
+      }
+      return
+    },
+    // 继续请求数据
+    continueReq () {
+      this.pageNum += 1
+      if (this.totalNum === this.toSwiper.length)
+        return
+      this.__init()
+    },
+    // 上一题按钮
+    goBefore () {
+      if (this.topSwiperIndex === 0) {
+        uni.showToast({
+          title: '已经是第一题了',
+          icon: 'none'
+        })
+        return
+      }
+      this.topSwiperIndex -= 1
+    },
+    // 下一题按钮
+    goNext () {
+      if (this.topSwiperIndex === this.totalNum - 1) {
+        uni.showToast({
+          title: '已经是最后一题了',
+          icon: 'none'
+        })
+        return
+      } else {
+        this.topSwiperIndex += 1
+        if (this.topSwiperIndex === this.toSwiper.length - 1) {
+          this.continueReq()
+        }
+      }
     }
   },
 } 

@@ -177,7 +177,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _startSchool = __webpack_require__(/*! @/service/start-school.js */ 66);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var MyHeader = function MyHeader() {__webpack_require__.e(/*! require.ensure | components/start-school/my-header/my-header */ "components/start-school/my-header/my-header").then((function () {return resolve(__webpack_require__(/*! @/components/start-school/my-header/my-header.vue */ 108));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var MangaList = function MangaList() {__webpack_require__.e(/*! require.ensure | components/start-school/manga-list/manga-list */ "components/start-school/manga-list/manga-list").then((function () {return resolve(__webpack_require__(/*! @/components/start-school/manga-list/manga-list.vue */ 122));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var CelebrityList = function CelebrityList() {__webpack_require__.e(/*! require.ensure | components/start-school/celebrity-list/celebrity-list */ "components/start-school/celebrity-list/celebrity-list").then((function () {return resolve(__webpack_require__(/*! @/components/start-school/celebrity-list/celebrity-list.vue */ 129));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Notice = function Notice() {__webpack_require__.e(/*! require.ensure | components/start-school/notice/notice */ "components/start-school/notice/notice").then((function () {return resolve(__webpack_require__(/*! @/components/start-school/notice/notice.vue */ 134));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
+
+
+
+
+
+
+var _getStartSchool = __webpack_require__(/*! @/service/get-start-school.js */ 66);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var MyHeader = function MyHeader() {__webpack_require__.e(/*! require.ensure | components/start-school/my-header/my-header */ "components/start-school/my-header/my-header").then((function () {return resolve(__webpack_require__(/*! @/components/start-school/my-header/my-header.vue */ 108));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var MangaList = function MangaList() {__webpack_require__.e(/*! require.ensure | components/start-school/manga-list/manga-list */ "components/start-school/manga-list/manga-list").then((function () {return resolve(__webpack_require__(/*! @/components/start-school/manga-list/manga-list.vue */ 122));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var CelebrityList = function CelebrityList() {__webpack_require__.e(/*! require.ensure | components/start-school/celebrity-list/celebrity-list */ "components/start-school/celebrity-list/celebrity-list").then((function () {return resolve(__webpack_require__(/*! @/components/start-school/celebrity-list/celebrity-list.vue */ 129));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Notice = function Notice() {__webpack_require__.e(/*! require.ensure | components/start-school/notice/notice */ "components/start-school/notice/notice").then((function () {return resolve(__webpack_require__(/*! @/components/start-school/notice/notice.vue */ 134));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 {
   name: "start-school",
   data: function data() {
@@ -216,9 +225,9 @@ var _startSchool = __webpack_require__(/*! @/service/start-school.js */ 66);func
                   pageNum: _this.pageNum,
                   pageSize: _this.pageSize };_context.next = 3;return (
 
-                  (0, _startSchool.getExcellentList)(data));case 3:res = _context.sent;
+                  (0, _getStartSchool.getExcellentList)(data));case 3:res = _context.sent;
                 _this.excellentList = res.slice(0, 3);_context.next = 7;return (
-                  (0, _startSchool.getNoticeList)(data));case 7:_this.noticeList = _context.sent;case 8:case "end":return _context.stop();}}}, _callee);}))();
+                  (0, _getStartSchool.getNoticeList)(data));case 7:_this.noticeList = _context.sent;case 8:case "end":return _context.stop();}}}, _callee);}))();
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

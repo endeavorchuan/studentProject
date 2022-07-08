@@ -12377,7 +12377,7 @@ internalMixin(Vue);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.getQuestionList = exports.getQuestionTypeList = void 0;
+Object.defineProperty(exports, "__esModule", { value: true });exports.getQuestionNum = exports.getQuestionList = exports.getQuestionTypeList = void 0;
 
 
 
@@ -12416,7 +12416,15 @@ exports.getQuestionTypeList = getQuestionTypeList;var getQuestionList = function
       typeId: typeId } });
 
 
-};exports.getQuestionList = getQuestionList;
+};
+
+// 获取面试题总条数  /wechat/questions/selQuestionNum/{typeId}
+exports.getQuestionList = getQuestionList;var getQuestionNum = function getQuestionNum(_ref3) {var typeId = _ref3.typeId;
+  return _request.default.request({
+    url: '/wechat/questions/selQuestionNum/' + typeId,
+    method: 'GET' });
+
+};exports.getQuestionNum = getQuestionNum;
 
 /***/ }),
 
@@ -12896,9 +12904,9 @@ function resolveLocaleChain(locale) {
 /***/ }),
 
 /***/ 66:
-/*!************************************************************************************************!*\
-  !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/service/start-school.js ***!
-  \************************************************************************************************/
+/*!****************************************************************************************************!*\
+  !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/service/get-start-school.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

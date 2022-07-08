@@ -1,4 +1,13 @@
 <!--
+ * @Author: 初浩诚
+ * @Date: 2022-06-27 19:33:52
+ * @LastEditTime: 2022-07-08 17:29:20
+ * @LastEditors: 初浩诚
+ * @Description: 
+ * @FilePath: /studentProject/pages/start-school/start-school.vue
+ * 版权声明
+-->
+<!--
 * @name: start-school
 * @author: chuanchuan
 * @date: 2022-06-27 19:33
@@ -45,7 +54,7 @@ import MyHeader from '@/components/start-school/my-header/my-header.vue'
 import MangaList from '@/components/start-school/manga-list/manga-list.vue'
 import CelebrityList from '@/components/start-school/celebrity-list/celebrity-list.vue'
 import Notice from '@/components/start-school/notice/notice.vue'
-import {getExcellentList, getNoticeList} from '@/service/start-school.js'
+import {getExcellentList, getNoticeList} from '@/service/get-start-school.js'
 export default {
   name: "start-school",
   data () {
