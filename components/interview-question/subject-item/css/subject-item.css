@@ -1,0 +1,47 @@
+.swiper-item {
+    margin-top: 60rpx;
+    margin-bottom: 100rpx;
+}
+
+.item-title {
+    width: 100%;
+    height: 100%;
+    font-size: 30rpx;
+    padding: 0 20rpx;
+    font-weight: normal;
+    color: #344356;
+    box-sizing: border-box;
+}
+
+.item-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+}
+
+.item-result {
+    display: flex;
+}
+
+.item-img {
+    width: 45rpx;
+    height: 44rpx;
+}
+
+.result {
+    width: 576rpx;
+    font-size: 32rpx;
+    font-weight: 400;
+    color: #333;
+    padding-left: 10rpx;
+}
+
+.answer {
+    box-sizing: border-box;
+    border: 2rpx solid transparent;
+}
+
+.parsing {
+    box-sizing: border-box;
+}

@@ -112,7 +112,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var Celebrity = function Celebrity() {__webpack_require__.e(/*! require.ensure | components/start-school/celebrity-list/celebrity/celebrity */ "components/start-school/celebrity-list/celebrity/celebrity").then((function () {return resolve(__webpack_require__(/*! @/components/start-school/celebrity-list/celebrity/celebrity.vue */ 155));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var Celebrity = function Celebrity() {__webpack_require__.e(/*! require.ensure | components/start-school/celebrity-list/celebrity/celebrity */ "components/start-school/celebrity-list/celebrity/celebrity").then((function () {return resolve(__webpack_require__(/*! @/components/start-school/celebrity-list/celebrity/celebrity.vue */ 162));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 

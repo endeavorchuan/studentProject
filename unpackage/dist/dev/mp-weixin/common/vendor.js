@@ -2229,6 +2229,2434 @@ function normalizeComponent (
 
 /***/ }),
 
+/***/ 174:
+/*!****************************************************************************************************************************!*\
+  !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/assets/marked.min.js ***!
+  \****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * marked - a markdown parser
+ * Copyright (c) 2011-2020, Christopher Jeffrey. (MIT Licensed)
+ * https://github.com/markedjs/marked
+ */
+!function (e, t) { true ? module.exports = t() : undefined;}(this, function () {"use strict";function s(e, t) {for (var n = 0; n < t.length; n++) {var r = t[n];r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r);}}function i(e, t) {(null == t || t > e.length) && (t = e.length);for (var n = 0, r = new Array(t); n < t; n++) {r[n] = e[n];}return r;}function g(e, t) {var n;if ("undefined" != typeof Symbol && null != e[Symbol.iterator]) return (n = e[Symbol.iterator]()).next.bind(n);if (Array.isArray(e) || (n = function (e, t) {if (e) {if ("string" == typeof e) return i(e, t);var n = Object.prototype.toString.call(e).slice(8, -1);return "Object" === n && e.constructor && (n = e.constructor.name), "Map" === n || "Set" === n ? Array.from(e) : "Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? i(e, t) : void 0;}}(e)) || t && e && "number" == typeof e.length) {n && (e = n);var r = 0;return function () {return r >= e.length ? { done: !0 } : { done: !1, value: e[r++] };};}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function n(e) {return c[e];}var e,t = (function (t) {function e() {return { baseUrl: null, breaks: !1, gfm: !0, headerIds: !0, headerPrefix: "", highlight: null, langPrefix: "language-", mangle: !0, pedantic: !1, renderer: null, sanitize: !1, sanitizer: null, silent: !1, smartLists: !1, smartypants: !1, tokenizer: null, walkTokens: null, xhtml: !1 };}t.exports = { defaults: e(), getDefaults: e, changeDefaults: function changeDefaults(e) {t.exports.defaults = e;} };}(e = { exports: {} }), e.exports),r = (t.defaults, t.getDefaults, t.changeDefaults, /[&<>"']/),l = /[&<>"']/g,a = /[<>"']|&(?!#?\w+;)/,o = /[<>"']|&(?!#?\w+;)/g,c = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" };var u = /&(#(?:\d+)|(?:#x[0-9A-Fa-f]+)|(?:\w+));?/gi;function p(e) {return e.replace(u, function (e, t) {return "colon" === (t = t.toLowerCase()) ? ":" : "#" === t.charAt(0) ? "x" === t.charAt(1) ? String.fromCharCode(parseInt(t.substring(2), 16)) : String.fromCharCode(+t.substring(1)) : "";});}var h = /(^|[^\[])\^/g;var f = /[^\w:]/g,d = /^$|^[a-z][a-z0-9+.-]*:|^[?#]/i;var k = {},b = /^[^:]+:\/*[^/]*$/,m = /^([^:]+:)[\s\S]*$/,x = /^([^:]+:\/*[^/]*)[\s\S]*$/;function v(e, t) {k[" " + e] || (b.test(e) ? k[" " + e] = e + "/" : k[" " + e] = w(e, "/", !0));var n = -1 === (e = k[" " + e]).indexOf(":");return "//" === t.substring(0, 2) ? n ? t : e.replace(m, "$1") + t : "/" === t.charAt(0) ? n ? t : e.replace(x, "$1") + t : e + t;}function w(e, t, n) {var r = e.length;if (0 === r) return "";for (var i = 0; i < r;) {var s = e.charAt(r - i - 1);if (s !== t || n) {if (s === t || !n) break;i++;} else i++;}return e.substr(0, r - i);}var _ = function _(e, t) {if (t) {if (r.test(e)) return e.replace(l, n);} else if (a.test(e)) return e.replace(o, n);return e;},y = p,z = function z(n, e) {n = n.source || n, e = e || "";var r = { replace: function replace(e, t) {return t = (t = t.source || t).replace(h, "$1"), n = n.replace(e, t), r;}, getRegex: function getRegex() {return new RegExp(n, e);} };return r;},S = function S(e, t, n) {if (e) {var r;try {r = decodeURIComponent(p(n)).replace(f, "").toLowerCase();} catch (e) {return null;}if (0 === r.indexOf("javascript:") || 0 === r.indexOf("vbscript:") || 0 === r.indexOf("data:")) return null;}t && !d.test(n) && (n = v(t, n));try {n = encodeURI(n).replace(/%25/g, "%");} catch (e) {return null;}return n;},$ = { exec: function exec() {} },A = function A(e) {for (var t, n, r = 1; r < arguments.length; r++) {for (n in t = arguments[r]) {Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n]);}}return e;},R = function R(e, t) {var n = e.replace(/\|/g, function (e, t, n) {for (var r = !1, i = t; 0 <= --i && "\\" === n[i];) {r = !r;}return r ? "|" : " |";}).split(/ \|/),r = 0;if (n.length > t) n.splice(t);else for (; n.length < t;) {n.push("");}for (; r < n.length; r++) {n[r] = n[r].trim().replace(/\\\|/g, "|");}return n;},T = function T(e, t) {if (-1 === e.indexOf(t[1])) return -1;for (var n = e.length, r = 0, i = 0; i < n; i++) {if ("\\" === e[i]) i++;else if (e[i] === t[0]) r++;else if (e[i] === t[1] && --r < 0) return i;}return -1;},I = function I(e) {e && e.sanitize && !e.silent && console.warn("marked(): sanitize and sanitizer parameters are deprecated since version 0.7.0, should not be used and will be removed in the future. Read more here: https://marked.js.org/#/USING_ADVANCED.md#options");},Z = t.defaults,q = w,O = R,C = _,U = T;function j(e, t, n) {var r = t.href,i = t.title ? C(t.title) : null,s = e[1].replace(/\\([\[\]])/g, "$1");return "!" !== e[0].charAt(0) ? { type: "link", raw: n, href: r, title: i, text: s } : { type: "image", raw: n, href: r, title: i, text: C(s) };}var E = function () {function e(e) {this.options = e || Z;}var t = e.prototype;return t.space = function (e) {var t = this.rules.block.newline.exec(e);if (t) return 1 < t[0].length ? { type: "space", raw: t[0] } : { raw: "\n" };}, t.code = function (e, t) {var n = this.rules.block.code.exec(e);if (n) {var r = t[t.length - 1];if (r && "paragraph" === r.type) return { raw: n[0], text: n[0].trimRight() };var i = n[0].replace(/^ {4}/gm, "");return { type: "code", raw: n[0], codeBlockStyle: "indented", text: this.options.pedantic ? i : q(i, "\n") };}}, t.fences = function (e) {var t = this.rules.block.fences.exec(e);if (t) {var n = t[0],r = function (e, t) {var n = e.match(/^(\s+)(?:```)/);if (null === n) return t;var r = n[1];return t.split("\n").map(function (e) {var t = e.match(/^\s+/);return null !== t && t[0].length >= r.length ? e.slice(r.length) : e;}).join("\n");}(n, t[3] || "");return { type: "code", raw: n, lang: t[2] ? t[2].trim() : t[2], text: r };}}, t.heading = function (e) {var t = this.rules.block.heading.exec(e);if (t) return { type: "heading", raw: t[0], depth: t[1].length, text: t[2] };}, t.nptable = function (e) {var t = this.rules.block.nptable.exec(e);if (t) {var n = { type: "table", header: O(t[1].replace(/^ *| *\| *$/g, "")), align: t[2].replace(/^ *|\| *$/g, "").split(/ *\| */), cells: t[3] ? t[3].replace(/\n$/, "").split("\n") : [], raw: t[0] };if (n.header.length === n.align.length) {for (var r = n.align.length, i = 0; i < r; i++) {/^ *-+: *$/.test(n.align[i]) ? n.align[i] = "right" : /^ *:-+: *$/.test(n.align[i]) ? n.align[i] = "center" : /^ *:-+ *$/.test(n.align[i]) ? n.align[i] = "left" : n.align[i] = null;}for (r = n.cells.length, i = 0; i < r; i++) {n.cells[i] = O(n.cells[i], n.header.length);}return n;}}}, t.hr = function (e) {var t = this.rules.block.hr.exec(e);if (t) return { type: "hr", raw: t[0] };}, t.blockquote = function (e) {var t = this.rules.block.blockquote.exec(e);if (t) {var n = t[0].replace(/^ *> ?/gm, "");return { type: "blockquote", raw: t[0], text: n };}}, t.list = function (e) {var t = this.rules.block.list.exec(e);if (t) {for (var n, r, i, s, l, a, o, c = t[0], u = t[2], p = 1 < u.length, h = ")" === u[u.length - 1], g = { type: "list", raw: c, ordered: p, start: p ? +u.slice(0, -1) : "", loose: !1, items: [] }, f = t[0].match(this.rules.block.item), d = !1, k = f.length, b = 0; b < k; b++) {r = (c = n = f[b]).length, ~(n = n.replace(/^ *([*+-]|\d+[.)]) */, "")).indexOf("\n ") && (r -= n.length, n = this.options.pedantic ? n.replace(/^ {1,4}/gm, "") : n.replace(new RegExp("^ {1," + r + "}", "gm"), "")), b !== k - 1 && (i = this.rules.block.bullet.exec(f[b + 1])[0], (p ? 1 === i.length || !h && ")" === i[i.length - 1] : 1 < i.length || this.options.smartLists && i !== u) && (s = f.slice(b + 1).join("\n"), g.raw = g.raw.substring(0, g.raw.length - s.length), b = k - 1)), l = d || /\n\n(?!\s*$)/.test(n), b !== k - 1 && (d = "\n" === n.charAt(n.length - 1), l = l || d), l && (g.loose = !0), o = void 0, (a = /^\[[ xX]\] /.test(n)) && (o = " " !== n[1], n = n.replace(/^\[[ xX]\] +/, "")), g.items.push({ type: "list_item", raw: c, task: a, checked: o, loose: l, text: n });}return g;}}, t.html = function (e) {var t = this.rules.block.html.exec(e);if (t) return { type: this.options.sanitize ? "paragraph" : "html", raw: t[0], pre: !this.options.sanitizer && ("pre" === t[1] || "script" === t[1] || "style" === t[1]), text: this.options.sanitize ? this.options.sanitizer ? this.options.sanitizer(t[0]) : C(t[0]) : t[0] };}, t.def = function (e) {var t = this.rules.block.def.exec(e);if (t) return t[3] && (t[3] = t[3].substring(1, t[3].length - 1)), { tag: t[1].toLowerCase().replace(/\s+/g, " "), raw: t[0], href: t[2], title: t[3] };}, t.table = function (e) {var t = this.rules.block.table.exec(e);if (t) {var n = { type: "table", header: O(t[1].replace(/^ *| *\| *$/g, "")), align: t[2].replace(/^ *|\| *$/g, "").split(/ *\| */), cells: t[3] ? t[3].replace(/\n$/, "").split("\n") : [] };if (n.header.length === n.align.length) {n.raw = t[0];for (var r = n.align.length, i = 0; i < r; i++) {/^ *-+: *$/.test(n.align[i]) ? n.align[i] = "right" : /^ *:-+: *$/.test(n.align[i]) ? n.align[i] = "center" : /^ *:-+ *$/.test(n.align[i]) ? n.align[i] = "left" : n.align[i] = null;}for (r = n.cells.length, i = 0; i < r; i++) {n.cells[i] = O(n.cells[i].replace(/^ *\| *| *\| *$/g, ""), n.header.length);}return n;}}}, t.lheading = function (e) {var t = this.rules.block.lheading.exec(e);if (t) return { type: "heading", raw: t[0], depth: "=" === t[2].charAt(0) ? 1 : 2, text: t[1] };}, t.paragraph = function (e) {var t = this.rules.block.paragraph.exec(e);if (t) return { type: "paragraph", raw: t[0], text: "\n" === t[1].charAt(t[1].length - 1) ? t[1].slice(0, -1) : t[1] };}, t.text = function (e, t) {var n = this.rules.block.text.exec(e);if (n) {var r = t[t.length - 1];return r && "text" === r.type ? { raw: n[0], text: n[0] } : { type: "text", raw: n[0], text: n[0] };}}, t.escape = function (e) {var t = this.rules.inline.escape.exec(e);if (t) return { type: "escape", raw: t[0], text: C(t[1]) };}, t.tag = function (e, t, n) {var r = this.rules.inline.tag.exec(e);if (r) return !t && /^<a /i.test(r[0]) ? t = !0 : t && /^<\/a>/i.test(r[0]) && (t = !1), !n && /^<(pre|code|kbd|script)(\s|>)/i.test(r[0]) ? n = !0 : n && /^<\/(pre|code|kbd|script)(\s|>)/i.test(r[0]) && (n = !1), { type: this.options.sanitize ? "text" : "html", raw: r[0], inLink: t, inRawBlock: n, text: this.options.sanitize ? this.options.sanitizer ? this.options.sanitizer(r[0]) : C(r[0]) : r[0] };}, t.link = function (e) {var t = this.rules.inline.link.exec(e);if (t) {var n,r = U(t[2], "()");-1 < r && (n = (0 === t[0].indexOf("!") ? 5 : 4) + t[1].length + r, t[2] = t[2].substring(0, r), t[0] = t[0].substring(0, n).trim(), t[3] = "");var i,s = t[2],l = "";return l = this.options.pedantic ? (i = /^([^'"]*[^\s])\s+(['"])(.*)\2/.exec(s), i ? (s = i[1], i[3]) : "") : t[3] ? t[3].slice(1, -1) : "", j(t, { href: (s = s.trim().replace(/^<([\s\S]*)>$/, "$1")) ? s.replace(this.rules.inline._escapes, "$1") : s, title: l ? l.replace(this.rules.inline._escapes, "$1") : l }, t[0]);}}, t.reflink = function (e, t) {var n;if ((n = this.rules.inline.reflink.exec(e)) || (n = this.rules.inline.nolink.exec(e))) {var r = (n[2] || n[1]).replace(/\s+/g, " ");if ((r = t[r.toLowerCase()]) && r.href) return j(n, r, n[0]);var i = n[0].charAt(0);return { type: "text", raw: i, text: i };}}, t.strong = function (e, t, n) {void 0 === n && (n = "");var r = this.rules.inline.strong.start.exec(e);if (r && (!r[1] || r[1] && ("" === n || this.rules.inline.punctuation.exec(n)))) {t = t.slice(-1 * e.length);var i,s = "**" === r[0] ? this.rules.inline.strong.endAst : this.rules.inline.strong.endUnd;for (s.lastIndex = 0; null != (r = s.exec(t));) {if (i = this.rules.inline.strong.middle.exec(t.slice(0, r.index + 3))) return { type: "strong", raw: e.slice(0, i[0].length), text: e.slice(2, i[0].length - 2) };}}}, t.em = function (e, t, n) {void 0 === n && (n = "");var r = this.rules.inline.em.start.exec(e);if (r && (!r[1] || r[1] && ("" === n || this.rules.inline.punctuation.exec(n)))) {t = t.slice(-1 * e.length);var i,s = "*" === r[0] ? this.rules.inline.em.endAst : this.rules.inline.em.endUnd;for (s.lastIndex = 0; null != (r = s.exec(t));) {if (i = this.rules.inline.em.middle.exec(t.slice(0, r.index + 2))) return { type: "em", raw: e.slice(0, i[0].length), text: e.slice(1, i[0].length - 1) };}}}, t.codespan = function (e) {var t = this.rules.inline.code.exec(e);if (t) {var n = t[2].replace(/\n/g, " "),r = /[^ ]/.test(n),i = n.startsWith(" ") && n.endsWith(" ");return r && i && (n = n.substring(1, n.length - 1)), n = C(n, !0), { type: "codespan", raw: t[0], text: n };}}, t.br = function (e) {var t = this.rules.inline.br.exec(e);if (t) return { type: "br", raw: t[0] };}, t.del = function (e) {var t = this.rules.inline.del.exec(e);if (t) return { type: "del", raw: t[0], text: t[1] };}, t.autolink = function (e, t) {var n = this.rules.inline.autolink.exec(e);if (n) {var r,i = "@" === n[2] ? "mailto:" + (r = C(this.options.mangle ? t(n[1]) : n[1])) : r = C(n[1]);return { type: "link", raw: n[0], text: r, href: i, tokens: [{ type: "text", raw: r, text: r }] };}}, t.url = function (e, t) {var n, r, i, s;if (n = this.rules.inline.url.exec(e)) {if ("@" === n[2]) i = "mailto:" + (r = C(this.options.mangle ? t(n[0]) : n[0]));else {for (; s = n[0], n[0] = this.rules.inline._backpedal.exec(n[0])[0], s !== n[0];) {;}r = C(n[0]), i = "www." === n[1] ? "http://" + r : r;}return { type: "link", raw: n[0], text: r, href: i, tokens: [{ type: "text", raw: r, text: r }] };}}, t.inlineText = function (e, t, n) {var r = this.rules.inline.text.exec(e);if (r) {var i = t ? this.options.sanitize ? this.options.sanitizer ? this.options.sanitizer(r[0]) : C(r[0]) : r[0] : C(this.options.smartypants ? n(r[0]) : r[0]);return { type: "text", raw: r[0], text: i };}}, e;}(),D = $,P = z,L = A,N = { newline: /^\n+/, code: /^( {4}[^\n]+\n*)+/, fences: /^ {0,3}(`{3,}(?=[^`\n]*\n)|~{3,})([^\n]*)\n(?:|([\s\S]*?)\n)(?: {0,3}\1[~`]* *(?:\n+|$)|$)/, hr: /^ {0,3}((?:- *){3,}|(?:_ *){3,}|(?:\* *){3,})(?:\n+|$)/, heading: /^ {0,3}(#{1,6}) +([^\n]*?)(?: +#+)? *(?:\n+|$)/, blockquote: /^( {0,3}> ?(paragraph|[^\n]*)(?:\n|$))+/, list: /^( {0,3})(bull) [\s\S]+?(?:hr|def|\n{2,}(?! )(?!\1bull )\n*|\s*$)/, html: "^ {0,3}(?:<(script|pre|style)[\\s>][\\s\\S]*?(?:</\\1>[^\\n]*\\n+|$)|comment[^\\n]*(\\n+|$)|<\\?[\\s\\S]*?(?:\\?>\\n*|$)|<![A-Z][\\s\\S]*?(?:>\\n*|$)|<!\\[CDATA\\[[\\s\\S]*?(?:\\]\\]>\\n*|$)|</?(tag)(?: +|\\n|/?>)[\\s\\S]*?(?:\\n{2,}|$)|<(?!script|pre|style)([a-z][\\w-]*)(?:attribute)*? */?>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:\\n{2,}|$)|</(?!script|pre|style)[a-z][\\w-]*\\s*>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:\\n{2,}|$))", def: /^ {0,3}\[(label)\]: *\n? *<?([^\s>]+)>?(?:(?: +\n? *| *\n *)(title))? *(?:\n+|$)/, nptable: D, table: D, lheading: /^([^\n]+)\n {0,3}(=+|-+) *(?:\n+|$)/, _paragraph: /^([^\n]+(?:\n(?!hr|heading|lheading|blockquote|fences|list|html)[^\n]+)*)/, text: /^[^\n]+/, _label: /(?!\s*\])(?:\\[\[\]]|[^\[\]])+/, _title: /(?:"(?:\\"?|[^"\\])*"|'[^'\n]*(?:\n[^'\n]+)*\n?'|\([^()]*\))/ };N.def = P(N.def).replace("label", N._label).replace("title", N._title).getRegex(), N.bullet = /(?:[*+-]|\d{1,9}[.)])/, N.item = /^( *)(bull) ?[^\n]*(?:\n(?!\1bull ?)[^\n]*)*/, N.item = P(N.item, "gm").replace(/bull/g, N.bullet).getRegex(), N.list = P(N.list).replace(/bull/g, N.bullet).replace("hr", "\\n+(?=\\1?(?:(?:- *){3,}|(?:_ *){3,}|(?:\\* *){3,})(?:\\n+|$))").replace("def", "\\n+(?=" + N.def.source + ")").getRegex(), N._tag = "address|article|aside|base|basefont|blockquote|body|caption|center|col|colgroup|dd|details|dialog|dir|div|dl|dt|fieldset|figcaption|figure|footer|form|frame|frameset|h[1-6]|head|header|hr|html|iframe|legend|li|link|main|menu|menuitem|meta|nav|noframes|ol|optgroup|option|p|param|section|source|summary|table|tbody|td|tfoot|th|thead|title|tr|track|ul", N._comment = /<!--(?!-?>)[\s\S]*?(?:-->|$)/, N.html = P(N.html, "i").replace("comment", N._comment).replace("tag", N._tag).replace("attribute", / +[a-zA-Z:_][\w.:-]*(?: *= *"[^"\n]*"| *= *'[^'\n]*'| *= *[^\s"'=<>`]+)?/).getRegex(), N.paragraph = P(N._paragraph).replace("hr", N.hr).replace("heading", " {0,3}#{1,6} ").replace("|lheading", "").replace("blockquote", " {0,3}>").replace("fences", " {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list", " {0,3}(?:[*+-]|1[.)]) ").replace("html", "</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|!--)").replace("tag", N._tag).getRegex(), N.blockquote = P(N.blockquote).replace("paragraph", N.paragraph).getRegex(), N.normal = L({}, N), N.gfm = L({}, N.normal, { nptable: "^ *([^|\\n ].*\\|.*)\\n {0,3}([-:]+ *\\|[-| :]*)(?:\\n((?:(?!\\n|hr|heading|blockquote|code|fences|list|html).*(?:\\n|$))*)\\n*|$)", table: "^ *\\|(.+)\\n {0,3}\\|?( *[-:]+[-| :]*)(?:\\n *((?:(?!\\n|hr|heading|blockquote|code|fences|list|html).*(?:\\n|$))*)\\n*|$)" }), N.gfm.nptable = P(N.gfm.nptable).replace("hr", N.hr).replace("heading", " {0,3}#{1,6} ").replace("blockquote", " {0,3}>").replace("code", " {4}[^\\n]").replace("fences", " {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list", " {0,3}(?:[*+-]|1[.)]) ").replace("html", "</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|!--)").replace("tag", N._tag).getRegex(), N.gfm.table = P(N.gfm.table).replace("hr", N.hr).replace("heading", " {0,3}#{1,6} ").replace("blockquote", " {0,3}>").replace("code", " {4}[^\\n]").replace("fences", " {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list", " {0,3}(?:[*+-]|1[.)]) ").replace("html", "</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|!--)").replace("tag", N._tag).getRegex(), N.pedantic = L({}, N.normal, { html: P("^ *(?:comment *(?:\\n|\\s*$)|<(tag)[\\s\\S]+?</\\1> *(?:\\n{2,}|\\s*$)|<tag(?:\"[^\"]*\"|'[^']*'|\\s[^'\"/>\\s]*)*?/?> *(?:\\n{2,}|\\s*$))").replace("comment", N._comment).replace(/tag/g, "(?!(?:a|em|strong|small|s|cite|q|dfn|abbr|data|time|code|var|samp|kbd|sub|sup|i|b|u|mark|ruby|rt|rp|bdi|bdo|span|br|wbr|ins|del|img)\\b)\\w+(?!:|[^\\w\\s@]*@)\\b").getRegex(), def: /^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +(["(][^\n]+[")]))? *(?:\n+|$)/, heading: /^ *(#{1,6}) *([^\n]+?) *(?:#+ *)?(?:\n+|$)/, fences: D, paragraph: P(N.normal._paragraph).replace("hr", N.hr).replace("heading", " *#{1,6} *[^\n]").replace("lheading", N.lheading).replace("blockquote", " {0,3}>").replace("|fences", "").replace("|list", "").replace("|html", "").getRegex() });var B = { escape: /^\\([!"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~])/, autolink: /^<(scheme:[^\s\x00-\x1f<>]*|email)>/, url: D, tag: "^comment|^</[a-zA-Z][\\w:-]*\\s*>|^<[a-zA-Z][\\w-]*(?:attribute)*?\\s*/?>|^<\\?[\\s\\S]*?\\?>|^<![a-zA-Z]+\\s[\\s\\S]*?>|^<!\\[CDATA\\[[\\s\\S]*?\\]\\]>", link: /^!?\[(label)\]\(\s*(href)(?:\s+(title))?\s*\)/, reflink: /^!?\[(label)\]\[(?!\s*\])((?:\\[\[\]]?|[^\[\]\\])+)\]/, nolink: /^!?\[(?!\s*\])((?:\[[^\[\]]*\]|\\[\[\]]|[^\[\]])*)\](?:\[\])?/, reflinkSearch: "reflink|nolink(?!\\()", strong: { start: /^(?:(\*\*(?=[*punctuation]))|\*\*)(?![\s])|__/, middle: /^\*\*(?:(?:(?!overlapSkip)(?:[^*]|\\\*)|overlapSkip)|\*(?:(?!overlapSkip)(?:[^*]|\\\*)|overlapSkip)*?\*)+?\*\*$|^__(?![\s])((?:(?:(?!overlapSkip)(?:[^_]|\\_)|overlapSkip)|_(?:(?!overlapSkip)(?:[^_]|\\_)|overlapSkip)*?_)+?)__$/, endAst: /[^punctuation\s]\*\*(?!\*)|[punctuation]\*\*(?!\*)(?:(?=[punctuation_\s]|$))/, endUnd: /[^\s]__(?!_)(?:(?=[punctuation*\s])|$)/ }, em: { start: /^(?:(\*(?=[punctuation]))|\*)(?![*\s])|_/, middle: /^\*(?:(?:(?!overlapSkip)(?:[^*]|\\\*)|overlapSkip)|\*(?:(?!overlapSkip)(?:[^*]|\\\*)|overlapSkip)*?\*)+?\*$|^_(?![_\s])(?:(?:(?!overlapSkip)(?:[^_]|\\_)|overlapSkip)|_(?:(?!overlapSkip)(?:[^_]|\\_)|overlapSkip)*?_)+?_$/, endAst: /[^punctuation\s]\*(?!\*)|[punctuation]\*(?!\*)(?:(?=[punctuation_\s]|$))/, endUnd: /[^\s]_(?!_)(?:(?=[punctuation*\s])|$)/ }, code: /^(`+)([^`]|[^`][\s\S]*?[^`])\1(?!`)/, br: /^( {2,}|\\)\n(?!\s*$)/, del: D, text: /^(`+|[^`])(?:(?= {2,}\n)|[\s\S]*?(?:(?=[\\<!\[`*]|\b_|$)|[^ ](?= {2,}\n)))/, punctuation: /^([\s*punctuation])/, _punctuation: "!\"#$%&'()+\\-.,/:;<=>?@\\[\\]`^{|}~" };B.punctuation = P(B.punctuation).replace(/punctuation/g, B._punctuation).getRegex(), B._blockSkip = "\\[[^\\]]*?\\]\\([^\\)]*?\\)|`[^`]*?`|<[^>]*?>", B._overlapSkip = "__[^_]*?__|\\*\\*\\[^\\*\\]*?\\*\\*", B._comment = P(N._comment).replace("(?:--\x3e|$)", "--\x3e").getRegex(), B.em.start = P(B.em.start).replace(/punctuation/g, B._punctuation).getRegex(), B.em.middle = P(B.em.middle).replace(/punctuation/g, B._punctuation).replace(/overlapSkip/g, B._overlapSkip).getRegex(), B.em.endAst = P(B.em.endAst, "g").replace(/punctuation/g, B._punctuation).getRegex(), B.em.endUnd = P(B.em.endUnd, "g").replace(/punctuation/g, B._punctuation).getRegex(), B.strong.start = P(B.strong.start).replace(/punctuation/g, B._punctuation).getRegex(), B.strong.middle = P(B.strong.middle).replace(/punctuation/g, B._punctuation).replace(/overlapSkip/g, B._overlapSkip).getRegex(), B.strong.endAst = P(B.strong.endAst, "g").replace(/punctuation/g, B._punctuation).getRegex(), B.strong.endUnd = P(B.strong.endUnd, "g").replace(/punctuation/g, B._punctuation).getRegex(), B.blockSkip = P(B._blockSkip, "g").getRegex(), B.overlapSkip = P(B._overlapSkip, "g").getRegex(), B._escapes = /\\([!"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~])/g, B._scheme = /[a-zA-Z][a-zA-Z0-9+.-]{1,31}/, B._email = /[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+(@)[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+(?![-_])/, B.autolink = P(B.autolink).replace("scheme", B._scheme).replace("email", B._email).getRegex(), B._attribute = /\s+[a-zA-Z:_][\w.:-]*(?:\s*=\s*"[^"]*"|\s*=\s*'[^']*'|\s*=\s*[^\s"'=<>`]+)?/, B.tag = P(B.tag).replace("comment", B._comment).replace("attribute", B._attribute).getRegex(), B._label = /(?:\[(?:\\.|[^\[\]\\])*\]|\\.|`[^`]*`|[^\[\]\\`])*?/, B._href = /<(?:\\[<>]?|[^\s<>\\])*>|[^\s\x00-\x1f]*/, B._title = /"(?:\\"?|[^"\\])*"|'(?:\\'?|[^'\\])*'|\((?:\\\)?|[^)\\])*\)/, B.link = P(B.link).replace("label", B._label).replace("href", B._href).replace("title", B._title).getRegex(), B.reflink = P(B.reflink).replace("label", B._label).getRegex(), B.reflinkSearch = P(B.reflinkSearch, "g").replace("reflink", B.reflink).replace("nolink", B.nolink).getRegex(), B.normal = L({}, B), B.pedantic = L({}, B.normal, { strong: { start: /^__|\*\*/, middle: /^__(?=\S)([\s\S]*?\S)__(?!_)|^\*\*(?=\S)([\s\S]*?\S)\*\*(?!\*)/, endAst: /\*\*(?!\*)/g, endUnd: /__(?!_)/g }, em: { start: /^_|\*/, middle: /^()\*(?=\S)([\s\S]*?\S)\*(?!\*)|^_(?=\S)([\s\S]*?\S)_(?!_)/, endAst: /\*(?!\*)/g, endUnd: /_(?!_)/g }, link: P(/^!?\[(label)\]\((.*?)\)/).replace("label", B._label).getRegex(), reflink: P(/^!?\[(label)\]\s*\[([^\]]*)\]/).replace("label", B._label).getRegex() }), B.gfm = L({}, B.normal, { escape: P(B.escape).replace("])", "~|])").getRegex(), _extended_email: /[A-Za-z0-9._+-]+(@)[a-zA-Z0-9-_]+(?:\.[a-zA-Z0-9-_]*[a-zA-Z0-9])+(?![-_])/, url: /^((?:ftp|https?):\/\/|www\.)(?:[a-zA-Z0-9\-]+\.?)+[^\s<]*|^email/, _backpedal: /(?:[^?!.,:;*_~()&]+|\([^)]*\)|&(?![a-zA-Z0-9]+;$)|[?!.,:;*_~)]+(?!$))+/, del: /^~+(?=\S)([\s\S]*?\S)~+/, text: /^(`+|[^`])(?:(?= {2,}\n)|[\s\S]*?(?:(?=[\\<!\[`*~]|\b_|https?:\/\/|ftp:\/\/|www\.|$)|[^ ](?= {2,}\n)|[^a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-](?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@))|(?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@))/ }), B.gfm.url = P(B.gfm.url, "i").replace("email", B.gfm._extended_email).getRegex(), B.breaks = L({}, B.gfm, { br: P(B.br).replace("{2,}", "*").getRegex(), text: P(B.gfm.text).replace("\\b_", "\\b_| {2,}\\n").replace(/\{2,\}/g, "*").getRegex() });var F = { block: N, inline: B },M = t.defaults,W = F.block,X = F.inline;function G(e) {return e.replace(/---/g, "—").replace(/--/g, "–").replace(/(^|[-\u2014/(\[{"\s])'/g, "$1‘").replace(/'/g, "’").replace(/(^|[-\u2014/(\[{\u2018\s])"/g, "$1“").replace(/"/g, "”").replace(/\.{3}/g, "…");}function V(e) {for (var t, n = "", r = e.length, i = 0; i < r; i++) {t = e.charCodeAt(i), .5 < Math.random() && (t = "x" + t.toString(16)), n += "&#" + t + ";";}return n;}var H = function () {function n(e) {this.tokens = [], this.tokens.links = Object.create(null), this.options = e || M, this.options.tokenizer = this.options.tokenizer || new E(), this.tokenizer = this.options.tokenizer, this.tokenizer.options = this.options;var t = { block: W.normal, inline: X.normal };this.options.pedantic ? (t.block = W.pedantic, t.inline = X.pedantic) : this.options.gfm && (t.block = W.gfm, this.options.breaks ? t.inline = X.breaks : t.inline = X.gfm), this.tokenizer.rules = t;}n.lex = function (e, t) {return new n(t).lex(e);}, n.lexInline = function (e, t) {return new n(t).inlineTokens(e);};var e,t,r,i = n.prototype;return i.lex = function (e) {return e = e.replace(/\r\n|\r/g, "\n").replace(/\t/g, "    "), this.blockTokens(e, this.tokens, !0), this.inline(this.tokens), this.tokens;}, i.blockTokens = function (e, t, n) {var r, i, s, l;for (void 0 === t && (t = []), void 0 === n && (n = !0), e = e.replace(/^ +$/gm, ""); e;) {if (r = this.tokenizer.space(e)) e = e.substring(r.raw.length), r.type && t.push(r);else if (r = this.tokenizer.code(e, t)) e = e.substring(r.raw.length), r.type ? t.push(r) : ((l = t[t.length - 1]).raw += "\n" + r.raw, l.text += "\n" + r.text);else if (r = this.tokenizer.fences(e)) e = e.substring(r.raw.length), t.push(r);else if (r = this.tokenizer.heading(e)) e = e.substring(r.raw.length), t.push(r);else if (r = this.tokenizer.nptable(e)) e = e.substring(r.raw.length), t.push(r);else if (r = this.tokenizer.hr(e)) e = e.substring(r.raw.length), t.push(r);else if (r = this.tokenizer.blockquote(e)) e = e.substring(r.raw.length), r.tokens = this.blockTokens(r.text, [], n), t.push(r);else if (r = this.tokenizer.list(e)) {for (e = e.substring(r.raw.length), s = r.items.length, i = 0; i < s; i++) {r.items[i].tokens = this.blockTokens(r.items[i].text, [], !1);}t.push(r);} else if (r = this.tokenizer.html(e)) e = e.substring(r.raw.length), t.push(r);else if (n && (r = this.tokenizer.def(e))) e = e.substring(r.raw.length), this.tokens.links[r.tag] || (this.tokens.links[r.tag] = { href: r.href, title: r.title });else if (r = this.tokenizer.table(e)) e = e.substring(r.raw.length), t.push(r);else if (r = this.tokenizer.lheading(e)) e = e.substring(r.raw.length), t.push(r);else if (n && (r = this.tokenizer.paragraph(e))) e = e.substring(r.raw.length), t.push(r);else if (r = this.tokenizer.text(e, t)) e = e.substring(r.raw.length), r.type ? t.push(r) : ((l = t[t.length - 1]).raw += "\n" + r.raw, l.text += "\n" + r.text);else if (e) {var a = "Infinite loop on byte: " + e.charCodeAt(0);if (this.options.silent) {console.error(a);break;}throw new Error(a);}}return t;}, i.inline = function (e) {for (var t, n, r, i, s, l = e.length, a = 0; a < l; a++) {switch ((s = e[a]).type) {case "paragraph":case "text":case "heading":s.tokens = [], this.inlineTokens(s.text, s.tokens);break;case "table":for (s.tokens = { header: [], cells: [] }, r = s.header.length, t = 0; t < r; t++) {s.tokens.header[t] = [], this.inlineTokens(s.header[t], s.tokens.header[t]);}for (r = s.cells.length, t = 0; t < r; t++) {for (i = s.cells[t], s.tokens.cells[t] = [], n = 0; n < i.length; n++) {s.tokens.cells[t][n] = [], this.inlineTokens(i[n], s.tokens.cells[t][n]);}}break;case "blockquote":this.inline(s.tokens);break;case "list":for (r = s.items.length, t = 0; t < r; t++) {this.inline(s.items[t].tokens);}}}return e;}, i.inlineTokens = function (e, t, n, r, i) {var s;void 0 === t && (t = []), void 0 === n && (n = !1), void 0 === r && (r = !1), void 0 === i && (i = "");var l,a = e;if (this.tokens.links) {var o = Object.keys(this.tokens.links);if (0 < o.length) for (; null != (l = this.tokenizer.rules.inline.reflinkSearch.exec(a));) {o.includes(l[0].slice(l[0].lastIndexOf("[") + 1, -1)) && (a = a.slice(0, l.index) + "[" + "a".repeat(l[0].length - 2) + "]" + a.slice(this.tokenizer.rules.inline.reflinkSearch.lastIndex));}}for (; null != (l = this.tokenizer.rules.inline.blockSkip.exec(a));) {a = a.slice(0, l.index) + "[" + "a".repeat(l[0].length - 2) + "]" + a.slice(this.tokenizer.rules.inline.blockSkip.lastIndex);}for (; e;) {if (s = this.tokenizer.escape(e)) e = e.substring(s.raw.length), t.push(s);else if (s = this.tokenizer.tag(e, n, r)) e = e.substring(s.raw.length), n = s.inLink, r = s.inRawBlock, t.push(s);else if (s = this.tokenizer.link(e)) e = e.substring(s.raw.length), "link" === s.type && (s.tokens = this.inlineTokens(s.text, [], !0, r)), t.push(s);else if (s = this.tokenizer.reflink(e, this.tokens.links)) e = e.substring(s.raw.length), "link" === s.type && (s.tokens = this.inlineTokens(s.text, [], !0, r)), t.push(s);else if (s = this.tokenizer.strong(e, a, i)) e = e.substring(s.raw.length), s.tokens = this.inlineTokens(s.text, [], n, r), t.push(s);else if (s = this.tokenizer.em(e, a, i)) e = e.substring(s.raw.length), s.tokens = this.inlineTokens(s.text, [], n, r), t.push(s);else if (s = this.tokenizer.codespan(e)) e = e.substring(s.raw.length), t.push(s);else if (s = this.tokenizer.br(e)) e = e.substring(s.raw.length), t.push(s);else if (s = this.tokenizer.del(e)) e = e.substring(s.raw.length), s.tokens = this.inlineTokens(s.text, [], n, r), t.push(s);else if (s = this.tokenizer.autolink(e, V)) e = e.substring(s.raw.length), t.push(s);else if (n || !(s = this.tokenizer.url(e, V))) {if (s = this.tokenizer.inlineText(e, r, G)) e = e.substring(s.raw.length), i = s.raw.slice(-1), t.push(s);else if (e) {var c = "Infinite loop on byte: " + e.charCodeAt(0);if (this.options.silent) {console.error(c);break;}throw new Error(c);}} else e = e.substring(s.raw.length), t.push(s);}return t;}, e = n, r = [{ key: "rules", get: function get() {return { block: W, inline: X };} }], (t = null) && s(e.prototype, t), r && s(e, r), n;}(),J = t.defaults,K = S,Q = _,Y = function () {function e(e) {this.options = e || J;}var t = e.prototype;return t.code = function (e, t, n) {var r,i = (t || "").match(/\S*/)[0];return !this.options.highlight || null != (r = this.options.highlight(e, i)) && r !== e && (n = !0, e = r), i ? '<pre><code class="' + this.options.langPrefix + Q(i, !0) + '">' + (n ? e : Q(e, !0)) + "</code></pre>\n" : "<pre><code>" + (n ? e : Q(e, !0)) + "</code></pre>\n";}, t.blockquote = function (e) {return "<blockquote>\n" + e + "</blockquote>\n";}, t.html = function (e) {return e;}, t.heading = function (e, t, n, r) {return this.options.headerIds ? "<h" + t + ' id="' + this.options.headerPrefix + r.slug(n) + '">' + e + "</h" + t + ">\n" : "<h" + t + ">" + e + "</h" + t + ">\n";}, t.hr = function () {return this.options.xhtml ? "<hr/>\n" : "<hr>\n";}, t.list = function (e, t, n) {var r = t ? "ol" : "ul";return "<" + r + (t && 1 !== n ? ' start="' + n + '"' : "") + ">\n" + e + "</" + r + ">\n";}, t.listitem = function (e) {return "<li>" + e + "</li>\n";}, t.checkbox = function (e) {return "<input " + (e ? 'checked="" ' : "") + 'disabled="" type="checkbox"' + (this.options.xhtml ? " /" : "") + "> ";}, t.paragraph = function (e) {return "<p>" + e + "</p>\n";}, t.table = function (e, t) {return "<table>\n<thead>\n" + e + "</thead>\n" + (t = t && "<tbody>" + t + "</tbody>") + "</table>\n";}, t.tablerow = function (e) {return "<tr>\n" + e + "</tr>\n";}, t.tablecell = function (e, t) {var n = t.header ? "th" : "td";return (t.align ? "<" + n + ' align="' + t.align + '">' : "<" + n + ">") + e + "</" + n + ">\n";}, t.strong = function (e) {return "<strong>" + e + "</strong>";}, t.em = function (e) {return "<em>" + e + "</em>";}, t.codespan = function (e) {return "<code>" + e + "</code>";}, t.br = function () {return this.options.xhtml ? "<br/>" : "<br>";}, t.del = function (e) {return "<del>" + e + "</del>";}, t.link = function (e, t, n) {if (null === (e = K(this.options.sanitize, this.options.baseUrl, e))) return n;var r = '<a href="' + Q(e) + '"';return t && (r += ' title="' + t + '"'), r += ">" + n + "</a>";}, t.image = function (e, t, n) {if (null === (e = K(this.options.sanitize, this.options.baseUrl, e))) return n;var r = '<img src="' + e + '" alt="' + n + '"';return t && (r += ' title="' + t + '"'), r += this.options.xhtml ? "/>" : ">";}, t.text = function (e) {return e;}, e;}(),ee = function () {function e() {}var t = e.prototype;return t.strong = function (e) {return e;}, t.em = function (e) {return e;}, t.codespan = function (e) {return e;}, t.del = function (e) {return e;}, t.html = function (e) {return e;}, t.text = function (e) {return e;}, t.link = function (e, t, n) {return "" + n;}, t.image = function (e, t, n) {return "" + n;}, t.br = function () {return "";}, e;}(),te = function () {function e() {this.seen = {};}var t = e.prototype;return t.serialize = function (e) {return e.toLowerCase().trim().replace(/<[!\/a-z].*?>/gi, "").replace(/[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,./:;<=>?@[\]^`{|}~]/g, "").replace(/\s/g, "-");}, t.getNextSafeSlug = function (e, t) {var n = e,r = 0;if (this.seen.hasOwnProperty(n)) for (r = this.seen[e]; n = e + "-" + ++r, this.seen.hasOwnProperty(n);) {;}return t || (this.seen[e] = r, this.seen[n] = 0), n;}, t.slug = function (e, t) {void 0 === t && (t = {});var n = this.serialize(e);return this.getNextSafeSlug(n, t.dryrun);}, e;}(),ne = t.defaults,re = y,ie = function () {function n(e) {this.options = e || ne, this.options.renderer = this.options.renderer || new Y(), this.renderer = this.options.renderer, this.renderer.options = this.options, this.textRenderer = new ee(), this.slugger = new te();}n.parse = function (e, t) {return new n(t).parse(e);}, n.parseInline = function (e, t) {return new n(t).parseInline(e);};var e = n.prototype;return e.parse = function (e, t) {void 0 === t && (t = !0);for (var n, r, i, s, l, a, o, c, u, p, h, g, f, d, k, b, m, x = "", v = e.length, w = 0; w < v; w++) {switch ((u = e[w]).type) {case "space":continue;case "hr":x += this.renderer.hr();continue;case "heading":x += this.renderer.heading(this.parseInline(u.tokens), u.depth, re(this.parseInline(u.tokens, this.textRenderer)), this.slugger);continue;case "code":x += this.renderer.code(u.text, u.lang, u.escaped);continue;case "table":for (a = o = "", i = u.header.length, n = 0; n < i; n++) {a += this.renderer.tablecell(this.parseInline(u.tokens.header[n]), { header: !0, align: u.align[n] });}for (o += this.renderer.tablerow(a), c = "", i = u.cells.length, n = 0; n < i; n++) {for (a = "", s = (l = u.tokens.cells[n]).length, r = 0; r < s; r++) {a += this.renderer.tablecell(this.parseInline(l[r]), { header: !1, align: u.align[r] });}c += this.renderer.tablerow(a);}x += this.renderer.table(o, c);continue;case "blockquote":c = this.parse(u.tokens), x += this.renderer.blockquote(c);continue;case "list":for (p = u.ordered, h = u.start, g = u.loose, i = u.items.length, c = "", n = 0; n < i; n++) {k = (d = u.items[n]).checked, b = d.task, f = "", d.task && (m = this.renderer.checkbox(k), g ? 0 < d.tokens.length && "text" === d.tokens[0].type ? (d.tokens[0].text = m + " " + d.tokens[0].text, d.tokens[0].tokens && 0 < d.tokens[0].tokens.length && "text" === d.tokens[0].tokens[0].type && (d.tokens[0].tokens[0].text = m + " " + d.tokens[0].tokens[0].text)) : d.tokens.unshift({ type: "text", text: m }) : f += m), f += this.parse(d.tokens, g), c += this.renderer.listitem(f, b, k);}x += this.renderer.list(c, p, h);continue;case "html":x += this.renderer.html(u.text);continue;case "paragraph":x += this.renderer.paragraph(this.parseInline(u.tokens));continue;case "text":for (c = u.tokens ? this.parseInline(u.tokens) : u.text; w + 1 < v && "text" === e[w + 1].type;) {c += "\n" + ((u = e[++w]).tokens ? this.parseInline(u.tokens) : u.text);}x += t ? this.renderer.paragraph(c) : c;continue;default:var _ = 'Token with "' + u.type + '" type was not found.';if (this.options.silent) return void console.error(_);throw new Error(_);}}return x;}, e.parseInline = function (e, t) {t = t || this.renderer;for (var n, r = "", i = e.length, s = 0; s < i; s++) {switch ((n = e[s]).type) {case "escape":r += t.text(n.text);break;case "html":r += t.html(n.text);break;case "link":r += t.link(n.href, n.title, this.parseInline(n.tokens, t));break;case "image":r += t.image(n.href, n.title, n.text);break;case "strong":r += t.strong(this.parseInline(n.tokens, t));break;case "em":r += t.em(this.parseInline(n.tokens, t));break;case "codespan":r += t.codespan(n.text);break;case "br":r += t.br();break;case "del":r += t.del(this.parseInline(n.tokens, t));break;case "text":r += t.text(n.text);break;default:var l = 'Token with "' + n.type + '" type was not found.';if (this.options.silent) return void console.error(l);throw new Error(l);}}return r;}, n;}(),se = A,le = I,ae = _,oe = t.getDefaults,ce = t.changeDefaults,ue = t.defaults;function pe(e, n, r) {if (null == e) throw new Error("marked(): input parameter is undefined or null");if ("string" != typeof e) throw new Error("marked(): input parameter is of type " + Object.prototype.toString.call(e) + ", string expected");if ("function" == typeof n && (r = n, n = null), n = se({}, pe.defaults, n || {}), le(n), r) {var i,s = n.highlight;try {i = H.lex(e, n);} catch (e) {return r(e);}var l = function l(t) {var e;if (!t) try {e = ie.parse(i, n);} catch (e) {t = e;}return n.highlight = s, t ? r(t) : r(null, e);};if (!s || s.length < 3) return l();if (delete n.highlight, !i.length) return l();var a = 0;return pe.walkTokens(i, function (n) {"code" === n.type && (a++, setTimeout(function () {s(n.text, n.lang, function (e, t) {return e ? l(e) : (null != t && t !== n.text && (n.text = t, n.escaped = !0), void (0 === --a && l()));});}, 0));}), void (0 === a && l());}try {var t = H.lex(e, n);return n.walkTokens && pe.walkTokens(t, n.walkTokens), ie.parse(t, n);} catch (e) {if (e.message += "\nPlease report this to https://github.com/markedjs/marked.", n.silent) return "<p>An error occurred:</p><pre>" + ae(e.message + "", !0) + "</pre>";throw e;}}return pe.options = pe.setOptions = function (e) {return se(pe.defaults, e), ce(pe.defaults), pe;}, pe.getDefaults = oe, pe.defaults = ue, pe.use = function (a) {var t,n = se({}, a);a.renderer && function () {var l = pe.defaults.renderer || new Y();for (var e in a.renderer) {!function (i) {var s = l[i];l[i] = function () {for (var e = arguments.length, t = new Array(e), n = 0; n < e; n++) {t[n] = arguments[n];}var r = a.renderer[i].apply(l, t);return !1 === r && (r = s.apply(l, t)), r;};}(e);}n.renderer = l;}(), a.tokenizer && function () {var l = pe.defaults.tokenizer || new E();for (var e in a.tokenizer) {!function (i) {var s = l[i];l[i] = function () {for (var e = arguments.length, t = new Array(e), n = 0; n < e; n++) {t[n] = arguments[n];}var r = a.tokenizer[i].apply(l, t);return !1 === r && (r = s.apply(l, t)), r;};}(e);}n.tokenizer = l;}(), a.walkTokens && (t = pe.defaults.walkTokens, n.walkTokens = function (e) {a.walkTokens(e), t && t(e);}), pe.setOptions(n);}, pe.walkTokens = function (e, t) {for (var n, r = g(e); !(n = r()).done;) {var i = n.value;switch (t(i), i.type) {case "table":for (var s, l = g(i.tokens.header); !(s = l()).done;) {var a = s.value;pe.walkTokens(a, t);}for (var o, c = g(i.tokens.cells); !(o = c()).done;) {for (var u, p = g(o.value); !(u = p()).done;) {var h = u.value;pe.walkTokens(h, t);}}break;case "list":pe.walkTokens(i.items, t);break;default:i.tokens && pe.walkTokens(i.tokens, t);}}}, pe.parseInline = function (e, t) {if (null == e) throw new Error("marked.parseInline(): input parameter is undefined or null");if ("string" != typeof e) throw new Error("marked.parseInline(): input parameter is of type " + Object.prototype.toString.call(e) + ", string expected");t = se({}, pe.defaults, t || {}), le(t);try {var n = H.lexInline(e, t);return t.walkTokens && pe.walkTokens(n, t.walkTokens), ie.parseInline(n, t);} catch (e) {if (e.message += "\nPlease report this to https://github.com/markedjs/marked.", t.silent) return "<p>An error occurred:</p><pre>" + ae(e.message + "", !0) + "</pre>";throw e;}}, pe.Parser = ie, pe.parser = ie.parse, pe.Renderer = Y, pe.TextRenderer = ee, pe.Lexer = H, pe.lexer = H.lex, pe.Tokenizer = E, pe.Slugger = te, pe.parse = pe;});
+
+/***/ }),
+
+/***/ 175:
+/*!*********************************************************************************************************************************!*\
+  !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/highlight.js/lib/index.js ***!
+  \*********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var hljs = __webpack_require__(/*! ./core */ 176);
+
+// hljs.registerLanguage('1c', require('./languages/1c'));
+// hljs.registerLanguage('abnf', require('./languages/abnf'));
+// hljs.registerLanguage('accesslog', require('./languages/accesslog'));
+// hljs.registerLanguage('actionscript', require('./languages/actionscript'));
+// hljs.registerLanguage('ada', require('./languages/ada'));
+// hljs.registerLanguage('angelscript', require('./languages/angelscript'));
+// hljs.registerLanguage('apache', require('./languages/apache'));
+// hljs.registerLanguage('applescript', require('./languages/applescript'));
+// hljs.registerLanguage('arcade', require('./languages/arcade'));
+// hljs.registerLanguage('c-like', require('./languages/c-like'));
+// hljs.registerLanguage('cpp', require('./languages/cpp'));
+// hljs.registerLanguage('arduino', require('./languages/arduino'));
+// hljs.registerLanguage('armasm', require('./languages/armasm'));
+// hljs.registerLanguage('xml', require('./languages/xml'));
+// hljs.registerLanguage('asciidoc', require('./languages/asciidoc'));
+// hljs.registerLanguage('aspectj', require('./languages/aspectj'));
+// hljs.registerLanguage('autohotkey', require('./languages/autohotkey'));
+// hljs.registerLanguage('autoit', require('./languages/autoit'));
+// hljs.registerLanguage('avrasm', require('./languages/avrasm'));
+// hljs.registerLanguage('awk', require('./languages/awk'));
+// hljs.registerLanguage('axapta', require('./languages/axapta'));
+// hljs.registerLanguage('bash', require('./languages/bash'));
+// hljs.registerLanguage('basic', require('./languages/basic'));
+// hljs.registerLanguage('bnf', require('./languages/bnf'));
+// hljs.registerLanguage('brainfuck', require('./languages/brainfuck'));
+// hljs.registerLanguage('c', require('./languages/c'));
+// hljs.registerLanguage('cal', require('./languages/cal'));
+// hljs.registerLanguage('capnproto', require('./languages/capnproto'));
+// hljs.registerLanguage('ceylon', require('./languages/ceylon'));
+// hljs.registerLanguage('clean', require('./languages/clean'));
+// hljs.registerLanguage('clojure', require('./languages/clojure'));
+// hljs.registerLanguage('clojure-repl', require('./languages/clojure-repl'));
+// hljs.registerLanguage('cmake', require('./languages/cmake'));
+// hljs.registerLanguage('coffeescript', require('./languages/coffeescript'));
+// hljs.registerLanguage('coq', require('./languages/coq'));
+// hljs.registerLanguage('cos', require('./languages/cos'));
+// hljs.registerLanguage('crmsh', require('./languages/crmsh'));
+// hljs.registerLanguage('crystal', require('./languages/crystal'));
+// hljs.registerLanguage('csharp', require('./languages/csharp'));
+// hljs.registerLanguage('csp', require('./languages/csp'));
+// hljs.registerLanguage('css', require('./languages/css'));
+// hljs.registerLanguage('d', require('./languages/d'));
+// hljs.registerLanguage('markdown', require('./languages/markdown'));
+// hljs.registerLanguage('dart', require('./languages/dart'));
+// hljs.registerLanguage('delphi', require('./languages/delphi'));
+// hljs.registerLanguage('diff', require('./languages/diff'));
+// hljs.registerLanguage('django', require('./languages/django'));
+// hljs.registerLanguage('dns', require('./languages/dns'));
+// hljs.registerLanguage('dockerfile', require('./languages/dockerfile'));
+// hljs.registerLanguage('dos', require('./languages/dos'));
+// hljs.registerLanguage('dsconfig', require('./languages/dsconfig'));
+// hljs.registerLanguage('dts', require('./languages/dts'));
+// hljs.registerLanguage('dust', require('./languages/dust'));
+// hljs.registerLanguage('ebnf', require('./languages/ebnf'));
+// hljs.registerLanguage('elixir', require('./languages/elixir'));
+// hljs.registerLanguage('elm', require('./languages/elm'));
+// hljs.registerLanguage('ruby', require('./languages/ruby'));
+// hljs.registerLanguage('erb', require('./languages/erb'));
+// hljs.registerLanguage('erlang-repl', require('./languages/erlang-repl'));
+// hljs.registerLanguage('erlang', require('./languages/erlang'));
+// hljs.registerLanguage('excel', require('./languages/excel'));
+// hljs.registerLanguage('fix', require('./languages/fix'));
+// hljs.registerLanguage('flix', require('./languages/flix'));
+// hljs.registerLanguage('fortran', require('./languages/fortran'));
+// hljs.registerLanguage('fsharp', require('./languages/fsharp'));
+// hljs.registerLanguage('gams', require('./languages/gams'));
+// hljs.registerLanguage('gauss', require('./languages/gauss'));
+// hljs.registerLanguage('gcode', require('./languages/gcode'));
+// hljs.registerLanguage('gherkin', require('./languages/gherkin'));
+// hljs.registerLanguage('glsl', require('./languages/glsl'));
+// hljs.registerLanguage('gml', require('./languages/gml'));
+// hljs.registerLanguage('go', require('./languages/go'));
+// hljs.registerLanguage('golo', require('./languages/golo'));
+// hljs.registerLanguage('gradle', require('./languages/gradle'));
+// hljs.registerLanguage('groovy', require('./languages/groovy'));
+// hljs.registerLanguage('haml', require('./languages/haml'));
+// hljs.registerLanguage('handlebars', require('./languages/handlebars'));
+// hljs.registerLanguage('haskell', require('./languages/haskell'));
+// hljs.registerLanguage('haxe', require('./languages/haxe'));
+// hljs.registerLanguage('hsp', require('./languages/hsp'));
+// hljs.registerLanguage('htmlbars', require('./languages/htmlbars'));
+// hljs.registerLanguage('http', require('./languages/http'));
+// hljs.registerLanguage('hy', require('./languages/hy'));
+// hljs.registerLanguage('inform7', require('./languages/inform7'));
+// hljs.registerLanguage('ini', require('./languages/ini'));
+// hljs.registerLanguage('irpf90', require('./languages/irpf90'));
+// hljs.registerLanguage('isbl', require('./languages/isbl'));
+// hljs.registerLanguage('java', require('./languages/java'));
+// hljs.registerLanguage('javascript', require('./languages/javascript'));
+// hljs.registerLanguage('typescript', require('./languages/typescript'));
+// hljs.registerLanguage('javascript.old', require('./languages/javascript.old'));
+// hljs.registerLanguage('jboss-cli', require('./languages/jboss-cli'));
+// hljs.registerLanguage('json', require('./languages/json'));
+// hljs.registerLanguage('julia', require('./languages/julia'));
+// hljs.registerLanguage('julia-repl', require('./languages/julia-repl'));
+// hljs.registerLanguage('kotlin', require('./languages/kotlin'));
+// hljs.registerLanguage('lasso', require('./languages/lasso'));
+// hljs.registerLanguage('latex', require('./languages/latex'));
+// hljs.registerLanguage('ldif', require('./languages/ldif'));
+// hljs.registerLanguage('leaf', require('./languages/leaf'));
+// hljs.registerLanguage('less', require('./languages/less'));
+// hljs.registerLanguage('lisp', require('./languages/lisp'));
+// hljs.registerLanguage('livecodeserver', require('./languages/livecodeserver'));
+// hljs.registerLanguage('livescript', require('./languages/livescript'));
+// hljs.registerLanguage('llvm', require('./languages/llvm'));
+// hljs.registerLanguage('lsl', require('./languages/lsl'));
+// hljs.registerLanguage('lua', require('./languages/lua'));
+// hljs.registerLanguage('makefile', require('./languages/makefile'));
+// hljs.registerLanguage('mathematica', require('./languages/mathematica'));
+// hljs.registerLanguage('matlab', require('./languages/matlab'));
+// hljs.registerLanguage('maxima', require('./languages/maxima'));
+// hljs.registerLanguage('mel', require('./languages/mel'));
+// hljs.registerLanguage('mercury', require('./languages/mercury'));
+// hljs.registerLanguage('mipsasm', require('./languages/mipsasm'));
+// hljs.registerLanguage('mizar', require('./languages/mizar'));
+// hljs.registerLanguage('perl', require('./languages/perl'));
+// hljs.registerLanguage('mojolicious', require('./languages/mojolicious'));
+// hljs.registerLanguage('monkey', require('./languages/monkey'));
+// hljs.registerLanguage('moonscript', require('./languages/moonscript'));
+// hljs.registerLanguage('n1ql', require('./languages/n1ql'));
+// hljs.registerLanguage('nginx', require('./languages/nginx'));
+// hljs.registerLanguage('nim', require('./languages/nim'));
+// hljs.registerLanguage('nix', require('./languages/nix'));
+// hljs.registerLanguage('nsis', require('./languages/nsis'));
+// hljs.registerLanguage('objectivec', require('./languages/objectivec'));
+// hljs.registerLanguage('ocaml', require('./languages/ocaml'));
+// hljs.registerLanguage('openscad', require('./languages/openscad'));
+// hljs.registerLanguage('oxygene', require('./languages/oxygene'));
+// hljs.registerLanguage('parser3', require('./languages/parser3'));
+// hljs.registerLanguage('pf', require('./languages/pf'));
+// hljs.registerLanguage('pgsql', require('./languages/pgsql'));
+// hljs.registerLanguage('php', require('./languages/php'));
+// hljs.registerLanguage('php-template', require('./languages/php-template'));
+// hljs.registerLanguage('plaintext', require('./languages/plaintext'));
+// hljs.registerLanguage('pony', require('./languages/pony'));
+// hljs.registerLanguage('powershell', require('./languages/powershell'));
+// hljs.registerLanguage('processing', require('./languages/processing'));
+// hljs.registerLanguage('profile', require('./languages/profile'));
+// hljs.registerLanguage('prolog', require('./languages/prolog'));
+// hljs.registerLanguage('properties', require('./languages/properties'));
+// hljs.registerLanguage('protobuf', require('./languages/protobuf'));
+// hljs.registerLanguage('puppet', require('./languages/puppet'));
+// hljs.registerLanguage('purebasic', require('./languages/purebasic'));
+// hljs.registerLanguage('python', require('./languages/python'));
+// hljs.registerLanguage('python-repl', require('./languages/python-repl'));
+// hljs.registerLanguage('q', require('./languages/q'));
+// hljs.registerLanguage('qml', require('./languages/qml'));
+// hljs.registerLanguage('r', require('./languages/r'));
+// hljs.registerLanguage('reasonml', require('./languages/reasonml'));
+// hljs.registerLanguage('rib', require('./languages/rib'));
+// hljs.registerLanguage('roboconf', require('./languages/roboconf'));
+// hljs.registerLanguage('routeros', require('./languages/routeros'));
+// hljs.registerLanguage('rsl', require('./languages/rsl'));
+// hljs.registerLanguage('ruleslanguage', require('./languages/ruleslanguage'));
+// hljs.registerLanguage('rust', require('./languages/rust'));
+// hljs.registerLanguage('sas', require('./languages/sas'));
+// hljs.registerLanguage('scala', require('./languages/scala'));
+// hljs.registerLanguage('scheme', require('./languages/scheme'));
+// hljs.registerLanguage('scilab', require('./languages/scilab'));
+// hljs.registerLanguage('scss', require('./languages/scss'));
+// hljs.registerLanguage('shell', require('./languages/shell'));
+// hljs.registerLanguage('smali', require('./languages/smali'));
+// hljs.registerLanguage('smalltalk', require('./languages/smalltalk'));
+// hljs.registerLanguage('sml', require('./languages/sml'));
+// hljs.registerLanguage('sqf', require('./languages/sqf'));
+// hljs.registerLanguage('sql', require('./languages/sql'));
+// hljs.registerLanguage('stan', require('./languages/stan'));
+// hljs.registerLanguage('stata', require('./languages/stata'));
+// hljs.registerLanguage('step21', require('./languages/step21'));
+// hljs.registerLanguage('stylus', require('./languages/stylus'));
+// hljs.registerLanguage('subunit', require('./languages/subunit'));
+// hljs.registerLanguage('swift', require('./languages/swift'));
+// hljs.registerLanguage('taggerscript', require('./languages/taggerscript'));
+// hljs.registerLanguage('yaml', require('./languages/yaml'));
+// hljs.registerLanguage('tap', require('./languages/tap'));
+// hljs.registerLanguage('tcl', require('./languages/tcl'));
+// hljs.registerLanguage('thrift', require('./languages/thrift'));
+// hljs.registerLanguage('tp', require('./languages/tp'));
+// hljs.registerLanguage('twig', require('./languages/twig'));
+// hljs.registerLanguage('vala', require('./languages/vala'));
+// hljs.registerLanguage('vbnet', require('./languages/vbnet'));
+// hljs.registerLanguage('vbscript', require('./languages/vbscript'));
+// hljs.registerLanguage('vbscript-html', require('./languages/vbscript-html'));
+// hljs.registerLanguage('verilog', require('./languages/verilog'));
+// hljs.registerLanguage('vhdl', require('./languages/vhdl'));
+// hljs.registerLanguage('vim', require('./languages/vim'));
+// hljs.registerLanguage('x86asm', require('./languages/x86asm'));
+// hljs.registerLanguage('xl', require('./languages/xl'));
+// hljs.registerLanguage('xquery', require('./languages/xquery'));
+// hljs.registerLanguage('zephir', require('./languages/zephir'));
+
+module.exports = hljs;
+
+/***/ }),
+
+/***/ 176:
+/*!********************************************************************************************************************************!*\
+  !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/highlight.js/lib/core.js ***!
+  \********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function");}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } });if (superClass) _setPrototypeOf(subClass, superClass);}function _setPrototypeOf(o, p) {_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {o.__proto__ = p;return o;};return _setPrototypeOf(o, p);}function _createSuper(Derived) {var hasNativeReflectConstruct = _isNativeReflectConstruct();return function _createSuperInternal() {var Super = _getPrototypeOf(Derived),result;if (hasNativeReflectConstruct) {var NewTarget = _getPrototypeOf(this).constructor;result = Reflect.construct(Super, arguments, NewTarget);} else {result = Super.apply(this, arguments);}return _possibleConstructorReturn(this, result);};}function _possibleConstructorReturn(self, call) {if (call && (typeof call === "object" || typeof call === "function")) {return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self) {if (self === void 0) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _isNativeReflectConstruct() {if (typeof Reflect === "undefined" || !Reflect.construct) return false;if (Reflect.construct.sham) return false;if (typeof Proxy === "function") return true;try {Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));return true;} catch (e) {return false;}}function _getPrototypeOf(o) {_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {return o.__proto__ || Object.getPrototypeOf(o);};return _getPrototypeOf(o);}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;} // https://github.com/substack/deep-freeze/blob/master/index.js
+/** @param {any} obj */
+function deepFreeze(obj) {
+  Object.freeze(obj);
+
+  var objIsFunction = typeof obj === 'function';
+
+  Object.getOwnPropertyNames(obj).forEach(function (prop) {
+    if (Object.hasOwnProperty.call(obj, prop) &&
+    obj[prop] !== null && (
+    typeof obj[prop] === "object" || typeof obj[prop] === "function")
+    // IE11 fix: https://github.com/highlightjs/highlight.js/issues/2318
+    // TODO: remove in the future
+    && (objIsFunction ? prop !== 'caller' && prop !== 'callee' && prop !== 'arguments' : true) &&
+    !Object.isFrozen(obj[prop])) {
+      deepFreeze(obj[prop]);
+    }
+  });
+
+  return obj;
+}var
+
+Response = /*#__PURE__*/function () {"use strict";
+  /**
+                                                    * @param {CompiledMode} mode
+                                                    */
+  function Response(mode) {_classCallCheck(this, Response);
+    // eslint-disable-next-line no-undefined
+    if (mode.data === undefined) mode.data = {};
+
+    this.data = mode.data;
+  }_createClass(Response, [{ key: "ignoreMatch", value: function ignoreMatch()
+
+    {
+      this.ignore = true;
+    } }]);return Response;}();
+
+
+/**
+                                * @param {string} value
+                                * @returns {string}
+                                */
+function escapeHTML(value) {
+  return value.
+  replace(/&/g, '&amp;').
+  replace(/</g, '&lt;').
+  replace(/>/g, '&gt;').
+  replace(/"/g, '&quot;').
+  replace(/'/g, '&#x27;');
+}
+
+/**
+   * performs a shallow merge of multiple objects into one
+   *
+   * @template T
+   * @param {T} original
+   * @param {Record<string,any>[]} objects
+   * @returns {T} a single new object
+   */
+function inherit(original) {
+  /** @type Record<string,any> */
+  var result = {};
+
+  for (var key in original) {
+    result[key] = original[key];
+  }for (var _len = arguments.length, objects = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {objects[_key - 1] = arguments[_key];}
+  objects.forEach(function (obj) {
+    for (var _key2 in obj) {
+      result[_key2] = obj[_key2];
+    }
+  });
+  return (/** @type {T} */result);
+}
+
+/* Stream merging */
+
+/**
+                      * @typedef Event
+                      * @property {'start'|'stop'} event
+                      * @property {number} offset
+                      * @property {Node} node
+                      */
+
+/**
+                          * @param {Node} node
+                          */
+function tag(node) {
+  return node.nodeName.toLowerCase();
+}
+
+/**
+   * @param {Node} node
+   */
+function nodeStream(node) {
+  /** @type Event[] */
+  var result = [];
+  (function _nodeStream(node, offset) {
+    for (var child = node.firstChild; child; child = child.nextSibling) {
+      if (child.nodeType === 3) {
+        offset += child.nodeValue.length;
+      } else if (child.nodeType === 1) {
+        result.push({
+          event: 'start',
+          offset: offset,
+          node: child });
+
+        offset = _nodeStream(child, offset);
+        // Prevent void elements from having an end tag that would actually
+        // double them in the output. There are more void elements in HTML
+        // but we list only those realistically expected in code display.
+        if (!tag(child).match(/br|hr|img|input/)) {
+          result.push({
+            event: 'stop',
+            offset: offset,
+            node: child });
+
+        }
+      }
+    }
+    return offset;
+  })(node, 0);
+  return result;
+}
+
+/**
+   * @param {any} original - the original stream
+   * @param {any} highlighted - stream of the highlighted source
+   * @param {string} value - the original source itself
+   */
+function mergeStreams(original, highlighted, value) {
+  var processed = 0;
+  var result = '';
+  var nodeStack = [];
+
+  function selectStream() {
+    if (!original.length || !highlighted.length) {
+      return original.length ? original : highlighted;
+    }
+    if (original[0].offset !== highlighted[0].offset) {
+      return original[0].offset < highlighted[0].offset ? original : highlighted;
+    }
+
+    /*
+      To avoid starting the stream just before it should stop the order is
+      ensured that original always starts first and closes last:
+       if (event1 == 'start' && event2 == 'start')
+        return original;
+      if (event1 == 'start' && event2 == 'stop')
+        return highlighted;
+      if (event1 == 'stop' && event2 == 'start')
+        return original;
+      if (event1 == 'stop' && event2 == 'stop')
+        return highlighted;
+       ... which is collapsed to:
+      */
+
+
+    return highlighted[0].event === 'start' ? original : highlighted;
+  }
+
+  /**
+     * @param {Node} node
+     */
+  function open(node) {
+    /** @param {Attr} attr */
+    function attr_str(attr) {
+      return ' ' + attr.nodeName + '="' + escapeHTML(attr.value) + '"';
+    }
+    // @ts-ignore
+    result += '<' + tag(node) + [].map.call(node.attributes, attr_str).join('') + '>';
+  }
+
+  /**
+     * @param {Node} node
+     */
+  function close(node) {
+    result += '</' + tag(node) + '>';
+  }
+
+  /**
+     * @param {Event} event
+     */
+  function render(event) {
+    (event.event === 'start' ? open : close)(event.node);
+  }
+
+  while (original.length || highlighted.length) {
+    var stream = selectStream();
+    result += escapeHTML(value.substring(processed, stream[0].offset));
+    processed = stream[0].offset;
+    if (stream === original) {
+      /*
+                              On any opening or closing tag of the original markup we first close
+                              the entire highlighted node stack, then render the original tag along
+                              with all the following original tags at the same offset and then
+                              reopen all the tags on the highlighted stack.
+                              */
+      nodeStack.reverse().forEach(close);
+      do {
+        render(stream.splice(0, 1)[0]);
+        stream = selectStream();
+      } while (stream === original && stream.length && stream[0].offset === processed);
+      nodeStack.reverse().forEach(open);
+    } else {
+      if (stream[0].event === 'start') {
+        nodeStack.push(stream[0].node);
+      } else {
+        nodeStack.pop();
+      }
+      render(stream.splice(0, 1)[0]);
+    }
+  }
+  return result + escapeHTML(value.substr(processed));
+}
+
+var utils = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  escapeHTML: escapeHTML,
+  inherit: inherit,
+  nodeStream: nodeStream,
+  mergeStreams: mergeStreams });
+
+
+/**
+                                  * @typedef {object} Renderer
+                                  * @property {(text: string) => void} addText
+                                  * @property {(node: Node) => void} openNode
+                                  * @property {(node: Node) => void} closeNode
+                                  * @property {() => string} value
+                                  */
+
+/** @typedef {{kind?: string, sublanguage?: boolean}} Node */
+/** @typedef {{walk: (r: Renderer) => void}} Tree */
+/** */
+
+var SPAN_CLOSE = '</span>';
+
+/**
+                             * Determines if a node needs to be wrapped in <span>
+                             *
+                             * @param {Node} node */
+var emitsWrappingTags = function emitsWrappingTags(node) {
+  return !!node.kind;
+};
+
+/** @type {Renderer} */var
+HTMLRenderer = /*#__PURE__*/function () {"use strict";
+  /**
+                                                        * Creates a new HTMLRenderer
+                                                        *
+                                                        * @param {Tree} parseTree - the parse tree (must support `walk` API)
+                                                        * @param {{classPrefix: string}} options
+                                                        */
+  function HTMLRenderer(parseTree, options) {_classCallCheck(this, HTMLRenderer);
+    this.buffer = "";
+    this.classPrefix = options.classPrefix;
+    parseTree.walk(this);
+  }
+
+  /**
+     * Adds texts to the output stream
+     *
+     * @param {string} text */_createClass(HTMLRenderer, [{ key: "addText", value: function addText(
+    text) {
+      this.buffer += escapeHTML(text);
+    }
+
+    /**
+       * Adds a node open to the output stream (if needed)
+       *
+       * @param {Node} node */ }, { key: "openNode", value: function openNode(
+    node) {
+      if (!emitsWrappingTags(node)) return;
+
+      var className = node.kind;
+      if (!node.sublanguage) {
+        className = "".concat(this.classPrefix).concat(className);
+      }
+      this.span(className);
+    }
+
+    /**
+       * Adds a node close to the output stream (if needed)
+       *
+       * @param {Node} node */ }, { key: "closeNode", value: function closeNode(
+    node) {
+      if (!emitsWrappingTags(node)) return;
+
+      this.buffer += SPAN_CLOSE;
+    }
+
+    /**
+       * returns the accumulated buffer
+      */ }, { key: "value", value: function value()
+    {
+      return this.buffer;
+    }
+
+    // helpers
+
+    /**
+     * Builds a span element
+     *
+     * @param {string} className */ }, { key: "span", value: function span(
+    className) {
+      this.buffer += "<span class=\"".concat(className, "\">");
+    } }]);return HTMLRenderer;}();
+
+
+/** @typedef {{kind?: string, sublanguage?: boolean, children: Node[]} | string} Node */
+/** @typedef {{kind?: string, sublanguage?: boolean, children: Node[]} } DataNode */
+/**  */var
+
+TokenTree = /*#__PURE__*/function () {"use strict";
+  function TokenTree() {_classCallCheck(this, TokenTree);
+    /** @type DataNode */
+    this.rootNode = { children: [] };
+    this.stack = [this.rootNode];
+  }_createClass(TokenTree, [{ key: "add",
+
+
+
+
+
+
+
+    /** @param {Node} node */value: function add(
+    node) {
+      this.top.children.push(node);
+    }
+
+    /** @param {string} kind */ }, { key: "openNode", value: function openNode(
+    kind) {
+      /** @type Node */
+      var node = { kind: kind, children: [] };
+      this.add(node);
+      this.stack.push(node);
+    } }, { key: "closeNode", value: function closeNode()
+
+    {
+      if (this.stack.length > 1) {
+        return this.stack.pop();
+      }
+      // eslint-disable-next-line no-undefined
+      return undefined;
+    } }, { key: "closeAllNodes", value: function closeAllNodes()
+
+    {
+      while (this.closeNode()) {;}
+    } }, { key: "toJSON", value: function toJSON()
+
+    {
+      return JSON.stringify(this.rootNode, null, 4);
+    }
+
+    /**
+       * @typedef { import("./html_renderer").Renderer } Renderer
+       * @param {Renderer} builder
+       */ }, { key: "walk", value: function walk(
+    builder) {
+      // this does not
+      return this.constructor._walk(builder, this.rootNode);
+      // this works
+      // return TokenTree._walk(builder, this.rootNode);
+    }
+
+    /**
+       * @param {Renderer} builder
+       * @param {Node} node
+       */ }, { key: "top", get: function get() {return this.stack[this.stack.length - 1];} }, { key: "root", get: function get() {return this.rootNode;} }], [{ key: "_walk", value: function _walk(
+    builder, node) {var _this = this;
+      if (typeof node === "string") {
+        builder.addText(node);
+      } else if (node.children) {
+        builder.openNode(node);
+        node.children.forEach(function (child) {return _this._walk(builder, child);});
+        builder.closeNode(node);
+      }
+      return builder;
+    }
+
+    /**
+       * @param {Node} node
+       */ }, { key: "_collapse", value: function _collapse(
+    node) {
+      if (typeof node === "string") return;
+      if (!node.children) return;
+
+      if (node.children.every(function (el) {return typeof el === "string";})) {
+        // node.text = node.children.join("");
+        // delete node.children;
+        node.children = [node.children.join("")];
+      } else {
+        node.children.forEach(function (child) {
+          TokenTree._collapse(child);
+        });
+      }
+    } }]);return TokenTree;}();
+
+
+/**
+                                  Currently this is all private API, but this is the minimal API necessary
+                                  that an Emitter must implement to fully support the parser.
+                                
+                                  Minimal interface:
+                                
+                                  - addKeyword(text, kind)
+                                  - addText(text)
+                                  - addSublanguage(emitter, subLanguageName)
+                                  - finalize()
+                                  - openNode(kind)
+                                  - closeNode()
+                                  - closeAllNodes()
+                                  - toHTML()
+                                
+                                */
+
+/**
+                                    * @implements {Emitter}
+                                    */var
+TokenTreeEmitter = /*#__PURE__*/function (_TokenTree) {"use strict";_inherits(TokenTreeEmitter, _TokenTree);var _super = _createSuper(TokenTreeEmitter);
+  /**
+                                                                                                                                                          * @param {*} options
+                                                                                                                                                          */
+  function TokenTreeEmitter(options) {var _this2;_classCallCheck(this, TokenTreeEmitter);
+    _this2 = _super.call(this);
+    _this2.options = options;return _this2;
+  }
+
+  /**
+     * @param {string} text
+     * @param {string} kind
+     */_createClass(TokenTreeEmitter, [{ key: "addKeyword", value: function addKeyword(
+    text, kind) {
+      if (text === "") {return;}
+
+      this.openNode(kind);
+      this.addText(text);
+      this.closeNode();
+    }
+
+    /**
+       * @param {string} text
+       */ }, { key: "addText", value: function addText(
+    text) {
+      if (text === "") {return;}
+
+      this.add(text);
+    }
+
+    /**
+       * @param {Emitter & {root: DataNode}} emitter
+       * @param {string} name
+       */ }, { key: "addSublanguage", value: function addSublanguage(
+    emitter, name) {
+      /** @type DataNode */
+      var node = emitter.root;
+      node.kind = name;
+      node.sublanguage = true;
+      this.add(node);
+    } }, { key: "toHTML", value: function toHTML()
+
+    {
+      var renderer = new HTMLRenderer(this, this.options);
+      return renderer.value();
+    } }, { key: "finalize", value: function finalize()
+
+    {
+      return true;
+    } }]);return TokenTreeEmitter;}(TokenTree);
+
+
+/**
+                                                 * @param {string} value
+                                                 * @returns {RegExp}
+                                                 * */
+function escape(value) {
+  return new RegExp(value.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&'), 'm');
+}
+
+/**
+   * @param {RegExp | string } re
+   * @returns {string}
+   */
+function source(re) {
+  if (!re) return null;
+  if (typeof re === "string") return re;
+
+  return re.source;
+}
+
+/**
+   * @param {...(RegExp | string) } args
+   * @returns {string}
+   */
+function concat() {for (var _len2 = arguments.length, args = new Array(_len2), _key3 = 0; _key3 < _len2; _key3++) {args[_key3] = arguments[_key3];}
+  var joined = args.map(function (x) {return source(x);}).join("");
+  return joined;
+}
+
+/**
+   * @param {RegExp} re
+   * @returns {number}
+   */
+function countMatchGroups(re) {
+  return new RegExp(re.toString() + '|').exec('').length - 1;
+}
+
+/**
+   * Does lexeme start with a regular expression match at the beginning
+   * @param {RegExp} re
+   * @param {string} lexeme
+   */
+function startsWith(re, lexeme) {
+  var match = re && re.exec(lexeme);
+  return match && match.index === 0;
+}
+
+// join logically computes regexps.join(separator), but fixes the
+// backreferences so they continue to match.
+// it also places each individual regular expression into it's own
+// match group, keeping track of the sequencing of those match groups
+// is currently an exercise for the caller. :-)
+/**
+ * @param {(string | RegExp)[]} regexps
+ * @param {string} separator
+ * @returns {string}
+ */
+function join(regexps) {var separator = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "|";
+  // backreferenceRe matches an open parenthesis or backreference. To avoid
+  // an incorrect parse, it additionally matches the following:
+  // - [...] elements, where the meaning of parentheses and escapes change
+  // - other escape sequences, so we do not misparse escape sequences as
+  //   interesting elements
+  // - non-matching or lookahead parentheses, which do not capture. These
+  //   follow the '(' with a '?'.
+  var backreferenceRe = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
+  var numCaptures = 0;
+  var ret = '';
+  for (var i = 0; i < regexps.length; i++) {
+    numCaptures += 1;
+    var offset = numCaptures;
+    var re = source(regexps[i]);
+    if (i > 0) {
+      ret += separator;
+    }
+    ret += "(";
+    while (re.length > 0) {
+      var match = backreferenceRe.exec(re);
+      if (match == null) {
+        ret += re;
+        break;
+      }
+      ret += re.substring(0, match.index);
+      re = re.substring(match.index + match[0].length);
+      if (match[0][0] === '\\' && match[1]) {
+        // Adjust the backreference.
+        ret += '\\' + String(Number(match[1]) + offset);
+      } else {
+        ret += match[0];
+        if (match[0] === '(') {
+          numCaptures++;
+        }
+      }
+    }
+    ret += ")";
+  }
+  return ret;
+}
+
+// Common regexps
+var IDENT_RE = '[a-zA-Z]\\w*';
+var UNDERSCORE_IDENT_RE = '[a-zA-Z_]\\w*';
+var NUMBER_RE = '\\b\\d+(\\.\\d+)?';
+var C_NUMBER_RE = '(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)'; // 0x..., 0..., decimal, float
+var BINARY_NUMBER_RE = '\\b(0b[01]+)'; // 0b...
+var RE_STARTERS_RE = '!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~';
+
+/**
+                                                                                                                                                                     * @param { Partial<Mode> & {binary?: string | RegExp} } opts
+                                                                                                                                                                     */
+var SHEBANG = function SHEBANG() {var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var beginShebang = /^#![ ]*\//;
+  if (opts.binary) {
+    opts.begin = concat(
+    beginShebang,
+    /.*\b/,
+    opts.binary,
+    /\b.*/);
+  }
+  return inherit({
+    className: 'meta',
+    begin: beginShebang,
+    end: /$/,
+    relevance: 0,
+    /** @type {ModeCallback} */
+    "on:begin": function onBegin(m, resp) {
+      if (m.index !== 0) resp.ignoreMatch();
+    } },
+  opts);
+};
+
+// Common modes
+var BACKSLASH_ESCAPE = {
+  begin: '\\\\[\\s\\S]', relevance: 0 };
+
+var APOS_STRING_MODE = {
+  className: 'string',
+  begin: '\'',
+  end: '\'',
+  illegal: '\\n',
+  contains: [BACKSLASH_ESCAPE] };
+
+var QUOTE_STRING_MODE = {
+  className: 'string',
+  begin: '"',
+  end: '"',
+  illegal: '\\n',
+  contains: [BACKSLASH_ESCAPE] };
+
+var PHRASAL_WORDS_MODE = {
+  begin: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/ };
+
+/**
+                                                                                                                                                          * Creates a comment mode
+                                                                                                                                                          *
+                                                                                                                                                          * @param {string | RegExp} begin
+                                                                                                                                                          * @param {string | RegExp} end
+                                                                                                                                                          * @param {Mode | {}} [modeOptions]
+                                                                                                                                                          * @returns {Partial<Mode>}
+                                                                                                                                                          */
+var COMMENT = function COMMENT(begin, end) {var modeOptions = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+  var mode = inherit(
+  {
+    className: 'comment',
+    begin: begin,
+    end: end,
+    contains: [] },
+
+  modeOptions);
+
+  mode.contains.push(PHRASAL_WORDS_MODE);
+  mode.contains.push({
+    className: 'doctag',
+    begin: '(?:TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):',
+    relevance: 0 });
+
+  return mode;
+};
+var C_LINE_COMMENT_MODE = COMMENT('//', '$');
+var C_BLOCK_COMMENT_MODE = COMMENT('/\\*', '\\*/');
+var HASH_COMMENT_MODE = COMMENT('#', '$');
+var NUMBER_MODE = {
+  className: 'number',
+  begin: NUMBER_RE,
+  relevance: 0 };
+
+var C_NUMBER_MODE = {
+  className: 'number',
+  begin: C_NUMBER_RE,
+  relevance: 0 };
+
+var BINARY_NUMBER_MODE = {
+  className: 'number',
+  begin: BINARY_NUMBER_RE,
+  relevance: 0 };
+
+var CSS_NUMBER_MODE = {
+  className: 'number',
+  begin: NUMBER_RE + '(' +
+  '%|em|ex|ch|rem' +
+  '|vw|vh|vmin|vmax' +
+  '|cm|mm|in|pt|pc|px' +
+  '|deg|grad|rad|turn' +
+  '|s|ms' +
+  '|Hz|kHz' +
+  '|dpi|dpcm|dppx' +
+  ')?',
+  relevance: 0 };
+
+var REGEXP_MODE = {
+  // this outer rule makes sure we actually have a WHOLE regex and not simply
+  // an expression such as:
+  //
+  //     3 / something
+  //
+  // (which will then blow up when regex's `illegal` sees the newline)
+  begin: /(?=\/[^/\n]*\/)/,
+  contains: [{
+    className: 'regexp',
+    begin: /\//,
+    end: /\/[gimuy]*/,
+    illegal: /\n/,
+    contains: [
+    BACKSLASH_ESCAPE,
+    {
+      begin: /\[/,
+      end: /\]/,
+      relevance: 0,
+      contains: [BACKSLASH_ESCAPE] }] }] };
+
+
+
+
+var TITLE_MODE = {
+  className: 'title',
+  begin: IDENT_RE,
+  relevance: 0 };
+
+var UNDERSCORE_TITLE_MODE = {
+  className: 'title',
+  begin: UNDERSCORE_IDENT_RE,
+  relevance: 0 };
+
+var METHOD_GUARD = {
+  // excludes method names from keyword processing
+  begin: '\\.\\s*' + UNDERSCORE_IDENT_RE,
+  relevance: 0 };
+
+
+/**
+                   * Adds end same as begin mechanics to a mode
+                   *
+                   * Your mode must include at least a single () match group as that first match
+                   * group is what is used for comparison
+                   * @param {Partial<Mode>} mode
+                   */
+var END_SAME_AS_BEGIN = function END_SAME_AS_BEGIN(mode) {
+  return Object.assign(mode,
+  {
+    /** @type {ModeCallback} */
+    'on:begin': function onBegin(m, resp) {resp.data._beginMatch = m[1];},
+    /** @type {ModeCallback} */
+    'on:end': function onEnd(m, resp) {if (resp.data._beginMatch !== m[1]) resp.ignoreMatch();} });
+
+};
+
+var MODES = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  IDENT_RE: IDENT_RE,
+  UNDERSCORE_IDENT_RE: UNDERSCORE_IDENT_RE,
+  NUMBER_RE: NUMBER_RE,
+  C_NUMBER_RE: C_NUMBER_RE,
+  BINARY_NUMBER_RE: BINARY_NUMBER_RE,
+  RE_STARTERS_RE: RE_STARTERS_RE,
+  SHEBANG: SHEBANG,
+  BACKSLASH_ESCAPE: BACKSLASH_ESCAPE,
+  APOS_STRING_MODE: APOS_STRING_MODE,
+  QUOTE_STRING_MODE: QUOTE_STRING_MODE,
+  PHRASAL_WORDS_MODE: PHRASAL_WORDS_MODE,
+  COMMENT: COMMENT,
+  C_LINE_COMMENT_MODE: C_LINE_COMMENT_MODE,
+  C_BLOCK_COMMENT_MODE: C_BLOCK_COMMENT_MODE,
+  HASH_COMMENT_MODE: HASH_COMMENT_MODE,
+  NUMBER_MODE: NUMBER_MODE,
+  C_NUMBER_MODE: C_NUMBER_MODE,
+  BINARY_NUMBER_MODE: BINARY_NUMBER_MODE,
+  CSS_NUMBER_MODE: CSS_NUMBER_MODE,
+  REGEXP_MODE: REGEXP_MODE,
+  TITLE_MODE: TITLE_MODE,
+  UNDERSCORE_TITLE_MODE: UNDERSCORE_TITLE_MODE,
+  METHOD_GUARD: METHOD_GUARD,
+  END_SAME_AS_BEGIN: END_SAME_AS_BEGIN });
+
+
+// keywords that should have no default relevance value
+var COMMON_KEYWORDS = 'of and for in not or if then'.split(' ');
+
+// compilation
+
+/**
+ * Compiles a language definition result
+ *
+ * Given the raw result of a language definition (Language), compiles this so
+ * that it is ready for highlighting code.
+ * @param {Language} language
+ * @returns {CompiledLanguage}
+ */
+function compileLanguage(language) {
+  /**
+                                     * Builds a regex with the case sensativility of the current language
+                                     *
+                                     * @param {RegExp | string} value
+                                     * @param {boolean} [global]
+                                     */
+  function langRe(value, global) {
+    return new RegExp(
+    source(value),
+    'm' + (language.case_insensitive ? 'i' : '') + (global ? 'g' : ''));
+
+  }
+
+  /**
+      Stores multiple regular expressions and allows you to quickly search for
+      them all in a string simultaneously - returning the first match.  It does
+      this by creating a huge (a|b|c) regex - each individual item wrapped with ()
+      and joined by `|` - using match groups to track position.  When a match is
+      found checking which position in the array has content allows us to figure
+      out which of the original regexes / match groups triggered the match.
+       The match object itself (the result of `Regex.exec`) is returned but also
+      enhanced by merging in any meta-data that was registered with the regex.
+      This is how we keep track of which mode matched, and what type of rule
+      (`illegal`, `begin`, end, etc).
+    */var
+
+  MultiRegex = /*#__PURE__*/function () {"use strict";
+    function MultiRegex() {_classCallCheck(this, MultiRegex);
+      this.matchIndexes = {};
+      // @ts-ignore
+      this.regexes = [];
+      this.matchAt = 1;
+      this.position = 0;
+    }
+
+    // @ts-ignore
+    _createClass(MultiRegex, [{ key: "addRule", value: function addRule(re, opts) {
+        opts.position = this.position++;
+        // @ts-ignore
+        this.matchIndexes[this.matchAt] = opts;
+        this.regexes.push([opts, re]);
+        this.matchAt += countMatchGroups(re) + 1;
+      } }, { key: "compile", value: function compile()
+
+      {
+        if (this.regexes.length === 0) {
+          // avoids the need to check length every time exec is called
+          // @ts-ignore
+          this.exec = function () {return null;};
+        }
+        var terminators = this.regexes.map(function (el) {return el[1];});
+        this.matcherRe = langRe(join(terminators), true);
+        this.lastIndex = 0;
+      }
+
+      /** @param {string} s */ }, { key: "exec", value: function exec(
+      s) {
+        this.matcherRe.lastIndex = this.lastIndex;
+        var match = this.matcherRe.exec(s);
+        if (!match) {return null;}
+
+        // eslint-disable-next-line no-undefined
+        var i = match.findIndex(function (el, i) {return i > 0 && el !== undefined;});
+        // @ts-ignore
+        var matchData = this.matchIndexes[i];
+        // trim off any earlier non-relevant match groups (ie, the other regex
+        // match groups that make up the multi-matcher)
+        match.splice(0, i);
+
+        return Object.assign(match, matchData);
+      } }]);return MultiRegex;}();
+
+
+  /*
+                                     Created to solve the key deficiently with MultiRegex - there is no way to
+                                     test for multiple matches at a single location.  Why would we need to do
+                                     that?  In the future a more dynamic engine will allow certain matches to be
+                                     ignored.  An example: if we matched say the 3rd regex in a large group but
+                                     decided to ignore it - we'd need to started testing again at the 4th
+                                     regex... but MultiRegex itself gives us no real way to do that.
+                                      So what this class creates MultiRegexs on the fly for whatever search
+                                     position they are needed.
+                                      NOTE: These additional MultiRegex objects are created dynamically.  For most
+                                     grammars most of the time we will never actually need anything more than the
+                                     first MultiRegex - so this shouldn't have too much overhead.
+                                      Say this is our search group, and we match regex3, but wish to ignore it.
+                                        regex1 | regex2 | regex3 | regex4 | regex5    ' ie, startAt = 0
+                                      What we need is a new MultiRegex that only includes the remaining
+                                     possibilities:
+                                        regex4 | regex5                               ' ie, startAt = 3
+                                      This class wraps all that complexity up in a simple API... `startAt` decides
+                                     where in the array of expressions to start doing the matching. It
+                                     auto-increments, so if a match is found at position 2, then startAt will be
+                                     set to 3.  If the end is reached startAt will return to 0.
+                                      MOST of the time the parser will be setting startAt manually to 0.
+                                   */var
+
+
+
+
+
+
+
+
+  ResumableMultiRegex = /*#__PURE__*/function () {"use strict";
+    function ResumableMultiRegex() {_classCallCheck(this, ResumableMultiRegex);
+      // @ts-ignore
+      this.rules = [];
+      // @ts-ignore
+      this.multiRegexes = [];
+      this.count = 0;
+
+      this.lastIndex = 0;
+      this.regexIndex = 0;
+    }
+
+    // @ts-ignore
+    _createClass(ResumableMultiRegex, [{ key: "getMatcher", value: function getMatcher(index) {
+        if (this.multiRegexes[index]) return this.multiRegexes[index];
+
+        var matcher = new MultiRegex();
+        this.rules.slice(index).forEach(function (_ref) {var _ref2 = _slicedToArray(_ref, 2),re = _ref2[0],opts = _ref2[1];return matcher.addRule(re, opts);});
+        matcher.compile();
+        this.multiRegexes[index] = matcher;
+        return matcher;
+      } }, { key: "resumingScanAtSamePosition", value: function resumingScanAtSamePosition()
+
+      {
+        return this.regexIndex !== 0;
+      } }, { key: "considerAll", value: function considerAll()
+
+      {
+        this.regexIndex = 0;
+      }
+
+      // @ts-ignore
+    }, { key: "addRule", value: function addRule(re, opts) {
+        this.rules.push([re, opts]);
+        if (opts.type === "begin") this.count++;
+      }
+
+      /** @param {string} s */ }, { key: "exec", value: function exec(
+      s) {
+        var m = this.getMatcher(this.regexIndex);
+        m.lastIndex = this.lastIndex;
+        var result = m.exec(s);
+
+        // The following is because we have no easy way to say "resume scanning at the
+        // existing position but also skip the current rule ONLY". What happens is
+        // all prior rules are also skipped which can result in matching the wrong
+        // thing. Example of matching "booger":
+
+        // our matcher is [string, "booger", number]
+        //
+        // ....booger....
+
+        // if "booger" is ignored then we'd really need a regex to scan from the
+        // SAME position for only: [string, number] but ignoring "booger" (if it
+        // was the first match), a simple resume would scan ahead who knows how
+        // far looking only for "number", ignoring potential string matches (or
+        // future "booger" matches that might be valid.)
+
+        // So what we do: We execute two matchers, one resuming at the same
+        // position, but the second full matcher starting at the position after:
+
+        //     /--- resume first regex match here (for [number])
+        //     |/---- full match here for [string, "booger", number]
+        //     vv
+        // ....booger....
+
+        // Which ever results in a match first is then used. So this 3-4 step
+        // process essentially allows us to say "match at this position, excluding
+        // a prior rule that was ignored".
+        //
+        // 1. Match "booger" first, ignore. Also proves that [string] does non match.
+        // 2. Resume matching for [number]
+        // 3. Match at index + 1 for [string, "booger", number]
+        // 4. If #2 and #3 result in matches, which came first?
+        if (this.resumingScanAtSamePosition()) {
+          if (result && result.index === this.lastIndex) ;else {// use the second matcher result
+            var m2 = this.getMatcher(0);
+            m2.lastIndex = this.lastIndex + 1;
+            result = m2.exec(s);
+          }
+        }
+
+        if (result) {
+          this.regexIndex += result.position + 1;
+          if (this.regexIndex === this.count) {
+            // wrap-around to considering all matches again
+            this.considerAll();
+          }
+        }
+
+        return result;
+      } }]);return ResumableMultiRegex;}();
+
+
+  /**
+                                             * Given a mode, builds a huge ResumableMultiRegex that can be used to walk
+                                             * the content and find matches.
+                                             *
+                                             * @param {CompiledMode} mode
+                                             * @returns {ResumableMultiRegex}
+                                             */
+  function buildModeRegex(mode) {
+    var mm = new ResumableMultiRegex();
+
+    mode.contains.forEach(function (term) {return mm.addRule(term.begin, { rule: term, type: "begin" });});
+
+    if (mode.terminator_end) {
+      mm.addRule(mode.terminator_end, { type: "end" });
+    }
+    if (mode.illegal) {
+      mm.addRule(mode.illegal, { type: "illegal" });
+    }
+
+    return mm;
+  }
+
+  // TODO: We need negative look-behind support to do this properly
+  /**
+   * Skip a match if it has a preceding or trailing dot
+   *
+   * This is used for `beginKeywords` to prevent matching expressions such as
+   * `bob.keyword.do()`. The mode compiler automatically wires this up as a
+   * special _internal_ 'on:begin' callback for modes with `beginKeywords`
+   * @param {RegExpMatchArray} match
+   * @param {CallbackResponse} response
+   */
+  function skipIfhasPrecedingOrTrailingDot(match, response) {
+    var before = match.input[match.index - 1];
+    var after = match.input[match.index + match[0].length];
+    if (before === "." || after === ".") {
+      response.ignoreMatch();
+    }
+  }
+
+  /** skip vs abort vs ignore
+     *
+     * @skip   - The mode is still entered and exited normally (and contains rules apply),
+     *           but all content is held and added to the parent buffer rather than being
+     *           output when the mode ends.  Mostly used with `sublanguage` to build up
+     *           a single large buffer than can be parsed by sublanguage.
+     *
+     *             - The mode begin ands ends normally.
+     *             - Content matched is added to the parent mode buffer.
+     *             - The parser cursor is moved forward normally.
+     *
+     * @abort  - A hack placeholder until we have ignore.  Aborts the mode (as if it
+     *           never matched) but DOES NOT continue to match subsequent `contains`
+     *           modes.  Abort is bad/suboptimal because it can result in modes
+     *           farther down not getting applied because an earlier rule eats the
+     *           content but then aborts.
+     *
+     *             - The mode does not begin.
+     *             - Content matched by `begin` is added to the mode buffer.
+     *             - The parser cursor is moved forward accordingly.
+     *
+     * @ignore - Ignores the mode (as if it never matched) and continues to match any
+     *           subsequent `contains` modes.  Ignore isn't technically possible with
+     *           the current parser implementation.
+     *
+     *             - The mode does not begin.
+     *             - Content matched by `begin` is ignored.
+     *             - The parser cursor is not moved forward.
+     */
+
+  /**
+         * Compiles an individual mode
+         *
+         * This can raise an error if the mode contains certain detectable known logic
+         * issues.
+         * @param {Mode} mode
+         * @param {CompiledMode | null} [parent]
+         * @returns {CompiledMode | never}
+         */
+  function compileMode(mode, parent) {var _ref3;
+    var cmode = /** @type CompiledMode */mode;
+    if (mode.compiled) return cmode;
+    mode.compiled = true;
+
+    // __beforeBegin is considered private API, internal use only
+    mode.__beforeBegin = null;
+
+    mode.keywords = mode.keywords || mode.beginKeywords;
+
+    var kw_pattern = null;
+    if (typeof mode.keywords === "object") {
+      kw_pattern = mode.keywords.$pattern;
+      delete mode.keywords.$pattern;
+    }
+
+    if (mode.keywords) {
+      mode.keywords = compileKeywords(mode.keywords, language.case_insensitive);
+    }
+
+    // both are not allowed
+    if (mode.lexemes && kw_pattern) {
+      throw new Error("ERR: Prefer `keywords.$pattern` to `mode.lexemes`, BOTH are not allowed. (see mode reference) ");
+    }
+
+    // `mode.lexemes` was the old standard before we added and now recommend
+    // using `keywords.$pattern` to pass the keyword pattern
+    cmode.keywordPatternRe = langRe(mode.lexemes || kw_pattern || /\w+/, true);
+
+    if (parent) {
+      if (mode.beginKeywords) {
+        // for languages with keywords that include non-word characters checking for
+        // a word boundary is not sufficient, so instead we check for a word boundary
+        // or whitespace - this does no harm in any case since our keyword engine
+        // doesn't allow spaces in keywords anyways and we still check for the boundary
+        // first
+        mode.begin = '\\b(' + mode.beginKeywords.split(' ').join('|') + ')(?=\\b|\\s)';
+        mode.__beforeBegin = skipIfhasPrecedingOrTrailingDot;
+      }
+      if (!mode.begin) mode.begin = /\B|\b/;
+      cmode.beginRe = langRe(mode.begin);
+      if (mode.endSameAsBegin) mode.end = mode.begin;
+      if (!mode.end && !mode.endsWithParent) mode.end = /\B|\b/;
+      if (mode.end) cmode.endRe = langRe(mode.end);
+      cmode.terminator_end = source(mode.end) || '';
+      if (mode.endsWithParent && parent.terminator_end) {
+        cmode.terminator_end += (mode.end ? '|' : '') + parent.terminator_end;
+      }
+    }
+    if (mode.illegal) cmode.illegalRe = langRe(mode.illegal);
+    // eslint-disable-next-line no-undefined
+    if (mode.relevance === undefined) mode.relevance = 1;
+    if (!mode.contains) mode.contains = [];
+
+    mode.contains = (_ref3 = []).concat.apply(_ref3, _toConsumableArray(mode.contains.map(function (c) {
+      return expand_or_clone_mode(c === 'self' ? mode : c);
+    })));
+    mode.contains.forEach(function (c) {compileMode( /** @type Mode */c, cmode);});
+
+    if (mode.starts) {
+      compileMode(mode.starts, parent);
+    }
+
+    cmode.matcher = buildModeRegex(cmode);
+    return cmode;
+  }
+
+  // self is not valid at the top-level
+  if (language.contains && language.contains.includes('self')) {
+    throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
+  }
+  return compileMode( /** @type Mode */language);
+}
+
+/**
+   * Determines if a mode has a dependency on it's parent or not
+   *
+   * If a mode does have a parent dependency then often we need to clone it if
+   * it's used in multiple places so that each copy points to the correct parent,
+   * where-as modes without a parent can often safely be re-used at the bottom of
+   * a mode chain.
+   *
+   * @param {Mode | null} mode
+   * @returns {boolean} - is there a dependency on the parent?
+   * */
+function dependencyOnParent(mode) {
+  if (!mode) return false;
+
+  return mode.endsWithParent || dependencyOnParent(mode.starts);
+}
+
+/**
+   * Expands a mode or clones it if necessary
+   *
+   * This is necessary for modes with parental dependenceis (see notes on
+   * `dependencyOnParent`) and for nodes that have `variants` - which must then be
+   * exploded into their own individual modes at compile time.
+   *
+   * @param {Mode} mode
+   * @returns {Mode | Mode[]}
+   * */
+function expand_or_clone_mode(mode) {
+  if (mode.variants && !mode.cached_variants) {
+    mode.cached_variants = mode.variants.map(function (variant) {
+      return inherit(mode, { variants: null }, variant);
+    });
+  }
+
+  // EXPAND
+  // if we have variants then essentially "replace" the mode with the variants
+  // this happens in compileMode, where this function is called from
+  if (mode.cached_variants) {
+    return mode.cached_variants;
+  }
+
+  // CLONE
+  // if we have dependencies on parents then we need a unique
+  // instance of ourselves, so we can be reused with many
+  // different parents without issue
+  if (dependencyOnParent(mode)) {
+    return inherit(mode, { starts: mode.starts ? inherit(mode.starts) : null });
+  }
+
+  if (Object.isFrozen(mode)) {
+    return inherit(mode);
+  }
+
+  // no special dependency issues, just return ourselves
+  return mode;
+}
+
+/***********************************************
+    Keywords
+  ***********************************************/
+
+/**
+                                                    * Given raw keywords from a language definition, compile them.
+                                                    *
+                                                    * @param {string | Record<string,string>} rawKeywords
+                                                    * @param {boolean} case_insensitive
+                                                    */
+function compileKeywords(rawKeywords, case_insensitive) {
+  /** @type KeywordDict */
+  var compiled_keywords = {};
+
+  if (typeof rawKeywords === 'string') {// string
+    splitAndCompile('keyword', rawKeywords);
+  } else {
+    Object.keys(rawKeywords).forEach(function (className) {
+      splitAndCompile(className, rawKeywords[className]);
+    });
+  }
+  return compiled_keywords;
+
+  // ---
+
+  /**
+   * Compiles an individual list of keywords
+   *
+   * Ex: "for if when while|5"
+   *
+   * @param {string} className
+   * @param {string} keywordList
+   */
+  function splitAndCompile(className, keywordList) {
+    if (case_insensitive) {
+      keywordList = keywordList.toLowerCase();
+    }
+    keywordList.split(' ').forEach(function (keyword) {
+      var pair = keyword.split('|');
+      compiled_keywords[pair[0]] = [className, scoreForKeyword(pair[0], pair[1])];
+    });
+  }
+}
+
+/**
+   * Returns the proper score for a given keyword
+   *
+   * Also takes into account comment keywords, which will be scored 0 UNLESS
+   * another score has been manually assigned.
+   * @param {string} keyword
+   * @param {string} [providedScore]
+   */
+function scoreForKeyword(keyword, providedScore) {
+  // manual scores always win over common keywords
+  // so you can force a score of 1 if you really insist
+  if (providedScore) {
+    return Number(providedScore);
+  }
+
+  return commonKeyword(keyword) ? 0 : 1;
+}
+
+/**
+   * Determines if a given keyword is common or not
+   *
+   * @param {string} keyword */
+function commonKeyword(keyword) {
+  return COMMON_KEYWORDS.includes(keyword.toLowerCase());
+}
+
+var version = "10.2.1";
+
+// @ts-nocheck
+
+function hasValueOrEmptyAttribute(value) {
+  return Boolean(value || value === "");
+}
+
+var Component = {
+  props: ["language", "code", "autodetect"],
+  data: function data() {
+    return {
+      detectedLanguage: "",
+      unknownLanguage: false };
+
+  },
+  computed: {
+    className: function className() {
+      if (this.unknownLanguage) return "";
+
+      return "hljs " + this.detectedLanguage;
+    },
+    highlighted: function highlighted() {
+      // no idea what language to use, return raw code
+      if (!this.autoDetect && !hljs.getLanguage(this.language)) {
+        console.warn("The language \"".concat(this.language, "\" you specified could not be found."));
+        this.unknownLanguage = true;
+        return escapeHTML(this.code);
+      }
+
+      var result;
+      if (this.autoDetect) {
+        result = hljs.highlightAuto(this.code);
+        this.detectedLanguage = result.language;
+      } else {
+        result = hljs.highlight(this.language, this.code, this.ignoreIllegals);
+        this.detectectLanguage = this.language;
+      }
+      return result.value;
+    },
+    autoDetect: function autoDetect() {
+      return !this.language || hasValueOrEmptyAttribute(this.autodetect);
+    },
+    ignoreIllegals: function ignoreIllegals() {
+      return true;
+    } },
+
+  // this avoids needing to use a whole Vue compilation pipeline just
+  // to build Highlight.js
+  render: function render(createElement) {
+    return createElement("pre", {}, [
+    createElement("code", {
+      class: this.className,
+      domProps: { innerHTML: this.highlighted } })]);
+
+  }
+  // template: `<pre><code :class="className" v-html="highlighted"></code></pre>`
+};
+
+var VuePlugin = {
+  install: function install(Vue) {
+    Vue.component('highlightjs', Component);
+  } };
+
+
+/*
+       Syntax highlighting with language autodetection.
+       https://highlightjs.org/
+       */
+
+var escape$1 = escapeHTML;
+var inherit$1 = inherit;var
+
+nodeStream$1 = utils.nodeStream,mergeStreams$1 = utils.mergeStreams;
+var NO_MATCH = Symbol("nomatch");
+
+/**
+                                   * @param {any} hljs - object that is extended (legacy)
+                                   * @returns {HLJSApi}
+                                   */
+var HLJS = function HLJS(hljs) {
+  // Convenience variables for build-in objects
+  /** @type {unknown[]} */
+  var ArrayProto = [];
+
+  // Global internal variables used within the highlight.js library.
+  /** @type {Record<string, Language>} */
+  var languages = Object.create(null);
+  /** @type {Record<string, string>} */
+  var aliases = Object.create(null);
+  /** @type {HLJSPlugin[]} */
+  var plugins = [];
+
+  // safe/production mode - swallows more errors, tries to keep running
+  // even if a single syntax or parse hits a fatal error
+  var SAFE_MODE = true;
+  var fixMarkupRe = /(^(<[^>]+>|\t|)+|\n)/gm;
+  var LANGUAGE_NOT_FOUND = "Could not find the language '{}', did you forget to load/include a language module?";
+  /** @type {Language} */
+  var PLAINTEXT_LANGUAGE = { disableAutodetect: true, name: 'Plain text', contains: [] };
+
+  // Global options used when within external APIs. This is modified when
+  // calling the `hljs.configure` function.
+  /** @type HLJSOptions */
+  var options = {
+    noHighlightRe: /^(no-?highlight)$/i,
+    languageDetectRe: /\blang(?:uage)?-([\w-]+)\b/i,
+    classPrefix: 'hljs-',
+    tabReplace: null,
+    useBR: false,
+    languages: null,
+    // beta configuration options, subject to change, welcome to discuss
+    // https://github.com/highlightjs/highlight.js/issues/1086
+    __emitter: TokenTreeEmitter };
+
+
+  /* Utility functions */
+
+  /**
+                           * Tests a language name to see if highlighting should be skipped
+                           * @param {string} languageName
+                           */
+  function shouldNotHighlight(languageName) {
+    return options.noHighlightRe.test(languageName);
+  }
+
+  /**
+     * @param {HighlightedHTMLElement} block - the HTML element to determine language for
+     */
+  function blockLanguage(block) {
+    var classes = block.className + ' ';
+
+    classes += block.parentNode ? block.parentNode.className : '';
+
+    // language-* takes precedence over non-prefixed class names.
+    var match = options.languageDetectRe.exec(classes);
+    if (match) {
+      var language = getLanguage(match[1]);
+      if (!language) {
+        console.warn(LANGUAGE_NOT_FOUND.replace("{}", match[1]));
+        console.warn("Falling back to no-highlight mode for this block.", block);
+      }
+      return language ? match[1] : 'no-highlight';
+    }
+
+    return classes.
+    split(/\s+/).
+    find(function (_class) {return shouldNotHighlight(_class) || getLanguage(_class);});
+  }
+
+  /**
+     * Core highlighting function.
+     *
+     * @param {string} languageName - the language to use for highlighting
+     * @param {string} code - the code to highlight
+     * @param {boolean} [ignoreIllegals] - whether to ignore illegal matches, default is to bail
+     * @param {Mode} [continuation] - current continuation mode, if any
+     *
+     * @returns {HighlightResult} Result - an object that represents the result
+     * @property {string} language - the language name
+     * @property {number} relevance - the relevance score
+     * @property {string} value - the highlighted HTML code
+     * @property {string} code - the original raw code
+     * @property {Mode} top - top of the current mode stack
+     * @property {boolean} illegal - indicates whether any illegal matches were found
+    */
+  function highlight(languageName, code, ignoreIllegals, continuation) {
+    /** @type {{ code: string, language: string, result?: any }} */
+    var context = {
+      code: code,
+      language: languageName };
+
+    // the plugin can change the desired language or the code to be highlighted
+    // just be changing the object it was passed
+    fire("before:highlight", context);
+
+    // a before plugin can usurp the result completely by providing it's own
+    // in which case we don't even need to call highlight
+    var result = context.result ?
+    context.result :
+    _highlight(context.language, context.code, ignoreIllegals, continuation);
+
+    result.code = context.code;
+    // the plugin can change anything in result to suite it
+    fire("after:highlight", result);
+
+    return result;
+  }
+
+  /**
+     * private highlight that's used internally and does not fire callbacks
+     *
+     * @param {string} languageName - the language to use for highlighting
+     * @param {string} code - the code to highlight
+     * @param {boolean} [ignoreIllegals] - whether to ignore illegal matches, default is to bail
+     * @param {Mode} [continuation] - current continuation mode, if any
+    */
+  function _highlight(languageName, code, ignoreIllegals, continuation) {
+    var codeToHighlight = code;
+
+    /**
+                                 * Return keyword data if a match is a keyword
+                                 * @param {CompiledMode} mode - current mode
+                                 * @param {RegExpMatchArray} match - regexp match data
+                                 * @returns {KeywordData | false}
+                                 */
+    function keywordData(mode, match) {
+      var matchText = language.case_insensitive ? match[0].toLowerCase() : match[0];
+      return Object.prototype.hasOwnProperty.call(mode.keywords, matchText) && mode.keywords[matchText];
+    }
+
+    function processKeywords() {
+      if (!top.keywords) {
+        emitter.addText(mode_buffer);
+        return;
+      }
+
+      var last_index = 0;
+      top.keywordPatternRe.lastIndex = 0;
+      var match = top.keywordPatternRe.exec(mode_buffer);
+      var buf = "";
+
+      while (match) {
+        buf += mode_buffer.substring(last_index, match.index);
+        var data = keywordData(top, match);
+        if (data) {var _data = _slicedToArray(
+          data, 2),kind = _data[0],keywordRelevance = _data[1];
+          emitter.addText(buf);
+          buf = "";
+
+          relevance += keywordRelevance;
+          emitter.addKeyword(match[0], kind);
+        } else {
+          buf += match[0];
+        }
+        last_index = top.keywordPatternRe.lastIndex;
+        match = top.keywordPatternRe.exec(mode_buffer);
+      }
+      buf += mode_buffer.substr(last_index);
+      emitter.addText(buf);
+    }
+
+    function processSubLanguage() {
+      if (mode_buffer === "") return;
+      /** @type HighlightResult */
+      var result = null;
+
+      if (typeof top.subLanguage === 'string') {
+        if (!languages[top.subLanguage]) {
+          emitter.addText(mode_buffer);
+          return;
+        }
+        result = _highlight(top.subLanguage, mode_buffer, true, continuations[top.subLanguage]);
+        continuations[top.subLanguage] = result.top;
+      } else {
+        result = highlightAuto(mode_buffer, top.subLanguage.length ? top.subLanguage : null);
+      }
+
+      // Counting embedded language score towards the host language may be disabled
+      // with zeroing the containing mode relevance. Use case in point is Markdown that
+      // allows XML everywhere and makes every XML snippet to have a much larger Markdown
+      // score.
+      if (top.relevance > 0) {
+        relevance += result.relevance;
+      }
+      emitter.addSublanguage(result.emitter, result.language);
+    }
+
+    function processBuffer() {
+      if (top.subLanguage != null) {
+        processSubLanguage();
+      } else {
+        processKeywords();
+      }
+      mode_buffer = '';
+    }
+
+    /**
+       * @param {Mode} mode - new mode to start
+       */
+    function startNewMode(mode) {
+      if (mode.className) {
+        emitter.openNode(mode.className);
+      }
+      top = Object.create(mode, { parent: { value: top } });
+      return top;
+    }
+
+    /**
+       * @param {CompiledMode } mode - the mode to potentially end
+       * @param {RegExpMatchArray} match - the latest match
+       * @param {string} matchPlusRemainder - match plus remainder of content
+       * @returns {CompiledMode | void} - the next mode, or if void continue on in current mode
+       */
+    function endOfMode(mode, match, matchPlusRemainder) {
+      var matched = startsWith(mode.endRe, matchPlusRemainder);
+
+      if (matched) {
+        if (mode["on:end"]) {
+          var resp = new Response(mode);
+          mode["on:end"](match, resp);
+          if (resp.ignore) matched = false;
+        }
+
+        if (matched) {
+          while (mode.endsParent && mode.parent) {
+            mode = mode.parent;
+          }
+          return mode;
+        }
+      }
+      // even if on:end fires an `ignore` it's still possible
+      // that we might trigger the end node because of a parent mode
+      if (mode.endsWithParent) {
+        return endOfMode(mode.parent, match, matchPlusRemainder);
+      }
+    }
+
+    /**
+       * Handle matching but then ignoring a sequence of text
+       *
+       * @param {string} lexeme - string containing full match text
+       */
+    function doIgnore(lexeme) {
+      if (top.matcher.regexIndex === 0) {
+        // no more regexs to potentially match here, so we move the cursor forward one
+        // space
+        mode_buffer += lexeme[0];
+        return 1;
+      } else {
+        // no need to move the cursor, we still have additional regexes to try and
+        // match at this very spot
+        resumeScanAtSamePosition = true;
+        return 0;
+      }
+    }
+
+    /**
+       * Handle the start of a new potential mode match
+       *
+       * @param {EnhancedMatch} match - the current match
+       * @returns {number} how far to advance the parse cursor
+       */
+    function doBeginMatch(match) {
+      var lexeme = match[0];
+      var new_mode = match.rule;
+
+      var resp = new Response(new_mode);
+      // first internal before callbacks, then the public ones
+      var beforeCallbacks = [new_mode.__beforeBegin, new_mode["on:begin"]];
+      for (var _i2 = 0, _beforeCallbacks = beforeCallbacks; _i2 < _beforeCallbacks.length; _i2++) {var cb = _beforeCallbacks[_i2];
+        if (!cb) continue;
+        cb(match, resp);
+        if (resp.ignore) return doIgnore(lexeme);
+      }
+
+      if (new_mode && new_mode.endSameAsBegin) {
+        new_mode.endRe = escape(lexeme);
+      }
+
+      if (new_mode.skip) {
+        mode_buffer += lexeme;
+      } else {
+        if (new_mode.excludeBegin) {
+          mode_buffer += lexeme;
+        }
+        processBuffer();
+        if (!new_mode.returnBegin && !new_mode.excludeBegin) {
+          mode_buffer = lexeme;
+        }
+      }
+      startNewMode(new_mode);
+      // if (mode["after:begin"]) {
+      //   let resp = new Response(mode);
+      //   mode["after:begin"](match, resp);
+      // }
+      return new_mode.returnBegin ? 0 : lexeme.length;
+    }
+
+    /**
+       * Handle the potential end of mode
+       *
+       * @param {RegExpMatchArray} match - the current match
+       */
+    function doEndMatch(match) {
+      var lexeme = match[0];
+      var matchPlusRemainder = codeToHighlight.substr(match.index);
+
+      var end_mode = endOfMode(top, match, matchPlusRemainder);
+      if (!end_mode) {return NO_MATCH;}
+
+      var origin = top;
+      if (origin.skip) {
+        mode_buffer += lexeme;
+      } else {
+        if (!(origin.returnEnd || origin.excludeEnd)) {
+          mode_buffer += lexeme;
+        }
+        processBuffer();
+        if (origin.excludeEnd) {
+          mode_buffer = lexeme;
+        }
+      }
+      do {
+        if (top.className) {
+          emitter.closeNode();
+        }
+        if (!top.skip && !top.subLanguage) {
+          relevance += top.relevance;
+        }
+        top = top.parent;
+      } while (top !== end_mode.parent);
+      if (end_mode.starts) {
+        if (end_mode.endSameAsBegin) {
+          end_mode.starts.endRe = end_mode.endRe;
+        }
+        startNewMode(end_mode.starts);
+      }
+      return origin.returnEnd ? 0 : lexeme.length;
+    }
+
+    function processContinuations() {
+      var list = [];
+      for (var current = top; current !== language; current = current.parent) {
+        if (current.className) {
+          list.unshift(current.className);
+        }
+      }
+      list.forEach(function (item) {return emitter.openNode(item);});
+    }
+
+    /** @type {{type?: MatchType, index?: number, rule?: Mode}}} */
+    var lastMatch = {};
+
+    /**
+                         *  Process an individual match
+                         *
+                         * @param {string} textBeforeMatch - text preceeding the match (since the last match)
+                         * @param {EnhancedMatch} [match] - the match itself
+                         */
+    function processLexeme(textBeforeMatch, match) {
+      var lexeme = match && match[0];
+
+      // add non-matched text to the current mode buffer
+      mode_buffer += textBeforeMatch;
+
+      if (lexeme == null) {
+        processBuffer();
+        return 0;
+      }
+
+      // we've found a 0 width match and we're stuck, so we need to advance
+      // this happens when we have badly behaved rules that have optional matchers to the degree that
+      // sometimes they can end up matching nothing at all
+      // Ref: https://github.com/highlightjs/highlight.js/issues/2140
+      if (lastMatch.type === "begin" && match.type === "end" && lastMatch.index === match.index && lexeme === "") {
+        // spit the "skipped" character that our regex choked on back into the output sequence
+        mode_buffer += codeToHighlight.slice(match.index, match.index + 1);
+        if (!SAFE_MODE) {
+          /** @type {AnnotatedError} */
+          var err = new Error('0 width match regex');
+          err.languageName = languageName;
+          err.badRule = lastMatch.rule;
+          throw err;
+        }
+        return 1;
+      }
+      lastMatch = match;
+
+      if (match.type === "begin") {
+        return doBeginMatch(match);
+      } else if (match.type === "illegal" && !ignoreIllegals) {
+        // illegal match, we do not continue processing
+        /** @type {AnnotatedError} */
+        var _err = new Error('Illegal lexeme "' + lexeme + '" for mode "' + (top.className || '<unnamed>') + '"');
+        _err.mode = top;
+        throw _err;
+      } else if (match.type === "end") {
+        var processed = doEndMatch(match);
+        if (processed !== NO_MATCH) {
+          return processed;
+        }
+      }
+
+      // edge case for when illegal matches $ (end of line) which is technically
+      // a 0 width match but not a begin/end match so it's not caught by the
+      // first handler (when ignoreIllegals is true)
+      if (match.type === "illegal" && lexeme === "") {
+        // advance so we aren't stuck in an infinite loop
+        return 1;
+      }
+
+      // infinite loops are BAD, this is a last ditch catch all. if we have a
+      // decent number of iterations yet our index (cursor position in our
+      // parsing) still 3x behind our index then something is very wrong
+      // so we bail
+      if (iterations > 100000 && iterations > match.index * 3) {
+        var _err2 = new Error('potential infinite loop, way more iterations than matches');
+        throw _err2;
+      }
+
+      /*
+        Why might be find ourselves here?  Only one occasion now.  An end match that was
+        triggered but could not be completed.  When might this happen?  When an `endSameasBegin`
+        rule sets the end rule to a specific match.  Since the overall mode termination rule that's
+        being used to scan the text isn't recompiled that means that any match that LOOKS like
+        the end (but is not, because it is not an exact match to the beginning) will
+        end up here.  A definite end match, but when `doEndMatch` tries to "reapply"
+        the end rule and fails to match, we wind up here, and just silently ignore the end.
+         This causes no real harm other than stopping a few times too many.
+        */
+
+
+      mode_buffer += lexeme;
+      return lexeme.length;
+    }
+
+    var language = getLanguage(languageName);
+    if (!language) {
+      console.error(LANGUAGE_NOT_FOUND.replace("{}", languageName));
+      throw new Error('Unknown language: "' + languageName + '"');
+    }
+
+    var md = compileLanguage(language);
+    var result = '';
+    /** @type {CompiledMode} */
+    var top = continuation || md;
+    /** @type Record<string,Mode> */
+    var continuations = {}; // keep continuations for sub-languages
+    var emitter = new options.__emitter(options);
+    processContinuations();
+    var mode_buffer = '';
+    var relevance = 0;
+    var index = 0;
+    var iterations = 0;
+    var resumeScanAtSamePosition = false;
+
+    try {
+      top.matcher.considerAll();
+
+      for (;;) {
+        iterations++;
+        if (resumeScanAtSamePosition) {
+          // only regexes not matched previously will now be
+          // considered for a potential match
+          resumeScanAtSamePosition = false;
+        } else {
+          top.matcher.considerAll();
+        }
+        top.matcher.lastIndex = index;
+
+        var match = top.matcher.exec(codeToHighlight);
+        // console.log("match", match[0], match.rule && match.rule.begin)
+
+        if (!match) break;
+
+        var beforeMatch = codeToHighlight.substring(index, match.index);
+        var processedCount = processLexeme(beforeMatch, match);
+        index = match.index + processedCount;
+      }
+      processLexeme(codeToHighlight.substr(index));
+      emitter.closeAllNodes();
+      emitter.finalize();
+      result = emitter.toHTML();
+
+      return {
+        relevance: relevance,
+        value: result,
+        language: languageName,
+        illegal: false,
+        emitter: emitter,
+        top: top };
+
+    } catch (err) {
+      if (err.message && err.message.includes('Illegal')) {
+        return {
+          illegal: true,
+          illegalBy: {
+            msg: err.message,
+            context: codeToHighlight.slice(index - 100, index + 100),
+            mode: err.mode },
+
+          sofar: result,
+          relevance: 0,
+          value: escape$1(codeToHighlight),
+          emitter: emitter };
+
+      } else if (SAFE_MODE) {
+        return {
+          illegal: false,
+          relevance: 0,
+          value: escape$1(codeToHighlight),
+          emitter: emitter,
+          language: languageName,
+          top: top,
+          errorRaised: err };
+
+      } else {
+        throw err;
+      }
+    }
+  }
+
+  /**
+     * returns a valid highlight result, without actually doing any actual work,
+     * auto highlight starts with this and it's possible for small snippets that
+     * auto-detection may not find a better match
+     * @param {string} code
+     * @returns {HighlightResult}
+     */
+  function justTextHighlightResult(code) {
+    var result = {
+      relevance: 0,
+      emitter: new options.__emitter(options),
+      value: escape$1(code),
+      illegal: false,
+      top: PLAINTEXT_LANGUAGE };
+
+    result.emitter.addText(code);
+    return result;
+  }
+
+  /**
+    Highlighting with language detection. Accepts a string with the code to
+    highlight. Returns an object with the following properties:
+     - language (detected language)
+    - relevance (int)
+    - value (an HTML string with highlighting markup)
+    - second_best (object with the same structure for second-best heuristically
+      detected language, may be absent)
+       @param {string} code
+      @param {Array<string>} [languageSubset]
+      @returns {AutoHighlightResult}
+    */
+
+
+  function highlightAuto(code, languageSubset) {
+    languageSubset = languageSubset || options.languages || Object.keys(languages);
+    var result = justTextHighlightResult(code);
+    var secondBest = result;
+    languageSubset.filter(getLanguage).filter(autoDetection).forEach(function (name) {
+      var current = _highlight(name, code, false);
+      current.language = name;
+      if (current.relevance > secondBest.relevance) {
+        secondBest = current;
+      }
+      if (current.relevance > result.relevance) {
+        secondBest = result;
+        result = current;
+      }
+    });
+    if (secondBest.language) {
+      // second_best (with underscore) is the expected API
+      result.second_best = secondBest;
+    }
+    return result;
+  }
+
+  /**
+    Post-processing of the highlighted markup:
+     - replace TABs with something more useful
+    - replace real line-breaks with '<br>' for non-pre containers
+       @param {string} html
+      @returns {string}
+    */
+
+
+  function fixMarkup(html) {
+    if (!(options.tabReplace || options.useBR)) {
+      return html;
+    }
+
+    return html.replace(fixMarkupRe, function (match) {
+      if (match === '\n') {
+        return options.useBR ? '<br>' : match;
+      } else if (options.tabReplace) {
+        return match.replace(/\t/g, options.tabReplace);
+      }
+      return match;
+    });
+  }
+
+  /**
+     * Builds new class name for block given the language name
+     *
+     * @param {string} prevClassName
+     * @param {string} [currentLang]
+     * @param {string} [resultLang]
+     */
+  function buildClassName(prevClassName, currentLang, resultLang) {
+    var language = currentLang ? aliases[currentLang] : resultLang;
+    var result = [prevClassName.trim()];
+
+    if (!prevClassName.match(/\bhljs\b/)) {
+      result.push('hljs');
+    }
+
+    if (!prevClassName.includes(language)) {
+      result.push(language);
+    }
+
+    return result.join(' ').trim();
+  }
+
+  /**
+     * Applies highlighting to a DOM node containing code. Accepts a DOM node and
+     * two optional parameters for fixMarkup.
+     *
+     * @param {HighlightedHTMLElement} element - the HTML element to highlight
+    */
+  function highlightBlock(element) {
+    /** @type HTMLElement */
+    var node = null;
+    var language = blockLanguage(element);
+
+    if (shouldNotHighlight(language)) return;
+
+    fire("before:highlightBlock",
+    { block: element, language: language });
+    if (options.useBR) {
+      // node = document.createElement('div');
+      node = document.createElement('view');
+      node.innerHTML = element.innerHTML.replace(/\n/g, '').replace(/<br[ /]*>/g, '\n');
+    } else {
+      node = element;
+    }
+    var text = node.textContent;
+    var result = language ? highlight(language, text, true) : highlightAuto(text);
+
+    var originalStream = nodeStream$1(node);
+    if (originalStream.length) {
+      // const resultNode = document.createElement('div');
+      var resultNode = document.createElement('view');
+      resultNode.innerHTML = result.value;
+      result.value = mergeStreams$1(originalStream, nodeStream$1(resultNode), text);
+    }
+    result.value = fixMarkup(result.value);
+
+    fire("after:highlightBlock", { block: element, result: result });
+
+    element.innerHTML = result.value;
+    element.className = buildClassName(element.className, language, result.language);
+    element.result = {
+      language: result.language,
+      // TODO: remove with version 11.0
+      re: result.relevance,
+      relavance: result.relevance };
+
+    if (result.second_best) {
+      element.second_best = {
+        language: result.second_best.language,
+        // TODO: remove with version 11.0
+        re: result.second_best.relevance,
+        relavance: result.second_best.relevance };
+
+    }
+  }
+
+  /**
+     * Updates highlight.js global options with the passed options
+     *
+     * @param {{}} userOptions
+     */
+  function configure(userOptions) {
+    options = inherit$1(options, userOptions);
+  }
+
+  /**
+     * Highlights to all <pre><code> blocks on a page
+     *
+     * @type {Function & {called?: boolean}}
+     */
+  var initHighlighting = function initHighlighting() {
+    if (initHighlighting.called) return;
+    initHighlighting.called = true;
+    var blocks = document.querySelectorAll('pre code');
+
+  };
+
+  // Higlights all when DOMContentLoaded fires
+  function initHighlightingOnLoad() {
+    // @ts-ignore
+    window.addEventListener('DOMContentLoaded', initHighlighting, false);
+  }
+
+  /**
+     * Register a language grammar module
+     *
+     * @param {string} languageName
+     * @param {LanguageFn} languageDefinition
+     */
+  function registerLanguage(languageName, languageDefinition) {
+    var lang = null;
+    try {
+      lang = languageDefinition(hljs);
+    } catch (error) {
+      console.error("Language definition for '{}' could not be registered.".replace("{}", languageName));
+      // hard or soft error
+      if (!SAFE_MODE) {throw error;} else {console.error(error);}
+      // languages that have serious errors are replaced with essentially a
+      // "plaintext" stand-in so that the code blocks will still get normal
+      // css classes applied to them - and one bad language won't break the
+      // entire highlighter
+      lang = PLAINTEXT_LANGUAGE;
+    }
+    // give it a temporary name if it doesn't have one in the meta-data
+    if (!lang.name) lang.name = languageName;
+    languages[languageName] = lang;
+    lang.rawDefinition = languageDefinition.bind(null, hljs);
+
+    if (lang.aliases) {
+      registerAliases(lang.aliases, { languageName: languageName });
+    }
+  }
+
+  /**
+     * @returns {string[]} List of language internal names
+     */
+  function listLanguages() {
+    return Object.keys(languages);
+  }
+
+  /**
+      intended usage: When one language truly requires another
+       Unlike `getLanguage`, this will throw when the requested language
+      is not available.
+       @param {string} name - name of the language to fetch/require
+      @returns {Language | never}
+    */
+
+
+  function requireLanguage(name) {
+    var lang = getLanguage(name);
+    if (lang) {return lang;}
+
+    var err = new Error('The \'{}\' language is required, but not loaded.'.replace('{}', name));
+    throw err;
+  }
+
+  /**
+     * @param {string} name - name of the language to retrieve
+     * @returns {Language | undefined}
+     */
+  function getLanguage(name) {
+    name = (name || '').toLowerCase();
+    return languages[name] || languages[aliases[name]];
+  }
+
+  /**
+     *
+     * @param {string|string[]} aliasList - single alias or list of aliases
+     * @param {{languageName: string}} opts
+     */
+  function registerAliases(aliasList, _ref4) {var languageName = _ref4.languageName;
+    if (typeof aliasList === 'string') {
+      aliasList = [aliasList];
+    }
+    aliasList.forEach(function (alias) {aliases[alias] = languageName;});
+  }
+
+  /**
+     * Determines if a given language has auto-detection enabled
+     * @param {string} name - name of the language
+     */
+  function autoDetection(name) {
+    var lang = getLanguage(name);
+    return lang && !lang.disableAutodetect;
+  }
+
+  /**
+     * @param {HLJSPlugin} plugin
+     */
+  function addPlugin(plugin) {
+    plugins.push(plugin);
+  }
+
+  /**
+     *
+     * @param {PluginEvent} event
+     * @param {any} args
+     */
+  function fire(event, args) {
+    var cb = event;
+    plugins.forEach(function (plugin) {
+      if (plugin[cb]) {
+        plugin[cb](args);
+      }
+    });
+  }
+
+  /* fixMarkup is deprecated and will be removed entirely in v11 */
+  function deprecate_fixMarkup(arg) {
+    console.warn("fixMarkup is deprecated and will be removed entirely in v11.0");
+    console.warn("Please see https://github.com/highlightjs/highlight.js/issues/2534");
+
+    return fixMarkup(arg);
+  }
+
+  /* Interface definition */
+  Object.assign(hljs, {
+    highlight: highlight,
+    highlightAuto: highlightAuto,
+    fixMarkup: deprecate_fixMarkup,
+    highlightBlock: highlightBlock,
+    configure: configure,
+    initHighlighting: initHighlighting,
+    initHighlightingOnLoad: initHighlightingOnLoad,
+    registerLanguage: registerLanguage,
+    listLanguages: listLanguages,
+    getLanguage: getLanguage,
+    registerAliases: registerAliases,
+    requireLanguage: requireLanguage,
+    autoDetection: autoDetection,
+    inherit: inherit$1,
+    addPlugin: addPlugin,
+    // plugins for frameworks
+    vuePlugin: VuePlugin });
+
+
+  hljs.debugMode = function () {SAFE_MODE = false;};
+  hljs.safeMode = function () {SAFE_MODE = true;};
+  hljs.versionString = version;
+
+  for (var key in MODES) {
+    // @ts-ignore
+    if (typeof MODES[key] === "object") {
+      // @ts-ignore
+      deepFreeze(MODES[key]);
+    }
+  }
+
+  // merge all the modes/regexs into our main object
+  Object.assign(hljs, MODES);
+
+  return hljs;
+};
+
+// export an "instance" of the highlighter
+var highlight = HLJS({});
+
+module.exports = highlight;
+
+/***/ }),
+
 /***/ 18:
 /*!**********************************************************!*\
   !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
@@ -2237,6 +4665,749 @@ function normalizeComponent (
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! regenerator-runtime */ 19);
+
+/***/ }),
+
+/***/ 184:
+/*!***********************************************************************************************************************************!*\
+  !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/parser/libs/MpHtmlParser.js ***!
+  \***********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(uni) {/**
+ * html 解析器
+ * @tutorial https://github.com/jin-yufeng/Parser
+ * @version 20200828
+ * @author JinYufeng
+ * @listens MIT
+ */
+var cfg = __webpack_require__(/*! ./config.js */ 185),
+blankChar = cfg.blankChar,
+CssHandler = __webpack_require__(/*! ./CssHandler.js */ 186),
+windowWidth = uni.getSystemInfoSync().windowWidth;
+var emoji;
+
+function MpHtmlParser(data) {var _this = this;var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  this.attrs = {};
+  this.CssHandler = new CssHandler(options.tagStyle, windowWidth);
+  this.data = data;
+  this.domain = options.domain;
+  this.DOM = [];
+  this.i = this.start = this.audioNum = this.imgNum = this.videoNum = 0;
+  options.prot = (this.domain || '').includes('://') ? this.domain.split('://')[0] : 'http';
+  this.options = options;
+  this.state = this.Text;
+  this.STACK = [];
+  // 工具函数
+  this.bubble = function () {
+    for (var i = _this.STACK.length, item; item = _this.STACK[--i];) {
+      if (cfg.richOnlyTags[item.name]) {
+        if (item.name == 'table' && !Object.hasOwnProperty.call(item, 'c')) item.c = 1;
+        return false;
+      }
+      item.c = 1;
+    }
+    return true;
+  };
+  this.decode = function (val, amp) {
+    var i = -1,
+    j,en;
+    while (1) {
+      if ((i = val.indexOf('&', i + 1)) == -1) break;
+      if ((j = val.indexOf(';', i + 2)) == -1) break;
+      if (val[i + 1] == '#') {
+        en = parseInt((val[i + 2] == 'x' ? '0' : '') + val.substring(i + 2, j));
+        if (!isNaN(en)) val = val.substr(0, i) + String.fromCharCode(en) + val.substr(j + 1);
+      } else {
+        en = val.substring(i + 1, j);
+        if (cfg.entities[en] || en == amp)
+        val = val.substr(0, i) + (cfg.entities[en] || '&') + val.substr(j + 1);
+      }
+    }
+    return val;
+  };
+  this.getUrl = function (url) {
+    if (url[0] == '/') {
+      if (url[1] == '/') url = _this.options.prot + ':' + url;else
+      if (_this.domain) url = _this.domain + url;
+    } else if (_this.domain && url.indexOf('data:') != 0 && !url.includes('://'))
+    url = _this.domain + '/' + url;
+    return url;
+  };
+  this.isClose = function () {return _this.data[_this.i] == '>' || _this.data[_this.i] == '/' && _this.data[_this.i + 1] == '>';};
+  this.section = function () {return _this.data.substring(_this.start, _this.i);};
+  this.parent = function () {return _this.STACK[_this.STACK.length - 1];};
+  this.siblings = function () {return _this.STACK.length ? _this.parent().children : _this.DOM;};
+}
+MpHtmlParser.prototype.parse = function () {
+  if (emoji) this.data = emoji.parseEmoji(this.data);
+  for (var c; c = this.data[this.i]; this.i++) {
+    this.state(c);}
+  if (this.state == this.Text) this.setText();
+  while (this.STACK.length) {this.popNode(this.STACK.pop());}
+  return this.DOM;
+};
+// 设置属性
+MpHtmlParser.prototype.setAttr = function () {
+  var name = this.attrName.toLowerCase(),
+  val = this.attrVal;
+  if (cfg.boolAttrs[name]) this.attrs[name] = 'T';else
+  if (val) {
+    if (name == 'src' || name == 'data-src' && !this.attrs.src) this.attrs.src = this.getUrl(this.decode(val, 'amp'));else
+    if (name == 'href' || name == 'style') this.attrs[name] = this.decode(val, 'amp');else
+    if (name.substr(0, 5) != 'data-') this.attrs[name] = val;
+  }
+  this.attrVal = '';
+  while (blankChar[this.data[this.i]]) {this.i++;}
+  if (this.isClose()) this.setNode();else
+  {
+    this.start = this.i;
+    this.state = this.AttrName;
+  }
+};
+// 设置文本节点
+MpHtmlParser.prototype.setText = function () {
+  var back,text = this.section();
+  if (!text) return;
+  text = cfg.onText && cfg.onText(text, function () {return back = true;}) || text;
+  if (back) {
+    this.data = this.data.substr(0, this.start) + text + this.data.substr(this.i);
+    var j = this.start + text.length;
+    for (this.i = this.start; this.i < j; this.i++) {this.state(this.data[this.i]);}
+    return;
+  }
+  if (!this.pre) {
+    // 合并空白符
+    var flag,tmp = [];
+    for (var i = text.length, c; c = text[--i];) {
+      if (!blankChar[c]) {
+        tmp.unshift(c);
+        if (!flag) flag = 1;
+      } else {
+        if (tmp[0] != ' ') tmp.unshift(' ');
+        if (c == '\n' && flag == void 0) flag = 0;
+      }}
+    if (flag == 0) return;
+    text = tmp.join('');
+  }
+  this.siblings().push({
+    type: 'text',
+    text: this.decode(text) });
+
+};
+// 设置元素节点
+MpHtmlParser.prototype.setNode = function () {
+  var node = {
+    name: this.tagName.toLowerCase(),
+    attrs: this.attrs },
+
+  close = cfg.selfClosingTags[node.name];
+  if (this.options.nodes.length) node.type = 'node';
+  this.attrs = {};
+  if (!cfg.ignoreTags[node.name]) {
+    // 处理属性
+    var attrs = node.attrs,
+    style = this.CssHandler.match(node.name, attrs, node) + (attrs.style || ''),
+    styleObj = {};
+    if (attrs.id) {
+      if (this.options.compress & 1) attrs.id = void 0;else
+      if (this.options.useAnchor) this.bubble();
+    }
+    if (this.options.compress & 2 && attrs.class) attrs.class = void 0;
+    switch (node.name) {
+      case 'a':
+      case 'ad':
+
+
+        this.bubble();
+        break;
+      case 'font':
+        if (attrs.color) {
+          styleObj['color'] = attrs.color;
+          attrs.color = void 0;
+        }
+        if (attrs.face) {
+          styleObj['font-family'] = attrs.face;
+          attrs.face = void 0;
+        }
+        if (attrs.size) {
+          var size = parseInt(attrs.size);
+          if (size < 1) size = 1;else
+          if (size > 7) size = 7;
+          var map = ['xx-small', 'x-small', 'small', 'medium', 'large', 'x-large', 'xx-large'];
+          styleObj['font-size'] = map[size - 1];
+          attrs.size = void 0;
+        }
+        break;
+      case 'embed':
+
+        var src = node.attrs.src || '',
+        type = node.attrs.type || '';
+        if (type.includes('video') || src.includes('.mp4') || src.includes('.3gp') || src.includes('.m3u8'))
+        node.name = 'video';else
+        if (type.includes('audio') || src.includes('.m4a') || src.includes('.wav') || src.includes('.mp3') || src.includes(
+        '.aac'))
+        node.name = 'audio';else
+        break;
+        if (node.attrs.autostart)
+        node.attrs.autoplay = 'T';
+        node.attrs.controls = 'T';
+
+
+
+
+
+      case 'video':
+      case 'audio':
+        if (!attrs.id) attrs.id = node.name + ++this["".concat(node.name, "Num")];else
+        this["".concat(node.name, "Num")]++;
+        if (node.name == 'video') {
+          if (this.videoNum > 3)
+          node.lazyLoad = 1;
+          if (attrs.width) {
+            styleObj.width = parseFloat(attrs.width) + (attrs.width.includes('%') ? '%' : 'px');
+            attrs.width = void 0;
+          }
+          if (attrs.height) {
+            styleObj.height = parseFloat(attrs.height) + (attrs.height.includes('%') ? '%' : 'px');
+            attrs.height = void 0;
+          }
+        }
+        if (!attrs.controls && !attrs.autoplay) attrs.controls = 'T';
+        attrs.source = [];
+        if (attrs.src) {
+          attrs.source.push(attrs.src);
+          attrs.src = void 0;
+        }
+        this.bubble();
+        break;
+      case 'td':
+      case 'th':
+        if (attrs.colspan || attrs.rowspan)
+        for (var k = this.STACK.length, item; item = this.STACK[--k];) {
+          if (item.name == 'table') {
+            item.c = void 0;
+            break;
+          }}}
+
+    if (attrs.align) {
+      styleObj['text-align'] = attrs.align;
+      attrs.align = void 0;
+    }
+    // 压缩 style
+    var styles = style.split(';');
+    style = '';
+    for (var i = 0, len = styles.length; i < len; i++) {
+      var info = styles[i].split(':');
+      if (info.length < 2) continue;
+      var _key = info[0].trim().toLowerCase(),
+      _value = info.slice(1).join(':').trim();
+      if (_value[0] == '-' || _value.includes('safe'))
+      style += ";".concat(_key, ":").concat(_value);else
+      if (!styleObj[_key] || _value.includes('import') || !styleObj[_key].includes('import'))
+      styleObj[_key] = _value;
+    }
+    if (node.name == 'img') {
+      if (attrs.src && !attrs.ignore) {
+        if (this.bubble())
+        attrs.i = (this.imgNum++).toString();else
+        attrs.ignore = 'T';
+      }
+      if (attrs.ignore) {
+        style += ';-webkit-touch-callout:none';
+        styleObj['max-width'] = '100%';
+      }
+      var width;
+      if (styleObj.width) width = styleObj.width;else
+      if (attrs.width) width = attrs.width.includes('%') ? attrs.width : parseFloat(attrs.width) + 'px';
+      if (width) {
+        styleObj.width = width;
+        attrs.width = '100%';
+        if (parseInt(width) > windowWidth) {
+          styleObj.height = '';
+          if (attrs.height) attrs.height = void 0;
+        }
+      }
+      if (styleObj.height) {
+        attrs.height = styleObj.height;
+        styleObj.height = '';
+      } else if (attrs.height && !attrs.height.includes('%'))
+      attrs.height = parseFloat(attrs.height) + 'px';
+    }
+    for (var key in styleObj) {
+      var value = styleObj[key];
+      if (!value) continue;
+      if (key.includes('flex') || key == 'order' || key == 'self-align') node.c = 1;
+      // 填充链接
+      if (value.includes('url')) {
+        var j = value.indexOf('(');
+        if (j++ != -1) {
+          while (value[j] == '"' || value[j] == "'" || blankChar[value[j]]) {j++;}
+          value = value.substr(0, j) + this.getUrl(value.substr(j));
+        }
+      }
+      // 转换 rpx
+      else if (value.includes('rpx'))
+        value = value.replace(/[0-9.]+\s*rpx/g, function ($) {return parseFloat($) * windowWidth / 750 + 'px';});else
+        if (key == 'white-space' && value.includes('pre') && !close)
+        this.pre = node.pre = true;
+      style += ";".concat(key, ":").concat(value);
+    }
+    style = style.substr(1);
+    if (style) attrs.style = style;
+    if (!close) {
+      node.children = [];
+      if (node.name == 'pre' && cfg.highlight) {
+        this.remove(node);
+        this.pre = node.pre = true;
+      }
+      this.siblings().push(node);
+      this.STACK.push(node);
+    } else if (!cfg.filter || cfg.filter(node, this) != false)
+    this.siblings().push(node);
+  } else {
+    if (!close) this.remove(node);else
+    if (node.name == 'source') {
+      var parent = this.parent();
+      if (parent && (parent.name == 'video' || parent.name == 'audio') && node.attrs.src)
+      parent.attrs.source.push(node.attrs.src);
+    } else if (node.name == 'base' && !this.domain) this.domain = node.attrs.href;
+  }
+  if (this.data[this.i] == '/') this.i++;
+  this.start = this.i + 1;
+  this.state = this.Text;
+};
+// 移除标签
+MpHtmlParser.prototype.remove = function (node) {var _this2 = this;
+  var name = node.name,
+  j = this.i;
+  // 处理 svg
+  var handleSvg = function handleSvg() {
+    var src = _this2.data.substring(j, _this2.i + 1);
+    if (!node.attrs.xmlns) src = ' xmlns="http://www.w3.org/2000/svg"' + src;
+    var i = j;
+    while (_this2.data[j] != '<') {j--;}
+    src = _this2.data.substring(j, i).replace("viewbox", "viewBox") + src;
+    var parent = _this2.parent();
+    if (node.attrs.width == '100%' && parent && (parent.attrs.style || '').includes('inline'))
+    parent.attrs.style = 'width:300px;max-width:100%;' + parent.attrs.style;
+    _this2.siblings().push({
+      name: 'img',
+      attrs: {
+        src: 'data:image/svg+xml;utf8,' + src.replace(/#/g, '%23'),
+        style: (/vertical[^;]+/.exec(node.attrs.style) || []).shift(),
+        ignore: 'T' } });
+
+
+  };
+  if (node.name == 'svg' && this.data[j] == '/') return handleSvg(this.i++);
+  while (1) {
+    if ((this.i = this.data.indexOf('</', this.i + 1)) == -1) {
+      if (name == 'pre' || name == 'svg') this.i = j;else
+      this.i = this.data.length;
+      return;
+    }
+    this.start = this.i += 2;
+    while (!blankChar[this.data[this.i]] && !this.isClose()) {this.i++;}
+    if (this.section().toLowerCase() == name) {
+      // 代码块高亮
+      if (name == 'pre') {
+        this.data = this.data.substr(0, j + 1) + cfg.highlight(this.data.substring(j + 1, this.i - 5), node.attrs) + this.data.
+        substr(this.i - 5);
+        return this.i = j;
+      } else if (name == 'style')
+      this.CssHandler.getStyle(this.data.substring(j + 1, this.i - 7));else
+      if (name == 'title')
+      this.DOM.title = this.data.substring(j + 1, this.i - 7);
+      if ((this.i = this.data.indexOf('>', this.i)) == -1) this.i = this.data.length;
+      if (name == 'svg') handleSvg();
+      return;
+    }
+  }
+};
+// 节点出栈处理
+MpHtmlParser.prototype.popNode = function (node) {
+  // 空白符处理
+  if (node.pre) {
+    node.pre = this.pre = void 0;
+    for (var i = this.STACK.length; i--;) {
+      if (this.STACK[i].pre)
+      this.pre = true;}
+  }
+  var siblings = this.siblings(),
+  len = siblings.length,
+  childs = node.children;
+  if (node.name == 'head' || cfg.filter && cfg.filter(node, this) == false)
+  return siblings.pop();
+  var attrs = node.attrs;
+  // 替换一些标签名
+  if (cfg.blockTags[node.name]) node.name = 'div';else
+  if (!cfg.trustTags[node.name]) node.name = 'span';
+  // 处理列表
+  if (node.c && (node.name == 'ul' || node.name == 'ol')) {
+    if ((node.attrs.style || '').includes('list-style:none')) {
+      for (var _i = 0, child; child = childs[_i++];) {
+        if (child.name == 'li')
+        child.name = 'div';}
+    } else if (node.name == 'ul') {
+      var floor = 1;
+      for (var _i2 = this.STACK.length; _i2--;) {
+        if (this.STACK[_i2].name == 'ul') floor++;}
+      if (floor != 1)
+      for (var _i3 = childs.length; _i3--;) {
+        childs[_i3].floor = floor;}
+    } else {
+      for (var _i4 = 0, num = 1, _child; _child = childs[_i4++];) {
+        if (_child.name == 'li') {
+          _child.type = 'ol';
+          _child.num = function (num, type) {
+            if (type == 'a') return String.fromCharCode(97 + (num - 1) % 26);
+            if (type == 'A') return String.fromCharCode(65 + (num - 1) % 26);
+            if (type == 'i' || type == 'I') {
+              num = (num - 1) % 99 + 1;
+              var one = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'],
+              ten = ['X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'],
+              res = (ten[Math.floor(num / 10) - 1] || '') + (one[num % 10 - 1] || '');
+              if (type == 'i') return res.toLowerCase();
+              return res;
+            }
+            return num;
+          }(num++, attrs.type) + '.';
+        }}
+    }
+  }
+  // 处理表格的边框
+  if (node.name == 'table') {
+    var padding = attrs.cellpadding,
+    spacing = attrs.cellspacing,
+    border = attrs.border;
+    if (node.c) {
+      this.bubble();
+      attrs.style = (attrs.style || '') + ';display:table';
+      if (!padding) padding = 2;
+      if (!spacing) spacing = 2;
+    }
+    if (border) attrs.style = "border:".concat(border, "px solid gray;").concat(attrs.style || '');
+    if (spacing) attrs.style = "border-spacing:".concat(spacing, "px;").concat(attrs.style || '');
+    if (border || padding || node.c)
+    (function f(ns) {
+      for (var i = 0, n; n = ns[i]; i++) {
+        if (n.type == 'text') continue;
+        var style = n.attrs.style || '';
+        if (node.c && n.name[0] == 't') {
+          n.c = 1;
+          style += ';display:table-' + (n.name == 'th' || n.name == 'td' ? 'cell' : n.name == 'tr' ? 'row' : 'row-group');
+        }
+        if (n.name == 'th' || n.name == 'td') {
+          if (border) style = "border:".concat(border, "px solid gray;").concat(style);
+          if (padding) style = "padding:".concat(padding, "px;").concat(style);
+        } else f(n.children || []);
+        if (style) n.attrs.style = style;
+      }
+    })(childs);
+    if (this.options.autoscroll) {
+      var table = Object.assign({}, node);
+      node.name = 'div';
+      node.attrs = {
+        style: 'overflow:scroll' };
+
+      node.children = [table];
+    }
+  }
+  this.CssHandler.pop && this.CssHandler.pop(node);
+  // 自动压缩
+  if (node.name == 'div' && !Object.keys(attrs).length && childs.length == 1 && childs[0].name == 'div')
+  siblings[len - 1] = childs[0];
+};
+// 状态机
+MpHtmlParser.prototype.Text = function (c) {
+  if (c == '<') {
+    var next = this.data[this.i + 1],
+    isLetter = function isLetter(c) {return c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z';};
+    if (isLetter(next)) {
+      this.setText();
+      this.start = this.i + 1;
+      this.state = this.TagName;
+    } else if (next == '/') {
+      this.setText();
+      if (isLetter(this.data[++this.i + 1])) {
+        this.start = this.i + 1;
+        this.state = this.EndTag;
+      } else this.Comment();
+    } else if (next == '!' || next == '?') {
+      this.setText();
+      this.Comment();
+    }
+  }
+};
+MpHtmlParser.prototype.Comment = function () {
+  var key;
+  if (this.data.substring(this.i + 2, this.i + 4) == '--') key = '-->';else
+  if (this.data.substring(this.i + 2, this.i + 9) == '[CDATA[') key = ']]>';else
+  key = '>';
+  if ((this.i = this.data.indexOf(key, this.i + 2)) == -1) this.i = this.data.length;else
+  this.i += key.length - 1;
+  this.start = this.i + 1;
+  this.state = this.Text;
+};
+MpHtmlParser.prototype.TagName = function (c) {
+  if (blankChar[c]) {
+    this.tagName = this.section();
+    while (blankChar[this.data[this.i]]) {this.i++;}
+    if (this.isClose()) this.setNode();else
+    {
+      this.start = this.i;
+      this.state = this.AttrName;
+    }
+  } else if (this.isClose()) {
+    this.tagName = this.section();
+    this.setNode();
+  }
+};
+MpHtmlParser.prototype.AttrName = function (c) {
+  if (c == '=' || blankChar[c] || this.isClose()) {
+    this.attrName = this.section();
+    if (blankChar[c])
+    while (blankChar[this.data[++this.i]]) {;}
+    if (this.data[this.i] == '=') {
+      while (blankChar[this.data[++this.i]]) {;}
+      this.start = this.i--;
+      this.state = this.AttrValue;
+    } else this.setAttr();
+  }
+};
+MpHtmlParser.prototype.AttrValue = function (c) {
+  if (c == '"' || c == "'") {
+    this.start++;
+    if ((this.i = this.data.indexOf(c, this.i + 1)) == -1) return this.i = this.data.length;
+    this.attrVal = this.section();
+    this.i++;
+  } else {
+    for (; !blankChar[this.data[this.i]] && !this.isClose(); this.i++) {;}
+    this.attrVal = this.section();
+  }
+  this.setAttr();
+};
+MpHtmlParser.prototype.EndTag = function (c) {
+  if (blankChar[c] || c == '>' || c == '/') {
+    var name = this.section().toLowerCase();
+    for (var i = this.STACK.length; i--;) {
+      if (this.STACK[i].name == name) break;}
+    if (i != -1) {
+      var node;
+      while ((node = this.STACK.pop()).name != name) {this.popNode(node);}
+      this.popNode(node);
+    } else if (name == 'p' || name == 'br')
+    this.siblings().push({
+      name: name,
+      attrs: {} });
+
+    this.i = this.data.indexOf('>', this.i);
+    this.start = this.i + 1;
+    if (this.i == -1) this.i = this.data.length;else
+    this.state = this.Text;
+  }
+};
+module.exports = MpHtmlParser;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+
+/***/ 185:
+/*!*****************************************************************************************************************************!*\
+  !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/parser/libs/config.js ***!
+  \*****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* 配置文件 */
+var cfg = {
+  // 出错占位图
+  errorImg: null,
+  // 过滤器函数
+  filter: null,
+  // 代码高亮函数
+  highlight: null,
+  // 文本处理函数
+  onText: null,
+  // 实体编码列表
+  entities: {
+    quot: '"',
+    apos: "'",
+    semi: ';',
+    nbsp: '\xA0',
+    ensp: "\u2002",
+    emsp: "\u2003",
+    ndash: '–',
+    mdash: '—',
+    middot: '·',
+    lsquo: '‘',
+    rsquo: '’',
+    ldquo: '“',
+    rdquo: '”',
+    bull: '•',
+    hellip: '…' },
+
+  blankChar: makeMap(' ,\xA0,\t,\r,\n,\f'),
+  boolAttrs: makeMap('allowfullscreen,autoplay,autostart,controls,ignore,loop,muted'),
+  // 块级标签，将被转为 div
+  blockTags: makeMap('address,article,aside,body,caption,center,cite,footer,header,html,nav,pre,section'),
+  // 将被移除的标签
+  ignoreTags: makeMap('area,base,canvas,frame,iframe,input,link,map,meta,param,script,source,style,svg,textarea,title,track,wbr'),
+  // 只能被 rich-text 显示的标签
+  richOnlyTags: makeMap('a,colgroup,fieldset,legend,table'),
+  // 自闭合的标签
+  selfClosingTags: makeMap('area,base,br,col,circle,ellipse,embed,frame,hr,img,input,line,link,meta,param,path,polygon,rect,source,track,use,wbr'),
+  // 信任的标签
+  trustTags: makeMap('a,abbr,ad,audio,b,blockquote,br,code,col,colgroup,dd,del,dl,dt,div,em,fieldset,h1,h2,h3,h4,h5,h6,hr,i,img,ins,label,legend,li,ol,p,q,source,span,strong,sub,sup,table,tbody,td,tfoot,th,thead,tr,title,ul,video'),
+  // 默认的标签样式
+  userAgentStyles: {
+    address: 'font-style:italic',
+    big: 'display:inline;font-size:1.2em',
+    blockquote: 'background-color:#f6f6f6;border-left:3px solid #dbdbdb;color:#6c6c6c;padding:5px 0 5px 10px',
+    caption: 'display:table-caption;text-align:center',
+    center: 'text-align:center',
+    cite: 'font-style:italic',
+    dd: 'margin-left:40px',
+    mark: 'background-color:yellow',
+    pre: 'font-family:monospace;white-space:pre;overflow:scroll',
+    s: 'text-decoration:line-through',
+    small: 'display:inline;font-size:0.8em',
+    u: 'text-decoration:underline' } };
+
+
+
+function makeMap(str) {
+  var map = Object.create(null),
+  list = str.split(',');
+  for (var i = list.length; i--;) {
+    map[list[i]] = true;}
+  return map;
+}
+
+
+if (wx.canIUse('editor')) {
+  cfg.blockTags.pre = void 0;
+  cfg.ignoreTags.rp = true;
+  Object.assign(cfg.richOnlyTags, makeMap('bdi,bdo,caption,rt,ruby'));
+  Object.assign(cfg.trustTags, makeMap('bdi,bdo,caption,pre,rt,ruby'));
+}
+
+
+
+
+
+
+
+module.exports = cfg;
+
+/***/ }),
+
+/***/ 186:
+/*!*********************************************************************************************************************************!*\
+  !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/parser/libs/CssHandler.js ***!
+  \*********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var cfg = __webpack_require__(/*! ./config.js */ 185),
+isLetter = function isLetter(c) {return c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z';};
+
+function CssHandler(tagStyle) {
+  var styles = Object.assign(Object.create(null), cfg.userAgentStyles);
+  for (var item in tagStyle) {
+    styles[item] = (styles[item] ? styles[item] + ';' : '') + tagStyle[item];}
+  this.styles = styles;
+}
+CssHandler.prototype.getStyle = function (data) {
+  this.styles = new parser(data, this.styles).parse();
+};
+CssHandler.prototype.match = function (name, attrs) {
+  var tmp,matched = (tmp = this.styles[name]) ? tmp + ';' : '';
+  if (attrs.class) {
+    var items = attrs.class.split(' ');
+    for (var i = 0, item; item = items[i]; i++) {
+      if (tmp = this.styles['.' + item])
+      matched += tmp + ';';}
+  }
+  if (tmp = this.styles['#' + attrs.id])
+  matched += tmp + ';';
+  return matched;
+};
+module.exports = CssHandler;
+
+function parser(data, init) {
+  this.data = data;
+  this.floor = 0;
+  this.i = 0;
+  this.list = [];
+  this.res = init;
+  this.state = this.Space;
+}
+parser.prototype.parse = function () {
+  for (var c; c = this.data[this.i]; this.i++) {
+    this.state(c);}
+  return this.res;
+};
+parser.prototype.section = function () {
+  return this.data.substring(this.start, this.i);
+};
+// 状态机
+parser.prototype.Space = function (c) {
+  if (c == '.' || c == '#' || isLetter(c)) {
+    this.start = this.i;
+    this.state = this.Name;
+  } else if (c == '/' && this.data[this.i + 1] == '*')
+  this.Comment();else
+  if (!cfg.blankChar[c] && c != ';')
+  this.state = this.Ignore;
+};
+parser.prototype.Comment = function () {
+  this.i = this.data.indexOf('*/', this.i) + 1;
+  if (!this.i) this.i = this.data.length;
+  this.state = this.Space;
+};
+parser.prototype.Ignore = function (c) {
+  if (c == '{') this.floor++;else
+  if (c == '}' && ! --this.floor) this.state = this.Space;
+};
+parser.prototype.Name = function (c) {
+  if (cfg.blankChar[c]) {
+    this.list.push(this.section());
+    this.state = this.NameSpace;
+  } else if (c == '{') {
+    this.list.push(this.section());
+    this.Content();
+  } else if (c == ',') {
+    this.list.push(this.section());
+    this.Comma();
+  } else if (!isLetter(c) && (c < '0' || c > '9') && c != '-' && c != '_')
+  this.state = this.Ignore;
+};
+parser.prototype.NameSpace = function (c) {
+  if (c == '{') this.Content();else
+  if (c == ',') this.Comma();else
+  if (!cfg.blankChar[c]) this.state = this.Ignore;
+};
+parser.prototype.Comma = function () {
+  while (cfg.blankChar[this.data[++this.i]]) {;}
+  if (this.data[this.i] == '{') this.Content();else
+  {
+    this.start = this.i--;
+    this.state = this.Name;
+  }
+};
+parser.prototype.Content = function () {
+  this.start = ++this.i;
+  if ((this.i = this.data.indexOf('}', this.i)) == -1) this.i = this.data.length;
+  var content = this.section();
+  for (var i = 0, item; item = this.list[i++];) {
+    if (this.res[item]) this.res[item] += ';' + content;else
+    this.res[item] = content;}
+  this.list = [];
+  this.state = this.Space;
+};
 
 /***/ }),
 

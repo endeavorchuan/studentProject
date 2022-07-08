@@ -1,7 +1,7 @@
 <!--
  * @Author: 初浩诚
  * @Date: 2022-07-07 15:27:51
- * @LastEditTime: 2022-07-07 15:55:03
+ * @LastEditTime: 2022-07-08 12:32:12
  * @LastEditors: 初浩诚
  * @Description: 
  * @FilePath: /studentProject/pages/subject/subject.vue
@@ -15,10 +15,10 @@
         <view class="dots">
           <text>1/20</text>
         </view>
-        <swiper class="swiper">
+        <swiper class="swiper" :style="'height:'+clientHeight+'px;'">
           <swiper-item>
-            <scroll-view class="scroll-view" scroll-y="true">
-              每道题组件
+            <scroll-view class="scroll-view" scroll-y="true" :style="'height:'+clientHeight+'px;'">
+              <SubjectItem></SubjectItem>
             </scroll-view>
           </swiper-item>
         </swiper>
@@ -33,11 +33,51 @@
 
 <script>
 import MyHeader from '@/components/start-school/my-header/my-header.vue'
+import SubjectItem from '@/components/interview-question/subject-item/subject-item.vue'
 
 export default {
   components: {
-    MyHeader
-  }
+    MyHeader,
+    SubjectItem
+  },
+
+  data() {
+    return {
+      clientHeight: 0
+    }
+  },
+  onReady() {
+    uni.getSystemInfo({
+      success: (res) => {
+        this.clientHeight = res.windowHeight - this.getClientHeight()
+        // 获取计数高度
+        let dots = uni.createSelectorQuery().in(this).select(".dots")
+        dots.boundingClientRect((data) => {
+          // data包含元素的高度信息
+          // data.height 是头部的高度，68是tabbar的高度
+          this.clientHeight = res.clientHeight - data.height
+        }).exec(function (res){
+          // 这个方法必须执行，即使什么也不做，否则不会获取到信息
+        })
+        // 获取底部切换的高度
+        let info = uni.createSelectorQuery().in(this).select(".subject-check")
+        info.boundingClientRect((data) => {
+          // data包含元素的高度信息
+          // data.height 是头部的高度，68是tabbar的高度
+          this.clientHeight = res.clientHeight - data.height
+        }).exec(function (res){
+          // 这个方法必须执行，即使什么也不做，否则不会获取到信息
+        })
+      }
+    })
+  },
+  methods: {
+    // 获取可视区域的高度
+    getClientHeight () {
+      const res = uni.getSystemInfoSync()
+      return res.statusBarHeight
+    }
+  },
 } 
 </script>
 

@@ -5,6 +5,7 @@
   "backgroundColor": "#f0f3f7",
   "scrollIndicator": "none",
   "usingComponents": {
-    "my-header": "/components/start-school/my-header/my-header"
+    "my-header": "/components/start-school/my-header/my-header",
+    "subject-item": "/components/interview-question/subject-item/subject-item"
   }
 }

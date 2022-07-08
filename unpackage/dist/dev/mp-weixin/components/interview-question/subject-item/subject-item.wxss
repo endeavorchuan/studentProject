@@ -1,0 +1,41 @@
+.swiper-item.data-v-cc96e266 {
+    margin-top: 60rpx;
+    margin-bottom: 100rpx;
+}
+.item-title.data-v-cc96e266 {
+    width: 100%;
+    height: 100%;
+    font-size: 30rpx;
+    padding: 0 20rpx;
+    font-weight: normal;
+    color: #344356;
+    box-sizing: border-box;
+}
+.item-content.data-v-cc96e266 {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+}
+.item-result.data-v-cc96e266 {
+    display: flex;
+}
+.item-img.data-v-cc96e266 {
+    width: 45rpx;
+    height: 44rpx;
+}
+.result.data-v-cc96e266 {
+    width: 576rpx;
+    font-size: 32rpx;
+    font-weight: 400;
+    color: #333;
+    padding-left: 10rpx;
+}
+.answer.data-v-cc96e266 {
+    box-sizing: border-box;
+    border: 2rpx solid transparent;
+}
+.parsing.data-v-cc96e266 {
+    box-sizing: border-box;
+}
+
