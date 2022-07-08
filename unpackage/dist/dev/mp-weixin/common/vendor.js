@@ -12377,7 +12377,7 @@ internalMixin(Vue);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.getQuestionTypeList = void 0;
+Object.defineProperty(exports, "__esModule", { value: true });exports.getQuestionList = exports.getQuestionTypeList = void 0;
 
 
 
@@ -12400,7 +12400,23 @@ var getQuestionTypeList = function getQuestionTypeList(_ref) {var pageNum = _ref
       pageSize: pageSize } });
 
 
-};exports.getQuestionTypeList = getQuestionTypeList;
+};
+
+// 查询面试题  /wechat/questions/list
+exports.getQuestionTypeList = getQuestionTypeList;var getQuestionList = function getQuestionList(_ref2) {var pageNum = _ref2.pageNum,pageSize = _ref2.pageSize,typeId = _ref2.typeId;
+  return _request.default.request({
+    url: '/wechat/questions/list',
+    method: 'POST',
+    header: {
+      "Content-Type": "application/json" },
+
+    data: {
+      pageNum: pageNum,
+      pageSize: pageSize,
+      typeId: typeId } });
+
+
+};exports.getQuestionList = getQuestionList;
 
 /***/ }),
 

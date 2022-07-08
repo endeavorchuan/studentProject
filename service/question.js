@@ -22,3 +22,19 @@ export const getQuestionTypeList = ({pageNum, pageSize}) => {
         }
     })
 }
+
+// 查询面试题  /wechat/questions/list
+export const getQuestionList = ({pageNum, pageSize, typeId}) => {
+    return $http.request({
+        url: '/wechat/questions/list',
+        method: 'POST',
+        header: {
+            "Content-Type": "application/json"
+        },
+        data: {
+            pageNum,
+            pageSize,
+            typeId
+        }
+    })
+}

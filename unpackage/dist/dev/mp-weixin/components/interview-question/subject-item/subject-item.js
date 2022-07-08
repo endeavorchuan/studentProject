@@ -154,6 +154,12 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 {
+  props: {
+    item: {
+      type: Object,
+      default: {} } },
+
+
   components: {
     MDParserHighlight: MDParserHighlight } };exports.default = _default;
 

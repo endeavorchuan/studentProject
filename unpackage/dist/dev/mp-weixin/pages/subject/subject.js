@@ -130,7 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var MyHeader = function MyHeader() {__webpack_require__.e(/*! require.ensure | components/start-school/my-header/my-header */ "components/start-school/my-header/my-header").then((function () {return resolve(__webpack_require__(/*! @/components/start-school/my-header/my-header.vue */ 108));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var SubjectItem = function SubjectItem() {__webpack_require__.e(/*! require.ensure | components/interview-question/subject-item/subject-item */ "components/interview-question/subject-item/subject-item").then((function () {return resolve(__webpack_require__(/*! @/components/interview-question/subject-item/subject-item.vue */ 141));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 18));
 
 
 
@@ -166,16 +166,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var _question = __webpack_require__(/*! @/service/question */ 31);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var MyHeader = function MyHeader() {__webpack_require__.e(/*! require.ensure | components/start-school/my-header/my-header */ "components/start-school/my-header/my-header").then((function () {return resolve(__webpack_require__(/*! @/components/start-school/my-header/my-header.vue */ 108));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var SubjectItem = function SubjectItem() {__webpack_require__.e(/*! require.ensure | components/interview-question/subject-item/subject-item */ "components/interview-question/subject-item/subject-item").then((function () {return resolve(__webpack_require__(/*! @/components/interview-question/subject-item/subject-item.vue */ 141));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 {
   components: {
     MyHeader: MyHeader,
     SubjectItem: SubjectItem },
 
-
   data: function data() {
     return {
-      clientHeight: 0 };
+      clientHeight: 0,
+      typeId: 0,
+      toSwiper: [] };
 
   },
   onReady: function onReady() {var _this = this;
@@ -187,7 +189,7 @@ __webpack_require__.r(__webpack_exports__);
         dots.boundingClientRect(function (data) {
           // data包含元素的高度信息
           // data.height 是头部的高度，68是tabbar的高度
-          _this.clientHeight = res.clientHeight - data.height;
+          _this.clientHeight = _this.clientHeight - data.height;
         }).exec(function (res) {
           // 这个方法必须执行，即使什么也不做，否则不会获取到信息
         });
@@ -196,18 +198,34 @@ __webpack_require__.r(__webpack_exports__);
         info.boundingClientRect(function (data) {
           // data包含元素的高度信息
           // data.height 是头部的高度，68是tabbar的高度
-          _this.clientHeight = res.clientHeight - data.height;
+          _this.clientHeight = _this.clientHeight - data.height;
         }).exec(function (res) {
           // 这个方法必须执行，即使什么也不做，否则不会获取到信息
         });
       } });
 
   },
+  onLoad: function onLoad(options) {
+    // 获取类型id
+    this.typeId = options.typeId;
+    this.__init();
+  },
   methods: {
     // 获取可视区域的高度
     getClientHeight: function getClientHeight() {
       var res = uni.getSystemInfoSync();
       return res.statusBarHeight;
+    },
+    // 获取面试题数据
+    __init: function __init() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var _this2$toSwiper;var data, res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
+                data = {
+                  pageNum: _this2.pageNum,
+                  pageSize: _this2.pageSize,
+                  typeId: _this2.typeId };_context.next = 3;return (
+
+                  (0, _question.getQuestionList)(data));case 3:res = _context.sent;
+                (_this2$toSwiper = _this2.toSwiper).push.apply(_this2$toSwiper, _toConsumableArray(res));
+                console.log(_this2.toSwiper);case 6:case "end":return _context.stop();}}}, _callee);}))();
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

@@ -1,7 +1,7 @@
 <!--
  * @Author: 初浩诚
  * @Date: 2022-07-07 11:12:03
- * @LastEditTime: 2022-07-07 15:31:32
+ * @LastEditTime: 2022-07-08 13:46:37
  * @LastEditors: 初浩诚
  * @Description: 
  * @FilePath: /studentProject/components/interview-question/question-item/question-item.vue
@@ -15,7 +15,7 @@
       <view class="item-title">{{ item.title }}</view>
       <view class="item-tips">{{ item.source }}</view>
     </view>
-    <view class="item-start" @tap="goDetail">开始刷题</view>
+    <view class="item-start" @tap="goDetail(item.id)">开始刷题</view>
   </view>
 </template>
 
@@ -28,9 +28,9 @@ export default {
     }
   },
   methods: {
-    goDetail () {
+    goDetail (typeId) {
       uni.navigateTo({
-        url: '/pages/subject/subject'
+        url: '/pages/subject/subject?typeId=' + typeId
       })
     }
   }

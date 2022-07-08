@@ -6,10 +6,9 @@
     background: transparent;
     color: transparent;
 }
-
-/* .swiper {
+.swiper.data-v-66de5760 {
     height: auto;
-} */
+}
 .subject.data-v-66de5760 {
     position: relative;
     width: 100vw;
