@@ -3,6 +3,8 @@
   "navigationStyle": "custom",
   "enablePullDownRefresh": false,
   "usingComponents": {
-    "my-tabbar": "/components/tabbar/my-tabbar"
+    "my-tabbar": "/components/tabbar/my-tabbar",
+    "my-header": "/components/start-school/my-header/my-header",
+    "process-item": "/components/interview-process/process-item/process-item"
   }
 }

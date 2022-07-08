@@ -1,0 +1,23 @@
+page {
+    height: auto;
+}
+.process {
+    width: 750rpx;
+    padding-top: 20rpx;
+    padding-bottom: 120rpx;
+    background-image: url('https://fawnuat.xuexiluxian.cn/api/profile/wechat/bgimg/process-bg.png');
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.process-content {
+    width: 750rpx;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 10rpx;
+    padding-bottom: 4rpx;
+    
+}
