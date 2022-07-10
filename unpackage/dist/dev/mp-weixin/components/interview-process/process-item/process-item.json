@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "process-child": "/components/interview-process/process-child/process-child"
+  },
   "component": true
 }
