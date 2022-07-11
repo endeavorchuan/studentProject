@@ -3561,6 +3561,31 @@ module.exports = index_cjs;
 
 /***/ }),
 
+/***/ 133:
+/*!*****************************************************************************************!*\
+  !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/utils/getTime.js ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.getTime = void 0;var getTime = function getTime() {
+  var a = new Date();
+  var y = a.getFullYear();
+  var m = a.getMonth() + 1;
+  m = m < 10 ? "0" + m : m;
+  var d = a.getDate();
+  d = d < 10 ? "0" + d : d;
+
+  return {
+    year: y,
+    month: m,
+    day: d };
+
+};exports.getTime = getTime;
+
+/***/ }),
+
 /***/ 14:
 /*!*********************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/store/modules/bar.js ***!
@@ -3759,7 +3784,7 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 213:
+/***/ 230:
 /*!****************************************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/assets/marked.min.js ***!
   \****************************************************************************************************************************/
@@ -3775,14 +3800,14 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 214:
+/***/ 231:
 /*!*********************************************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/highlight.js/lib/index.js ***!
   \*********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var hljs = __webpack_require__(/*! ./core */ 215);
+var hljs = __webpack_require__(/*! ./core */ 232);
 
 // hljs.registerLanguage('1c', require('./languages/1c'));
 // hljs.registerLanguage('abnf', require('./languages/abnf'));
@@ -3979,7 +4004,7 @@ module.exports = hljs;
 
 /***/ }),
 
-/***/ 215:
+/***/ 232:
 /*!********************************************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/highlight.js/lib/core.js ***!
   \********************************************************************************************************************************/
@@ -6187,7 +6212,7 @@ module.exports = highlight;
 
 /***/ }),
 
-/***/ 230:
+/***/ 247:
 /*!***********************************************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/parser/libs/MpHtmlParser.js ***!
   \***********************************************************************************************************************************/
@@ -6201,9 +6226,9 @@ module.exports = highlight;
  * @author JinYufeng
  * @listens MIT
  */
-var cfg = __webpack_require__(/*! ./config.js */ 231),
+var cfg = __webpack_require__(/*! ./config.js */ 248),
 blankChar = cfg.blankChar,
-CssHandler = __webpack_require__(/*! ./CssHandler.js */ 232),
+CssHandler = __webpack_require__(/*! ./CssHandler.js */ 249),
 windowWidth = uni.getSystemInfoSync().windowWidth;
 var emoji;
 
@@ -6733,7 +6758,7 @@ module.exports = MpHtmlParser;
 
 /***/ }),
 
-/***/ 231:
+/***/ 248:
 /*!*****************************************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/parser/libs/config.js ***!
   \*****************************************************************************************************************************/
@@ -6823,14 +6848,14 @@ module.exports = cfg;
 
 /***/ }),
 
-/***/ 232:
+/***/ 249:
 /*!*********************************************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/parser/libs/CssHandler.js ***!
   \*********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var cfg = __webpack_require__(/*! ./config.js */ 231),
+var cfg = __webpack_require__(/*! ./config.js */ 248),
 isLetter = function isLetter(c) {return c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z';};
 
 function CssHandler(tagStyle) {
@@ -14445,7 +14470,7 @@ var getProcessList = function getProcessList(_ref) {var pageNum = _ref.pageNum,p
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.stuCurrent = void 0;
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.stuProtocolInfo = exports.signClassProtocol = exports.protocolInfo = exports.stuCurrent = void 0;
 
 
 
@@ -14453,17 +14478,54 @@ var getProcessList = function getProcessList(_ref) {var pageNum = _ref.pageNum,p
 
 
 
-var _request = _interopRequireDefault(__webpack_require__(/*! ./request.js */ 29));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} /**
-                                                                                                                                                              * @name: start-school
-                                                                                                                                                              * @author: chuanchuan
-                                                                                                                                                              * @date: 2022-07-11 15:52
-                                                                                                                                                              * @description：学院协议信息
-                                                                                                                                                              * @update: 2022-07-11 15:52
-                                                                                                                                                              */var stuCurrent = function stuCurrent() {return _request.default.request({ url: '/wechat/stuProtocol/current', method: 'GET', header: {
+var _request = _interopRequireDefault(__webpack_require__(/*! ./request.js */ 29));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
+
+var stuCurrent = function stuCurrent() {
+  return _request.default.request({
+    url: '/wechat/stuProtocol/current',
+    method: 'GET',
+    header: {
       'token': uni.getStorageSync('token') } });
 
 
 };exports.stuCurrent = stuCurrent;
+
+var protocolInfo = function protocolInfo(_ref) {var classId = _ref.classId;
+  return _request.default.request({
+    url: '/wechat/protocol/info/' + classId,
+    method: 'GET',
+    header: {
+      "token": uni.getStorageSync('token') } });
+
+
+};
+
+// 签署班级协议
+// /wechat/stuProtocol/signClassProtocol
+exports.protocolInfo = protocolInfo;var signClassProtocol = function signClassProtocol(data) {
+  return _request.default.request({
+    url: '/wechat/stuProtocol/signClassProtocol',
+    method: 'POST',
+    header: {
+      "Content-Type": "multipart/form-data",
+      "token": uni.getStorageSync('token') },
+
+    data: _objectSpread({},
+    data) });
+
+
+};
+
+// 查询已签署的班级协议 
+exports.signClassProtocol = signClassProtocol;var stuProtocolInfo = function stuProtocolInfo(_ref2) {var classId = _ref2.classId;
+  return _request.default.request({
+    url: '/wechat/stuProtocol/info/' + classId,
+    method: 'GET',
+    header: {
+      "token": uni.getStorageSync('token') } });
+
+
+};exports.stuProtocolInfo = stuProtocolInfo;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),

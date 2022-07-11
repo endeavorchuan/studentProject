@@ -17,3 +17,40 @@ export const stuCurrent = () => {
     }
   })
 }
+
+export const protocolInfo = ({classId}) => {
+  return $http.request({
+    url:'/wechat/protocol/info/'+classId,
+    method: 'GET',
+    header:{
+      "token": uni.getStorageSync('token')
+    }
+  })
+}
+
+// 签署班级协议
+// /wechat/stuProtocol/signClassProtocol
+export const signClassProtocol = (data) => {
+  return $http.request({
+    url:'/wechat/stuProtocol/signClassProtocol',
+    method: 'POST',
+    header:{
+      "Content-Type": "multipart/form-data",
+      "token": uni.getStorageSync('token')
+    },
+    data: {
+      ...data
+    }
+  })
+}
+
+// 查询已签署的班级协议 
+export const stuProtocolInfo = ({classId}) => {
+  return $http.request({
+    url:'/wechat/stuProtocol/info/'+classId,
+    method: 'GET',
+    header:{
+      "token": uni.getStorageSync('token')
+    }
+  })
+}

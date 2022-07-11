@@ -10,7 +10,9 @@
         "pages/enter-school/enter-school",
         "pages/cnosulting-help/consulting-help",
         "pages/subject/subject",
-        "pages/show-manage/show-manage"
+        "pages/show-manage/show-manage",
+        "pages/sign-canvas/sign-canvas",
+        "pages/sign-contract/sign-contract"
     ],
     "subPackages": [],
     "window": {

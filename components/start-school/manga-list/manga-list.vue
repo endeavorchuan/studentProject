@@ -12,7 +12,7 @@
       <image class="item-bg" src="../../../static/imgs/archives.png"></image>
       <view class="item-text">档案管理</view>
     </view>
-    <view class="list-item">
+    <view class="list-item" @tap="goContract">
       <image class="item-bg" :src="signList.imgUrl"></image>
       <view class="item-text">{{ signList.name }}</view>
     </view>
@@ -62,6 +62,11 @@ export default {
     goArchives () {
       uni.navigateTo({
         url: '/pages/show-manage/show-manage?classId=' + this.classId
+      })
+    },
+    goContract () {
+        uni.navigateTo({
+        url: '/pages/sign-contract/sign-contract'
       })
     }
   }

@@ -1,0 +1,219 @@
+
+scroll-view.data-v-bf5992e8 ::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
+  height: 0 !important;
+  -webkit-appearance: none;
+  background: transparent;
+  color: transparent;
+}
+.my-contract.data-v-bf5992e8 {
+  width: 100vw;
+  height: 7000rpx;
+  background-color: #f0f3f7;
+}
+.contract-content.data-v-bf5992e8 {
+  padding: 20rpx 35rpx;
+  height: 6500rpx;
+  height: 100%;
+  box-sizing: border-box;
+}
+scroll-view.data-v-bf5992e8 {
+  height: 100%;
+  height: 6500rpx;
+}
+.contract.data-v-bf5992e8 {
+  width: 682rpx;
+  height: 6000rpx;
+  border: 2rpx dashed #000;
+  position: relative;
+}
+.canvasImg.data-v-bf5992e8 {
+  width: 682rpx;
+  border: 2rpx dashed #000;
+}
+.username.data-v-bf5992e8 {
+  position: absolute;
+  left: 150rpx;
+  top: 220rpx;
+}
+.idCard.data-v-bf5992e8 {
+  font-size: 20rpx;
+  position: absolute;
+  right: 20rpx;
+  bottom: 2320rpx;
+}
+.idCard1.data-v-bf5992e8 {
+  font-size: 20rpx;
+  position: absolute;
+  right: 20rpx;
+  bottom: 180rpx;
+}
+.contract-time.data-v-bf5992e8 {
+  font-size: 20rpx;
+  position: absolute;
+  right: 60rpx;
+  bottom: 2280rpx;
+}
+.company-time.data-v-bf5992e8 {
+  font-size: 20rpx;
+  position: absolute;
+  left: 150rpx;
+  bottom: 2280rpx;
+}
+.contract-time1.data-v-bf5992e8 {
+  font-size: 20rpx;
+  position: absolute;
+  right: 50rpx;
+  bottom: 140rpx;
+}
+.company-time1.data-v-bf5992e8 {
+  font-size: 20rpx;
+  position: absolute;
+  left: 150rpx;
+  bottom: 140rpx;
+}
+.contract-img.data-v-bf5992e8 {
+  width: 682rpx;
+  /* height: 100%; */
+  height: 6000rpx;
+}
+
+/* 签名的图片显示的位置 */
+.contract-sign.data-v-bf5992e8 {
+  width: 200rpx;
+  height: 150rpx;
+  position: absolute;
+  right: 100rpx;
+  bottom: 2300rpx;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.contract-sign1.data-v-bf5992e8 {
+  width: 200rpx;
+  height: 150rpx;
+  position: absolute;
+  right: 100rpx;
+  bottom: 170rpx;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.contract-btn.data-v-bf5992e8 {
+  width: 680rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #358cf8;
+  text-align: center;
+  border-radius: 20rpx;
+  margin-top: 100rpx;
+  color: #fff;
+}
+
+/* model */
+.pop.data-v-bf5992e8 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+.pop-mask.data-v-bf5992e8 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.pop-box.data-v-bf5992e8 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 600rpx;
+  background-color: #fff;
+}
+.pop-content.data-v-bf5992e8 {
+  padding: 37rpx;
+}
+.pop-title.data-v-bf5992e8 {
+  width: 506rpx;
+  height: 31rpx;
+  font-size: 30rpx;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #333333;
+  line-height: 20rpx;
+}
+.tips-active.data-v-bf5992e8 {
+  color: #0060ff;
+}
+.sign-title.data-v-bf5992e8 {
+  width: 113rpx;
+  height: 28rpx;
+  font-size: 28rpx;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #333333;
+  line-height: 20rpx;
+  padding: 60rpx 0;
+}
+.pop-list.data-v-bf5992e8 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.pop-item.data-v-bf5992e8 {
+  width: 325rpx;
+  height: 211rpx;
+  border: 2rpx solid #8b8b8b;
+  border-radius: 10rpx;
+  position: relative;
+}
+.item-img.data-v-bf5992e8 {
+  width: 150rpx;
+  height: 150rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.sign-item.data-v-bf5992e8 {
+  width: 200rpx;
+  height: 200rpx;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  padding: 50rpx 0;
+  position: absolute;
+  top: -50rpx;
+  left: 60rpx;
+}
+.check-img.data-v-bf5992e8 {
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.pop-btn.data-v-bf5992e8 {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50rpx;
+}
+.cancel.data-v-bf5992e8 {
+  width: 310rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #5468ff;
+  border-radius: 20rpx;
+  text-align: center;
+  color: #ffffff;
+}
+.sign-sure.data-v-bf5992e8 {
+  background: #0060ff;
+}
+
