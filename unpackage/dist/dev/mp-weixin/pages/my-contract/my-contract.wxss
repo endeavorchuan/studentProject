@@ -1,0 +1,96 @@
+.scroll-view.data-v-3bdbfe2e ::-webkit-scrollbar {
+	display: none;
+	width: 0 !important;
+	height: 0 !important;
+	-webkit-appearance: none;
+	background: transparent;
+	color: transparent;
+}
+.my-contract.data-v-3bdbfe2e {
+	width: 100vw;
+	height: 100vh;
+	background-color: #f0f3f7;
+}
+.contract-content.data-v-3bdbfe2e {
+	padding: 0 35rpx;
+	box-sizing: border-box;
+}
+.scroll-view.data-v-3bdbfe2e {
+	box-sizing: border-box;
+}
+.contract.data-v-3bdbfe2e {
+	width: 682rpx;
+	border: 2rpx dashed #000;
+	position: relative;
+	margin-bottom: 140rpx;
+}
+.canvasImg.data-v-3bdbfe2e {
+	width: 682rpx;
+	border: 2rpx dashed #000;
+}
+.username.data-v-3bdbfe2e {
+	position: absolute;
+	left: 150rpx;
+	top: 220rpx;
+}
+.idCard.data-v-3bdbfe2e {
+	font-size: 20rpx;
+	position: absolute;
+	right: 20rpx;
+	bottom: 2320rpx;
+}
+.idCard1.data-v-3bdbfe2e {
+	font-size: 20rpx;
+	position: absolute;
+	right: 20rpx;
+	bottom: 180rpx;
+}
+.contract-time.data-v-3bdbfe2e {
+	font-size: 20rpx;
+	position: absolute;
+	right: 60rpx;
+	bottom: 2280rpx;
+}
+.company-time.data-v-3bdbfe2e {
+	font-size: 20rpx;
+	position: absolute;
+	left: 150rpx;
+	bottom: 2280rpx;
+}
+.contract-time1.data-v-3bdbfe2e {
+	font-size: 20rpx;
+	position: absolute;
+	right: 50rpx;
+	bottom: 140rpx;
+}
+.company-time1.data-v-3bdbfe2e {
+	font-size: 20rpx;
+	position: absolute;
+	left: 150rpx;
+	bottom: 140rpx;
+}
+.contract-img.data-v-3bdbfe2e {
+	width: 682rpx;
+	height: 6000rpx;
+}
+
+/* 签名的图片显示的位置 */
+.contract-sign.data-v-3bdbfe2e {
+	width: 200rpx;
+	height: 150rpx;
+	position: absolute;
+	right: 100rpx;
+	bottom: 2300rpx;
+	-webkit-transform: rotate(-90deg);
+	        transform: rotate(-90deg);
+}
+.contract-sign1.data-v-3bdbfe2e {
+	width: 200rpx;
+	height: 150rpx;
+	position: absolute;
+	right: 100rpx;
+	bottom: 170rpx;
+	-webkit-transform: rotate(-90deg);
+	        transform: rotate(-90deg);
+}
+

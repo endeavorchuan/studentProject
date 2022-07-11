@@ -2100,6 +2100,42 @@ uni$1;exports.default = _default;
 
 /***/ }),
 
+/***/ 100:
+/*!****************************************************************************************!*\
+  !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/service/help.js ***!
+  \****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.getHelpList = void 0;
+
+
+
+
+
+
+
+var _request = _interopRequireDefault(__webpack_require__(/*! ./request.js */ 29));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} /**
+                                                                                                                                                              * @name: start-school
+                                                                                                                                                              * @author: chuanchuan
+                                                                                                                                                              * @date: 2022-07-06 16:58
+                                                                                                                                                              * @description：请求咨询帮助页数据
+                                                                                                                                                              * @update: 2022-07-06 16:58
+                                                                                                                                                              */ // 查询咨询帮助页  /wechat/help/list
+var getHelpList = function getHelpList(_ref) {var pageSize = _ref.pageSize,pageNum = _ref.pageNum;return _request.default.request({ url: '/wechat/help/list', method: 'POST',
+    header: {
+      "Content-Type": "application/json" },
+
+    data: {
+      pageNum: pageNum,
+      pageSize: pageSize } });
+
+
+};exports.getHelpList = getHelpList;
+
+/***/ }),
+
 /***/ 11:
 /*!**********************************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
@@ -3723,7 +3759,7 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 203:
+/***/ 205:
 /*!****************************************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/assets/marked.min.js ***!
   \****************************************************************************************************************************/
@@ -3739,14 +3775,14 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 204:
+/***/ 206:
 /*!*********************************************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/highlight.js/lib/index.js ***!
   \*********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var hljs = __webpack_require__(/*! ./core */ 205);
+var hljs = __webpack_require__(/*! ./core */ 207);
 
 // hljs.registerLanguage('1c', require('./languages/1c'));
 // hljs.registerLanguage('abnf', require('./languages/abnf'));
@@ -3943,7 +3979,7 @@ module.exports = hljs;
 
 /***/ }),
 
-/***/ 205:
+/***/ 207:
 /*!********************************************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/highlight.js/lib/core.js ***!
   \********************************************************************************************************************************/
@@ -6151,7 +6187,7 @@ module.exports = highlight;
 
 /***/ }),
 
-/***/ 220:
+/***/ 222:
 /*!***********************************************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/parser/libs/MpHtmlParser.js ***!
   \***********************************************************************************************************************************/
@@ -6165,9 +6201,9 @@ module.exports = highlight;
  * @author JinYufeng
  * @listens MIT
  */
-var cfg = __webpack_require__(/*! ./config.js */ 221),
+var cfg = __webpack_require__(/*! ./config.js */ 223),
 blankChar = cfg.blankChar,
-CssHandler = __webpack_require__(/*! ./CssHandler.js */ 222),
+CssHandler = __webpack_require__(/*! ./CssHandler.js */ 224),
 windowWidth = uni.getSystemInfoSync().windowWidth;
 var emoji;
 
@@ -6697,7 +6733,7 @@ module.exports = MpHtmlParser;
 
 /***/ }),
 
-/***/ 221:
+/***/ 223:
 /*!*****************************************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/parser/libs/config.js ***!
   \*****************************************************************************************************************************/
@@ -6787,14 +6823,14 @@ module.exports = cfg;
 
 /***/ }),
 
-/***/ 222:
+/***/ 224:
 /*!*********************************************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/parser/libs/CssHandler.js ***!
   \*********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var cfg = __webpack_require__(/*! ./config.js */ 221),
+var cfg = __webpack_require__(/*! ./config.js */ 223),
 isLetter = function isLetter(c) {return c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z';};
 
 function CssHandler(tagStyle) {
@@ -14401,7 +14437,38 @@ var getProcessList = function getProcessList(_ref) {var pageNum = _ref.pageNum,p
 
 /***/ }),
 
-/***/ 62:
+/***/ 56:
+/*!****************************************************************************************!*\
+  !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/service/sign.js ***!
+  \****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.stuCurrent = void 0;
+
+
+
+
+
+
+
+var _request = _interopRequireDefault(__webpack_require__(/*! ./request.js */ 29));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} /**
+                                                                                                                                                              * @name: start-school
+                                                                                                                                                              * @author: chuanchuan
+                                                                                                                                                              * @date: 2022-07-11 15:52
+                                                                                                                                                              * @description：学院协议信息
+                                                                                                                                                              * @update: 2022-07-11 15:52
+                                                                                                                                                              */var stuCurrent = function stuCurrent() {return _request.default.request({ url: '/wechat/stuProtocol/current', method: 'GET', header: {
+      'token': uni.getStorageSync('token') } });
+
+
+};exports.stuCurrent = stuCurrent;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+
+/***/ 65:
 /*!*****************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/service/login.js ***!
   \*****************************************************************************************/
@@ -14434,38 +14501,7 @@ var _request = _interopRequireDefault(__webpack_require__(/*! ./request.js */ 29
 
 /***/ }),
 
-/***/ 63:
-/*!****************************************************************************************!*\
-  !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/service/sign.js ***!
-  \****************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.stuCurrent = void 0;
-
-
-
-
-
-
-
-var _request = _interopRequireDefault(__webpack_require__(/*! ./request.js */ 29));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} /**
-                                                                                                                                                              * @name: start-school
-                                                                                                                                                              * @author: chuanchuan
-                                                                                                                                                              * @date: 2022-07-11 15:52
-                                                                                                                                                              * @description：学院协议信息
-                                                                                                                                                              * @update: 2022-07-11 15:52
-                                                                                                                                                              */var stuCurrent = function stuCurrent() {return _request.default.request({ url: '/wechat/stuProtocol/current', method: 'GET', header: {
-      'token': uni.getStorageSync('token') } });
-
-
-};exports.stuCurrent = stuCurrent;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
-
-/***/ }),
-
-/***/ 64:
+/***/ 66:
 /*!*******************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/service/student.js ***!
   \*******************************************************************************************/
@@ -14496,7 +14532,7 @@ var _request = _interopRequireDefault(__webpack_require__(/*! ./request.js */ 29
 
 /***/ }),
 
-/***/ 81:
+/***/ 83:
 /*!****************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/service/get-start-school.js ***!
   \****************************************************************************************************/
@@ -14543,42 +14579,6 @@ exports.getExcellentList = getExcellentList;var getNoticeList = function getNoti
 
 
 };exports.getNoticeList = getNoticeList;
-
-/***/ }),
-
-/***/ 98:
-/*!****************************************************************************************!*\
-  !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/service/help.js ***!
-  \****************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.getHelpList = void 0;
-
-
-
-
-
-
-
-var _request = _interopRequireDefault(__webpack_require__(/*! ./request.js */ 29));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} /**
-                                                                                                                                                              * @name: start-school
-                                                                                                                                                              * @author: chuanchuan
-                                                                                                                                                              * @date: 2022-07-06 16:58
-                                                                                                                                                              * @description：请求咨询帮助页数据
-                                                                                                                                                              * @update: 2022-07-06 16:58
-                                                                                                                                                              */ // 查询咨询帮助页  /wechat/help/list
-var getHelpList = function getHelpList(_ref) {var pageSize = _ref.pageSize,pageNum = _ref.pageNum;return _request.default.request({ url: '/wechat/help/list', method: 'POST',
-    header: {
-      "Content-Type": "application/json" },
-
-    data: {
-      pageNum: pageNum,
-      pageSize: pageSize } });
-
-
-};exports.getHelpList = getHelpList;
 
 /***/ })
 

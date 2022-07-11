@@ -1,0 +1,107 @@
+.scroll-view ::-webkit-scrollbar {
+	display: none;
+	width: 0 !important;
+	height: 0 !important;
+	-webkit-appearance: none;
+	background: transparent;
+	color: transparent;
+}
+
+.my-contract {
+	width: 100vw;
+	height: 100vh;
+	background-color: #f0f3f7;
+}
+
+.contract-content {
+	padding: 0 35rpx;
+	box-sizing: border-box;
+}
+
+.scroll-view {
+	box-sizing: border-box;
+}
+
+.contract {
+	width: 682rpx;
+	border: 2rpx dashed #000;
+	position: relative;
+	margin-bottom: 140rpx;
+}
+
+.canvasImg {
+	width: 682rpx;
+	border: 2rpx dashed #000;
+}
+
+.username {
+	position: absolute;
+	left: 150rpx;
+	top: 220rpx;
+}
+
+.idCard {
+	font-size: 20rpx;
+	position: absolute;
+	right: 20rpx;
+	bottom: 2320rpx;
+}
+
+.idCard1 {
+	font-size: 20rpx;
+	position: absolute;
+	right: 20rpx;
+	bottom: 180rpx;
+}
+
+.contract-time {
+	font-size: 20rpx;
+	position: absolute;
+	right: 60rpx;
+	bottom: 2280rpx;
+}
+
+.company-time {
+	font-size: 20rpx;
+	position: absolute;
+	left: 150rpx;
+	bottom: 2280rpx;
+}
+
+.contract-time1 {
+	font-size: 20rpx;
+	position: absolute;
+	right: 50rpx;
+	bottom: 140rpx;
+}
+
+.company-time1 {
+	font-size: 20rpx;
+	position: absolute;
+	left: 150rpx;
+	bottom: 140rpx;
+}
+
+.contract-img {
+	width: 682rpx;
+	height: 6000rpx;
+}
+
+/* 签名的图片显示的位置 */
+.contract-sign {
+	width: 200rpx;
+	height: 150rpx;
+	position: absolute;
+	right: 100rpx;
+	bottom: 2300rpx;
+	transform: rotate(-90deg);
+}
+
+.contract-sign1 {
+	width: 200rpx;
+	height: 150rpx;
+	position: absolute;
+	right: 100rpx;
+	bottom: 170rpx;
+	transform: rotate(-90deg);
+}
