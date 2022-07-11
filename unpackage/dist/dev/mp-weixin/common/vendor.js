@@ -3723,7 +3723,7 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 200:
+/***/ 203:
 /*!****************************************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/assets/marked.min.js ***!
   \****************************************************************************************************************************/
@@ -3739,14 +3739,14 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 201:
+/***/ 204:
 /*!*********************************************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/highlight.js/lib/index.js ***!
   \*********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var hljs = __webpack_require__(/*! ./core */ 202);
+var hljs = __webpack_require__(/*! ./core */ 205);
 
 // hljs.registerLanguage('1c', require('./languages/1c'));
 // hljs.registerLanguage('abnf', require('./languages/abnf'));
@@ -3943,7 +3943,7 @@ module.exports = hljs;
 
 /***/ }),
 
-/***/ 202:
+/***/ 205:
 /*!********************************************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/highlight.js/lib/core.js ***!
   \********************************************************************************************************************************/
@@ -6151,7 +6151,7 @@ module.exports = highlight;
 
 /***/ }),
 
-/***/ 217:
+/***/ 220:
 /*!***********************************************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/parser/libs/MpHtmlParser.js ***!
   \***********************************************************************************************************************************/
@@ -6165,9 +6165,9 @@ module.exports = highlight;
  * @author JinYufeng
  * @listens MIT
  */
-var cfg = __webpack_require__(/*! ./config.js */ 218),
+var cfg = __webpack_require__(/*! ./config.js */ 221),
 blankChar = cfg.blankChar,
-CssHandler = __webpack_require__(/*! ./CssHandler.js */ 219),
+CssHandler = __webpack_require__(/*! ./CssHandler.js */ 222),
 windowWidth = uni.getSystemInfoSync().windowWidth;
 var emoji;
 
@@ -6697,7 +6697,7 @@ module.exports = MpHtmlParser;
 
 /***/ }),
 
-/***/ 218:
+/***/ 221:
 /*!*****************************************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/parser/libs/config.js ***!
   \*****************************************************************************************************************************/
@@ -6787,14 +6787,14 @@ module.exports = cfg;
 
 /***/ }),
 
-/***/ 219:
+/***/ 222:
 /*!*********************************************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/parser/libs/CssHandler.js ***!
   \*********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var cfg = __webpack_require__(/*! ./config.js */ 218),
+var cfg = __webpack_require__(/*! ./config.js */ 221),
 isLetter = function isLetter(c) {return c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z';};
 
 function CssHandler(tagStyle) {
@@ -14401,7 +14401,102 @@ var getProcessList = function getProcessList(_ref) {var pageNum = _ref.pageNum,p
 
 /***/ }),
 
-/***/ 78:
+/***/ 62:
+/*!*****************************************************************************************!*\
+  !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/service/login.js ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.authLogin = void 0;
+
+
+
+
+
+
+
+var _request = _interopRequireDefault(__webpack_require__(/*! ./request.js */ 29));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} /**
+                                                                                                                                                              * @name: start-school
+                                                                                                                                                              * @author: chuanchuan
+                                                                                                                                                              * @date: 2022-07-11 15:52
+                                                                                                                                                              * @description：登陆接口信息
+                                                                                                                                                              * @update: 2022-07-11 15:52
+                                                                                                                                                              */var authLogin = function authLogin(_ref) {var code = _ref.code;return _request.default.request({ url: '/wechat/user/auth/login', method: 'POST', header: {
+      'Conten-Type': 'application/json' },
+
+    data: {
+      code: code } });
+
+
+};exports.authLogin = authLogin;
+
+/***/ }),
+
+/***/ 63:
+/*!****************************************************************************************!*\
+  !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/service/sign.js ***!
+  \****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.stuCurrent = void 0;
+
+
+
+
+
+
+
+var _request = _interopRequireDefault(__webpack_require__(/*! ./request.js */ 29));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} /**
+                                                                                                                                                              * @name: start-school
+                                                                                                                                                              * @author: chuanchuan
+                                                                                                                                                              * @date: 2022-07-11 15:52
+                                                                                                                                                              * @description：学院协议信息
+                                                                                                                                                              * @update: 2022-07-11 15:52
+                                                                                                                                                              */var stuCurrent = function stuCurrent() {return _request.default.request({ url: '/wechat/stuProtocol/current', method: 'GET', header: {
+      'token': uni.getStorageSync('token') } });
+
+
+};exports.stuCurrent = stuCurrent;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+
+/***/ 64:
+/*!*******************************************************************************************!*\
+  !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/service/student.js ***!
+  \*******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.stuInfo = void 0;
+
+
+
+
+
+
+
+var _request = _interopRequireDefault(__webpack_require__(/*! ./request.js */ 29));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} /**
+                                                                                                                                                              * @name: start-school
+                                                                                                                                                              * @author: chuanchuan
+                                                                                                                                                              * @date: 2022-07-11 15:52
+                                                                                                                                                              * @description：获取学员信息
+                                                                                                                                                              * @update: 2022-07-11 15:52
+                                                                                                                                                              */var stuInfo = function stuInfo() {return _request.default.request({ url: '/wechat/student/info', method: 'GET', header: {
+      'token': uni.getStorageSync('token') } });
+
+
+};exports.stuInfo = stuInfo;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+
+/***/ 81:
 /*!****************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/service/get-start-school.js ***!
   \****************************************************************************************************/
@@ -14451,7 +14546,7 @@ exports.getExcellentList = getExcellentList;var getNoticeList = function getNoti
 
 /***/ }),
 
-/***/ 95:
+/***/ 98:
 /*!****************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/service/help.js ***!
   \****************************************************************************************/
