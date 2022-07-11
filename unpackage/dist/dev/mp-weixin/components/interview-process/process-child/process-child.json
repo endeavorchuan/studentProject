@@ -1,6 +1,6 @@
 {
+  "component": true,
   "usingComponents": {
     "sy-video": "/components/interview-process/sy-video/sy-video"
-  },
-  "component": true
+  }
 }

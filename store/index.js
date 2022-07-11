@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+Vue.use(Vuex)
+
 // wx自定义头部
 import bar from './modules/bar.js'
 
