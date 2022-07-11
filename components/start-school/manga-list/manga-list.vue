@@ -8,7 +8,7 @@
 
 <template>
   <view class="manga-list">
-    <view class="list-item">
+    <view class="list-item" @tap="goArchives">
       <image class="item-bg" src="../../../static/imgs/archives.png"></image>
       <view class="item-text">档案管理</view>
     </view>
@@ -30,6 +30,16 @@
 <script>
 export default {
   name: "manga-list",
+  props: {
+    classId:{
+      type: String,
+      default: 0
+    },
+    title: {
+      type: String,
+      default: ''
+    }
+  },
   data() {
     return {
       mangaList: {
@@ -47,6 +57,11 @@ export default {
       console.log('1')
       uni.navigateTo({
         url: '/pages/cnosulting-help/consulting-help'
+      })
+    },
+    goArchives () {
+      uni.navigateTo({
+        url: '/pages/show-manage/show-manage?classId=' + this.classId
       })
     }
   }

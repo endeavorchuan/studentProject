@@ -85,6 +85,14 @@
 				"backgroundColor": "#f0f3f7",
 				"scrollIndicator": "none"
 			}
+		},
+		{
+			"path": "pages/show-manage/show-manage",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
 		}
 	],
 	"globalStyle": {

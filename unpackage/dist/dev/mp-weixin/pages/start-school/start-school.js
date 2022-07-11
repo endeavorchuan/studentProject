@@ -186,12 +186,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _getStartSchool = __webpack_require__(/*! @/service/get-start-school.js */ 83);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var MyHeader = function MyHeader() {__webpack_require__.e(/*! require.ensure | components/start-school/my-header/my-header */ "components/start-school/my-header/my-header").then((function () {return resolve(__webpack_require__(/*! @/components/start-school/my-header/my-header.vue */ 125));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var MangaList = function MangaList() {__webpack_require__.e(/*! require.ensure | components/start-school/manga-list/manga-list */ "components/start-school/manga-list/manga-list").then((function () {return resolve(__webpack_require__(/*! @/components/start-school/manga-list/manga-list.vue */ 146));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var CelebrityList = function CelebrityList() {__webpack_require__.e(/*! require.ensure | components/start-school/celebrity-list/celebrity-list */ "components/start-school/celebrity-list/celebrity-list").then((function () {return resolve(__webpack_require__(/*! @/components/start-school/celebrity-list/celebrity-list.vue */ 153));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Notice = function Notice() {__webpack_require__.e(/*! require.ensure | components/start-school/notice/notice */ "components/start-school/notice/notice").then((function () {return resolve(__webpack_require__(/*! @/components/start-school/notice/notice.vue */ 158));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _getStartSchool = __webpack_require__(/*! @/service/get-start-school.js */ 83);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var MyHeader = function MyHeader() {__webpack_require__.e(/*! require.ensure | components/start-school/my-header/my-header */ "components/start-school/my-header/my-header").then((function () {return resolve(__webpack_require__(/*! @/components/start-school/my-header/my-header.vue */ 133));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var MangaList = function MangaList() {__webpack_require__.e(/*! require.ensure | components/start-school/manga-list/manga-list */ "components/start-school/manga-list/manga-list").then((function () {return resolve(__webpack_require__(/*! @/components/start-school/manga-list/manga-list.vue */ 154));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var CelebrityList = function CelebrityList() {__webpack_require__.e(/*! require.ensure | components/start-school/celebrity-list/celebrity-list */ "components/start-school/celebrity-list/celebrity-list").then((function () {return resolve(__webpack_require__(/*! @/components/start-school/celebrity-list/celebrity-list.vue */ 161));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Notice = function Notice() {__webpack_require__.e(/*! require.ensure | components/start-school/notice/notice */ "components/start-school/notice/notice").then((function () {return resolve(__webpack_require__(/*! @/components/start-school/notice/notice.vue */ 166));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 {
   name: "start-school",
   data: function data() {
     return {
       title: '',
+      classId: '',
       showPop: true,
       pageNum: 1,
       pageSize: 10,
@@ -201,7 +202,10 @@ var _getStartSchool = __webpack_require__(/*! @/service/get-start-school.js */ 8
   },
   onLoad: function onLoad(options) {
     var item = JSON.parse(options.item);
+    // 当前班级的名称
     this.title = item.className;
+    // 获取当前班级的id
+    this.classId = item.id;
     this.__init();
   },
   components: {

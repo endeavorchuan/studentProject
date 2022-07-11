@@ -1,7 +1,7 @@
 <!--
  * @Author: 初浩诚
  * @Date: 2022-06-27 19:33:52
- * @LastEditTime: 2022-07-08 17:29:20
+ * @LastEditTime: 2022-07-11 21:07:51
  * @LastEditors: 初浩诚
  * @Description: 
  * @FilePath: /studentProject/pages/start-school/start-school.vue
@@ -24,7 +24,7 @@
           <view class="sign-btn" @tap="goEnterSchool">立即填写 > </view>
         </view>
         <view class="school-content">
-          <MangaList></MangaList>
+          <MangaList :classId="classId" :title="title"></MangaList>
           <view class="main-title">名人堂</view>
           <scroll-view class="scroll-content" scroll-x="true">
             <view class="scroll-item">
@@ -60,6 +60,7 @@ export default {
   data () {
     return {
       title: '',
+      classId: '',
       showPop: true,
       pageNum: 1,
       pageSize: 10,
@@ -69,7 +70,10 @@ export default {
   },
   onLoad(options) {
     const item = JSON.parse(options.item)
+    // 当前班级的名称
     this.title = item.className
+    // 获取当前班级的id
+    this.classId = item.id
     this.__init()
   },
   components: {

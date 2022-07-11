@@ -9,7 +9,8 @@
         "pages/start-school/start-school",
         "pages/enter-school/enter-school",
         "pages/cnosulting-help/consulting-help",
-        "pages/subject/subject"
+        "pages/subject/subject",
+        "pages/show-manage/show-manage"
     ],
     "subPackages": [],
     "window": {
