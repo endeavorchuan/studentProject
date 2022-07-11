@@ -1,0 +1,137 @@
+.my-card {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f3f4f6;
+    overflow: hidden;
+}
+
+.my-header {
+    background-color: #57AEBE;
+    width: 100vw;
+    height: 400rpx;
+}
+
+.header-main {
+    width: 750rpx;
+    height: 100%;
+    padding: 0 50rpx;
+    height: 162rpx;
+    position: absolute;
+    top: 154rpx;
+    box-sizing: border-box;
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+}
+
+.main-img {
+    width: 162rpx;
+    height: 162rpx;
+    border-radius: 50%;
+}
+
+.main {
+    padding-left: 40rpx;
+}
+
+.header-name {
+    height: 40rpx;
+    font-size: 42rpx;
+    font-family: SourceHanSansCN;
+    font-weight: 400;
+    color: #fff;
+    padding-bottom: 40rpx;
+}
+
+.header-phone {
+    padding: 5rpx 30rpx;
+    background-color: #000;
+    opacity: 0.2;
+    border-radius: 20rpx;
+    font-size: 22rpx;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+}
+
+.card-content {
+    width: 750rpx;
+    height: 100%;
+    position: relative;
+    top: -60rpx;
+    padding: 0 40rpx;
+    box-sizing: border-box;
+}
+
+.card-item {
+    height: 110rpx;
+    background-color: #fff;
+    border-radius: 10rpx;
+    margin-bottom: 30rpx;
+    display: flex;
+    align-items: center;
+    padding-left: 37rpx;
+    box-sizing: border-box;
+}
+
+.item-img {
+    width: 36rpx;
+    height: 29rpx;
+}
+
+.item-img1 {
+    width: 31rpx;
+    height: 36rpx;
+}
+
+.item-img2 {
+    width: 28rpx;
+    height: 36rpx;
+}
+
+.item-card {
+    font-size: 28rpx;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #464646;
+    padding-left: 10rpx;
+}
+
+.finger {
+    width: 50rpx;
+    height: 50rpx;
+    animation: fingerHandle 1s ease infinite both;
+    transform: rotate(90deg);
+}
+
+.login {
+    display: flex;
+    width: 400rpx;
+}
+
+@keyframes fingerHandle {
+    0% {
+        transform: none;
+    }
+    70% {
+        transform: scale3d(.8,.8, .8);
+    }
+    100% {
+        transform: none;
+    }
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    background-color: #000;
+    filter: alpha(opacity=70%);
+}

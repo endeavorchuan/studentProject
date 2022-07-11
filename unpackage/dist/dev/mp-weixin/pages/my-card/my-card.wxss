@@ -1,0 +1,140 @@
+.my-card.data-v-76160fac {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f3f4f6;
+    overflow: hidden;
+}
+.my-header.data-v-76160fac {
+    background-color: #57AEBE;
+    width: 100vw;
+    height: 400rpx;
+}
+.header-main.data-v-76160fac {
+    width: 750rpx;
+    height: 100%;
+    padding: 0 50rpx;
+    height: 162rpx;
+    position: absolute;
+    top: 154rpx;
+    box-sizing: border-box;
+}
+.main-content.data-v-76160fac {
+    display: flex;
+    align-items: center;
+}
+.main-img.data-v-76160fac {
+    width: 162rpx;
+    height: 162rpx;
+    border-radius: 50%;
+}
+.main.data-v-76160fac {
+    padding-left: 40rpx;
+}
+.header-name.data-v-76160fac {
+    height: 40rpx;
+    font-size: 42rpx;
+    font-family: SourceHanSansCN;
+    font-weight: 400;
+    color: #fff;
+    padding-bottom: 40rpx;
+}
+.header-phone.data-v-76160fac {
+    padding: 5rpx 30rpx;
+    background-color: #000;
+    opacity: 0.2;
+    border-radius: 20rpx;
+    font-size: 22rpx;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+}
+.card-content.data-v-76160fac {
+    width: 750rpx;
+    height: 100%;
+    position: relative;
+    top: -60rpx;
+    padding: 0 40rpx;
+    box-sizing: border-box;
+}
+.card-item.data-v-76160fac {
+    height: 110rpx;
+    background-color: #fff;
+    border-radius: 10rpx;
+    margin-bottom: 30rpx;
+    display: flex;
+    align-items: center;
+    padding-left: 37rpx;
+    box-sizing: border-box;
+}
+.item-img.data-v-76160fac {
+    width: 36rpx;
+    height: 29rpx;
+}
+.item-img1.data-v-76160fac {
+    width: 31rpx;
+    height: 36rpx;
+}
+.item-img2.data-v-76160fac {
+    width: 28rpx;
+    height: 36rpx;
+}
+.item-card.data-v-76160fac {
+    font-size: 28rpx;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #464646;
+    padding-left: 10rpx;
+}
+.finger.data-v-76160fac {
+    width: 50rpx;
+    height: 50rpx;
+    -webkit-animation: fingerHandle-data-v-76160fac 1s ease infinite both;
+            animation: fingerHandle-data-v-76160fac 1s ease infinite both;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+.login.data-v-76160fac {
+    display: flex;
+    width: 400rpx;
+}
+@-webkit-keyframes fingerHandle-data-v-76160fac {
+0% {
+        -webkit-transform: none;
+                transform: none;
+}
+70% {
+        -webkit-transform: scale3d(.8,.8, .8);
+                transform: scale3d(.8,.8, .8);
+}
+100% {
+        -webkit-transform: none;
+                transform: none;
+}
+}
+@keyframes fingerHandle-data-v-76160fac {
+0% {
+        -webkit-transform: none;
+                transform: none;
+}
+70% {
+        -webkit-transform: scale3d(.8,.8, .8);
+                transform: scale3d(.8,.8, .8);
+}
+100% {
+        -webkit-transform: none;
+                transform: none;
+}
+}
+.mask.data-v-76160fac {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    background-color: #000;
+    filter: alpha(opacity=70%);
+}
+
