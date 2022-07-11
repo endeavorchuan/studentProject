@@ -2240,7 +2240,7 @@ module.exports = __webpack_require__(/*! regenerator-runtime */ 19);
 
 /***/ }),
 
-/***/ 184:
+/***/ 189:
 /*!****************************************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/assets/marked.min.js ***!
   \****************************************************************************************************************************/
@@ -2256,14 +2256,62 @@ module.exports = __webpack_require__(/*! regenerator-runtime */ 19);
 
 /***/ }),
 
-/***/ 185:
+/***/ 19:
+/*!************************************************************!*\
+  !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+// This method of obtaining a reference to the global object needs to be
+// kept identical to the way it is obtained in runtime.js
+var g = (function() {
+  return this || (typeof self === "object" && self);
+})() || Function("return this")();
+
+// Use `getOwnPropertyNames` because not all browsers support calling
+// `hasOwnProperty` on the global `self` object in a worker. See #183.
+var hadRuntime = g.regeneratorRuntime &&
+  Object.getOwnPropertyNames(g).indexOf("regeneratorRuntime") >= 0;
+
+// Save the old regeneratorRuntime in case it needs to be restored later.
+var oldRuntime = hadRuntime && g.regeneratorRuntime;
+
+// Force reevalutation of runtime.js.
+g.regeneratorRuntime = undefined;
+
+module.exports = __webpack_require__(/*! ./runtime */ 20);
+
+if (hadRuntime) {
+  // Restore the original runtime.
+  g.regeneratorRuntime = oldRuntime;
+} else {
+  // Remove the global property added by runtime.js.
+  try {
+    delete g.regeneratorRuntime;
+  } catch(e) {
+    g.regeneratorRuntime = undefined;
+  }
+}
+
+
+/***/ }),
+
+/***/ 190:
 /*!*********************************************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/highlight.js/lib/index.js ***!
   \*********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var hljs = __webpack_require__(/*! ./core */ 186);
+var hljs = __webpack_require__(/*! ./core */ 191);
 
 // hljs.registerLanguage('1c', require('./languages/1c'));
 // hljs.registerLanguage('abnf', require('./languages/abnf'));
@@ -2460,7 +2508,7 @@ module.exports = hljs;
 
 /***/ }),
 
-/***/ 186:
+/***/ 191:
 /*!********************************************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/highlight.js/lib/core.js ***!
   \********************************************************************************************************************************/
@@ -4668,55 +4716,7 @@ module.exports = highlight;
 
 /***/ }),
 
-/***/ 19:
-/*!************************************************************!*\
-  !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-// This method of obtaining a reference to the global object needs to be
-// kept identical to the way it is obtained in runtime.js
-var g = (function() {
-  return this || (typeof self === "object" && self);
-})() || Function("return this")();
-
-// Use `getOwnPropertyNames` because not all browsers support calling
-// `hasOwnProperty` on the global `self` object in a worker. See #183.
-var hadRuntime = g.regeneratorRuntime &&
-  Object.getOwnPropertyNames(g).indexOf("regeneratorRuntime") >= 0;
-
-// Save the old regeneratorRuntime in case it needs to be restored later.
-var oldRuntime = hadRuntime && g.regeneratorRuntime;
-
-// Force reevalutation of runtime.js.
-g.regeneratorRuntime = undefined;
-
-module.exports = __webpack_require__(/*! ./runtime */ 20);
-
-if (hadRuntime) {
-  // Restore the original runtime.
-  g.regeneratorRuntime = oldRuntime;
-} else {
-  // Remove the global property added by runtime.js.
-  try {
-    delete g.regeneratorRuntime;
-  } catch(e) {
-    g.regeneratorRuntime = undefined;
-  }
-}
-
-
-/***/ }),
-
-/***/ 194:
+/***/ 199:
 /*!***********************************************************************************************************************************!*\
   !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/parser/libs/MpHtmlParser.js ***!
   \***********************************************************************************************************************************/
@@ -4730,9 +4730,9 @@ if (hadRuntime) {
  * @author JinYufeng
  * @listens MIT
  */
-var cfg = __webpack_require__(/*! ./config.js */ 195),
+var cfg = __webpack_require__(/*! ./config.js */ 200),
 blankChar = cfg.blankChar,
-CssHandler = __webpack_require__(/*! ./CssHandler.js */ 196),
+CssHandler = __webpack_require__(/*! ./CssHandler.js */ 201),
 windowWidth = uni.getSystemInfoSync().windowWidth;
 var emoji;
 
@@ -5259,203 +5259,6 @@ MpHtmlParser.prototype.EndTag = function (c) {
 };
 module.exports = MpHtmlParser;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
-
-/***/ }),
-
-/***/ 195:
-/*!*****************************************************************************************************************************!*\
-  !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/parser/libs/config.js ***!
-  \*****************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* 配置文件 */
-var cfg = {
-  // 出错占位图
-  errorImg: null,
-  // 过滤器函数
-  filter: null,
-  // 代码高亮函数
-  highlight: null,
-  // 文本处理函数
-  onText: null,
-  // 实体编码列表
-  entities: {
-    quot: '"',
-    apos: "'",
-    semi: ';',
-    nbsp: '\xA0',
-    ensp: "\u2002",
-    emsp: "\u2003",
-    ndash: '–',
-    mdash: '—',
-    middot: '·',
-    lsquo: '‘',
-    rsquo: '’',
-    ldquo: '“',
-    rdquo: '”',
-    bull: '•',
-    hellip: '…' },
-
-  blankChar: makeMap(' ,\xA0,\t,\r,\n,\f'),
-  boolAttrs: makeMap('allowfullscreen,autoplay,autostart,controls,ignore,loop,muted'),
-  // 块级标签，将被转为 div
-  blockTags: makeMap('address,article,aside,body,caption,center,cite,footer,header,html,nav,pre,section'),
-  // 将被移除的标签
-  ignoreTags: makeMap('area,base,canvas,frame,iframe,input,link,map,meta,param,script,source,style,svg,textarea,title,track,wbr'),
-  // 只能被 rich-text 显示的标签
-  richOnlyTags: makeMap('a,colgroup,fieldset,legend,table'),
-  // 自闭合的标签
-  selfClosingTags: makeMap('area,base,br,col,circle,ellipse,embed,frame,hr,img,input,line,link,meta,param,path,polygon,rect,source,track,use,wbr'),
-  // 信任的标签
-  trustTags: makeMap('a,abbr,ad,audio,b,blockquote,br,code,col,colgroup,dd,del,dl,dt,div,em,fieldset,h1,h2,h3,h4,h5,h6,hr,i,img,ins,label,legend,li,ol,p,q,source,span,strong,sub,sup,table,tbody,td,tfoot,th,thead,tr,title,ul,video'),
-  // 默认的标签样式
-  userAgentStyles: {
-    address: 'font-style:italic',
-    big: 'display:inline;font-size:1.2em',
-    blockquote: 'background-color:#f6f6f6;border-left:3px solid #dbdbdb;color:#6c6c6c;padding:5px 0 5px 10px',
-    caption: 'display:table-caption;text-align:center',
-    center: 'text-align:center',
-    cite: 'font-style:italic',
-    dd: 'margin-left:40px',
-    mark: 'background-color:yellow',
-    pre: 'font-family:monospace;white-space:pre;overflow:scroll',
-    s: 'text-decoration:line-through',
-    small: 'display:inline;font-size:0.8em',
-    u: 'text-decoration:underline' } };
-
-
-
-function makeMap(str) {
-  var map = Object.create(null),
-  list = str.split(',');
-  for (var i = list.length; i--;) {
-    map[list[i]] = true;}
-  return map;
-}
-
-
-if (wx.canIUse('editor')) {
-  cfg.blockTags.pre = void 0;
-  cfg.ignoreTags.rp = true;
-  Object.assign(cfg.richOnlyTags, makeMap('bdi,bdo,caption,rt,ruby'));
-  Object.assign(cfg.trustTags, makeMap('bdi,bdo,caption,pre,rt,ruby'));
-}
-
-
-
-
-
-
-
-module.exports = cfg;
-
-/***/ }),
-
-/***/ 196:
-/*!*********************************************************************************************************************************!*\
-  !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/parser/libs/CssHandler.js ***!
-  \*********************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var cfg = __webpack_require__(/*! ./config.js */ 195),
-isLetter = function isLetter(c) {return c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z';};
-
-function CssHandler(tagStyle) {
-  var styles = Object.assign(Object.create(null), cfg.userAgentStyles);
-  for (var item in tagStyle) {
-    styles[item] = (styles[item] ? styles[item] + ';' : '') + tagStyle[item];}
-  this.styles = styles;
-}
-CssHandler.prototype.getStyle = function (data) {
-  this.styles = new parser(data, this.styles).parse();
-};
-CssHandler.prototype.match = function (name, attrs) {
-  var tmp,matched = (tmp = this.styles[name]) ? tmp + ';' : '';
-  if (attrs.class) {
-    var items = attrs.class.split(' ');
-    for (var i = 0, item; item = items[i]; i++) {
-      if (tmp = this.styles['.' + item])
-      matched += tmp + ';';}
-  }
-  if (tmp = this.styles['#' + attrs.id])
-  matched += tmp + ';';
-  return matched;
-};
-module.exports = CssHandler;
-
-function parser(data, init) {
-  this.data = data;
-  this.floor = 0;
-  this.i = 0;
-  this.list = [];
-  this.res = init;
-  this.state = this.Space;
-}
-parser.prototype.parse = function () {
-  for (var c; c = this.data[this.i]; this.i++) {
-    this.state(c);}
-  return this.res;
-};
-parser.prototype.section = function () {
-  return this.data.substring(this.start, this.i);
-};
-// 状态机
-parser.prototype.Space = function (c) {
-  if (c == '.' || c == '#' || isLetter(c)) {
-    this.start = this.i;
-    this.state = this.Name;
-  } else if (c == '/' && this.data[this.i + 1] == '*')
-  this.Comment();else
-  if (!cfg.blankChar[c] && c != ';')
-  this.state = this.Ignore;
-};
-parser.prototype.Comment = function () {
-  this.i = this.data.indexOf('*/', this.i) + 1;
-  if (!this.i) this.i = this.data.length;
-  this.state = this.Space;
-};
-parser.prototype.Ignore = function (c) {
-  if (c == '{') this.floor++;else
-  if (c == '}' && ! --this.floor) this.state = this.Space;
-};
-parser.prototype.Name = function (c) {
-  if (cfg.blankChar[c]) {
-    this.list.push(this.section());
-    this.state = this.NameSpace;
-  } else if (c == '{') {
-    this.list.push(this.section());
-    this.Content();
-  } else if (c == ',') {
-    this.list.push(this.section());
-    this.Comma();
-  } else if (!isLetter(c) && (c < '0' || c > '9') && c != '-' && c != '_')
-  this.state = this.Ignore;
-};
-parser.prototype.NameSpace = function (c) {
-  if (c == '{') this.Content();else
-  if (c == ',') this.Comma();else
-  if (!cfg.blankChar[c]) this.state = this.Ignore;
-};
-parser.prototype.Comma = function () {
-  while (cfg.blankChar[this.data[++this.i]]) {;}
-  if (this.data[this.i] == '{') this.Content();else
-  {
-    this.start = this.i--;
-    this.state = this.Name;
-  }
-};
-parser.prototype.Content = function () {
-  this.start = ++this.i;
-  if ((this.i = this.data.indexOf('}', this.i)) == -1) this.i = this.data.length;
-  var content = this.section();
-  for (var i = 0, item; item = this.list[i++];) {
-    if (this.res[item]) this.res[item] += ';' + content;else
-    this.res[item] = content;}
-  this.list = [];
-  this.state = this.Space;
-};
 
 /***/ }),
 
@@ -6219,6 +6022,203 @@ module.exports = g;
   })() || Function("return this")()
 );
 
+
+/***/ }),
+
+/***/ 200:
+/*!*****************************************************************************************************************************!*\
+  !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/parser/libs/config.js ***!
+  \*****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* 配置文件 */
+var cfg = {
+  // 出错占位图
+  errorImg: null,
+  // 过滤器函数
+  filter: null,
+  // 代码高亮函数
+  highlight: null,
+  // 文本处理函数
+  onText: null,
+  // 实体编码列表
+  entities: {
+    quot: '"',
+    apos: "'",
+    semi: ';',
+    nbsp: '\xA0',
+    ensp: "\u2002",
+    emsp: "\u2003",
+    ndash: '–',
+    mdash: '—',
+    middot: '·',
+    lsquo: '‘',
+    rsquo: '’',
+    ldquo: '“',
+    rdquo: '”',
+    bull: '•',
+    hellip: '…' },
+
+  blankChar: makeMap(' ,\xA0,\t,\r,\n,\f'),
+  boolAttrs: makeMap('allowfullscreen,autoplay,autostart,controls,ignore,loop,muted'),
+  // 块级标签，将被转为 div
+  blockTags: makeMap('address,article,aside,body,caption,center,cite,footer,header,html,nav,pre,section'),
+  // 将被移除的标签
+  ignoreTags: makeMap('area,base,canvas,frame,iframe,input,link,map,meta,param,script,source,style,svg,textarea,title,track,wbr'),
+  // 只能被 rich-text 显示的标签
+  richOnlyTags: makeMap('a,colgroup,fieldset,legend,table'),
+  // 自闭合的标签
+  selfClosingTags: makeMap('area,base,br,col,circle,ellipse,embed,frame,hr,img,input,line,link,meta,param,path,polygon,rect,source,track,use,wbr'),
+  // 信任的标签
+  trustTags: makeMap('a,abbr,ad,audio,b,blockquote,br,code,col,colgroup,dd,del,dl,dt,div,em,fieldset,h1,h2,h3,h4,h5,h6,hr,i,img,ins,label,legend,li,ol,p,q,source,span,strong,sub,sup,table,tbody,td,tfoot,th,thead,tr,title,ul,video'),
+  // 默认的标签样式
+  userAgentStyles: {
+    address: 'font-style:italic',
+    big: 'display:inline;font-size:1.2em',
+    blockquote: 'background-color:#f6f6f6;border-left:3px solid #dbdbdb;color:#6c6c6c;padding:5px 0 5px 10px',
+    caption: 'display:table-caption;text-align:center',
+    center: 'text-align:center',
+    cite: 'font-style:italic',
+    dd: 'margin-left:40px',
+    mark: 'background-color:yellow',
+    pre: 'font-family:monospace;white-space:pre;overflow:scroll',
+    s: 'text-decoration:line-through',
+    small: 'display:inline;font-size:0.8em',
+    u: 'text-decoration:underline' } };
+
+
+
+function makeMap(str) {
+  var map = Object.create(null),
+  list = str.split(',');
+  for (var i = list.length; i--;) {
+    map[list[i]] = true;}
+  return map;
+}
+
+
+if (wx.canIUse('editor')) {
+  cfg.blockTags.pre = void 0;
+  cfg.ignoreTags.rp = true;
+  Object.assign(cfg.richOnlyTags, makeMap('bdi,bdo,caption,rt,ruby'));
+  Object.assign(cfg.trustTags, makeMap('bdi,bdo,caption,pre,rt,ruby'));
+}
+
+
+
+
+
+
+
+module.exports = cfg;
+
+/***/ }),
+
+/***/ 201:
+/*!*********************************************************************************************************************************!*\
+  !*** /Users/chuanchuan/Documents/uni-app_study/uni-app/studentProject/common/cmder-MDParserHighlight/parser/libs/CssHandler.js ***!
+  \*********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var cfg = __webpack_require__(/*! ./config.js */ 200),
+isLetter = function isLetter(c) {return c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z';};
+
+function CssHandler(tagStyle) {
+  var styles = Object.assign(Object.create(null), cfg.userAgentStyles);
+  for (var item in tagStyle) {
+    styles[item] = (styles[item] ? styles[item] + ';' : '') + tagStyle[item];}
+  this.styles = styles;
+}
+CssHandler.prototype.getStyle = function (data) {
+  this.styles = new parser(data, this.styles).parse();
+};
+CssHandler.prototype.match = function (name, attrs) {
+  var tmp,matched = (tmp = this.styles[name]) ? tmp + ';' : '';
+  if (attrs.class) {
+    var items = attrs.class.split(' ');
+    for (var i = 0, item; item = items[i]; i++) {
+      if (tmp = this.styles['.' + item])
+      matched += tmp + ';';}
+  }
+  if (tmp = this.styles['#' + attrs.id])
+  matched += tmp + ';';
+  return matched;
+};
+module.exports = CssHandler;
+
+function parser(data, init) {
+  this.data = data;
+  this.floor = 0;
+  this.i = 0;
+  this.list = [];
+  this.res = init;
+  this.state = this.Space;
+}
+parser.prototype.parse = function () {
+  for (var c; c = this.data[this.i]; this.i++) {
+    this.state(c);}
+  return this.res;
+};
+parser.prototype.section = function () {
+  return this.data.substring(this.start, this.i);
+};
+// 状态机
+parser.prototype.Space = function (c) {
+  if (c == '.' || c == '#' || isLetter(c)) {
+    this.start = this.i;
+    this.state = this.Name;
+  } else if (c == '/' && this.data[this.i + 1] == '*')
+  this.Comment();else
+  if (!cfg.blankChar[c] && c != ';')
+  this.state = this.Ignore;
+};
+parser.prototype.Comment = function () {
+  this.i = this.data.indexOf('*/', this.i) + 1;
+  if (!this.i) this.i = this.data.length;
+  this.state = this.Space;
+};
+parser.prototype.Ignore = function (c) {
+  if (c == '{') this.floor++;else
+  if (c == '}' && ! --this.floor) this.state = this.Space;
+};
+parser.prototype.Name = function (c) {
+  if (cfg.blankChar[c]) {
+    this.list.push(this.section());
+    this.state = this.NameSpace;
+  } else if (c == '{') {
+    this.list.push(this.section());
+    this.Content();
+  } else if (c == ',') {
+    this.list.push(this.section());
+    this.Comma();
+  } else if (!isLetter(c) && (c < '0' || c > '9') && c != '-' && c != '_')
+  this.state = this.Ignore;
+};
+parser.prototype.NameSpace = function (c) {
+  if (c == '{') this.Content();else
+  if (c == ',') this.Comma();else
+  if (!cfg.blankChar[c]) this.state = this.Ignore;
+};
+parser.prototype.Comma = function () {
+  while (cfg.blankChar[this.data[++this.i]]) {;}
+  if (this.data[this.i] == '{') this.Content();else
+  {
+    this.start = this.i--;
+    this.state = this.Name;
+  }
+};
+parser.prototype.Content = function () {
+  this.start = ++this.i;
+  if ((this.i = this.data.indexOf('}', this.i)) == -1) this.i = this.data.length;
+  var content = this.section();
+  for (var i = 0, item; item = this.list[i++];) {
+    if (this.res[item]) this.res[item] += ';' + content;else
+    this.res[item] = content;}
+  this.list = [];
+  this.state = this.Space;
+};
 
 /***/ }),
 

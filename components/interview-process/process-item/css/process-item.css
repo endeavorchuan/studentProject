@@ -4,6 +4,7 @@
     position: absolute;
     top: 0;
     left: 10rpx;
+    position: relative;
     padding-bottom: 80rpx;
 }
 

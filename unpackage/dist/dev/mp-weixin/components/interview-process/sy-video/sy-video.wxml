@@ -1,0 +1,1 @@
+<view class="syvideo data-v-dce56750"><video class="video data-v-dce56750" src="{{objUrl}}" controls="{{true}}" enable-play-gesture="{{truie}}"></video></view>

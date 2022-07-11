@@ -4,46 +4,37 @@
     padding-bottom: 40rpx;
     padding-left: 30rpx;
 }
-
 .plain-list:nth-child(1) {
     margin-top: 20rpx;
 }
-
 .list-plain {
     display: flex;
     align-items: center;
 }
-
 .list-item {
     width: 37rpx;
     height: 34rpx;
     padding-right: -15rpx;
-
 }
-
 .list-title {
     font-size: 30rpx;
     padding-right: 40rpx;
 }
-
 .list-into {
     font-size: 20rpx;
     color: #0072ff;
 }
-
 .plain-video {
     width: 650rpx;
 }
-
 .plain-video .list-plain {
     padding-left: 20rpx;
 }
-
 .video-content {
     margin-top: 40rpx;
 }
-
 .video-content .image {
     width: 60rpx;
     height: 40rpx;
 }
+

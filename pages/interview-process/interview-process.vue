@@ -63,7 +63,6 @@ export default {
         pageSize: this.pageSize
       }
       const res = await getProcessList(params)
-      console.log(res)
       this.processList = res
     }
   }

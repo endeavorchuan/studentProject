@@ -195,8 +195,7 @@ var _process = __webpack_require__(/*! @/service/process.js */ 40);function _int
                   pageSize: _this.pageSize };_context.next = 3;return (
 
                   (0, _process.getProcessList)(params));case 3:res = _context.sent;
-                console.log(res);
-                _this.processList = res;case 6:case "end":return _context.stop();}}}, _callee);}))();
+                _this.processList = res;case 5:case "end":return _context.stop();}}}, _callee);}))();
     } } };exports.default = _default;
 
 /***/ }),

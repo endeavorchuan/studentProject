@@ -114,7 +114,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var MDParserHighlight = function MDParserHighlight() {Promise.all(/*! require.ensure | common/cmder-MDParserHighlight/index */[__webpack_require__.e("common/vendor"), __webpack_require__.e("common/cmder-MDParserHighlight/index")]).then((function () {return resolve(__webpack_require__(/*! @/common/cmder-MDParserHighlight/index.vue */ 179));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var MDParserHighlight = function MDParserHighlight() {Promise.all(/*! require.ensure | common/cmder-MDParserHighlight/index */[__webpack_require__.e("common/vendor"), __webpack_require__.e("common/cmder-MDParserHighlight/index")]).then((function () {return resolve(__webpack_require__(/*! @/common/cmder-MDParserHighlight/index.vue */ 184));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 

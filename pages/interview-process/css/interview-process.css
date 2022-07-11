@@ -4,8 +4,7 @@ page {
 .process {
     width: 750rpx;
     padding-top: 20rpx;
-    padding-bottom: 120rpx;
-    background-image: url('https://s2.loli.net/2022/07/10/RiIk2dCLM9fFp1s.png');
+    background-color: #867DE9;
     background-size: cover;
     background-position: center center;
     box-sizing: border-box;
@@ -18,5 +17,6 @@ page {
     position: absolute;
     top: 0;
     left: 10rpx;
+    position: relative;
     padding-bottom: 40rpx;
 }

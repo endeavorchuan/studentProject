@@ -16,9 +16,9 @@
           <view class="title-content">{{ index+1 }}、{{ item.title }}</view>
         </view>
         <view class="item-content">
-          <block>
+          <block v-for="child in item.interviewProcessAttrs" :key="child.id">
             <!-- 内容组件 -->
-            <ProcessChild></ProcessChild>
+            <ProcessChild :child="child"></ProcessChild>
           </block>
         </view>
         <view class="item-book">
